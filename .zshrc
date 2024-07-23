@@ -86,7 +86,7 @@ alias vim='nvim'
 
 alias icat="kitten icat"
 
-source ~/.script/update-all.sh
+source ~/.script/update-all.zsh
 
 fpath=(~/.script/ $fpath)
 autoload -U compinit
