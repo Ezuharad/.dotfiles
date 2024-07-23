@@ -1,6 +1,18 @@
 # interpreter for shell commands
 set shell sh
 
+# use icons
+set icons
+set nodirfirst
+set incfilter
+set incsearch
+set sixel
+
+set previewer ctpv
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id
+
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to
 # exit on error and option '-u' is used to give error for unset variables.
@@ -18,10 +30,19 @@ set shellopts '-eu'
 set ifs "\n"
 
 # leave some space at the top and the bottom of the screen
-set scrolloff 10
+# set scrolloff 10
 
 # Use the `dim` attribute instead of underline for the cursor in the preview pane
 set cursorpreviewfmt "\033[7;2m"
+
+map gh cd ~
+map gd cd ~/Downloads/
+map go cd ~/Documents/
+map gc cd ~/.dotfiles/.config/
+
+map xz zip
+map xt tar
+map xx extract
 
 # use enter for shell commands
 map <enter> shell
@@ -30,8 +51,8 @@ map <enter> shell
 map ` !true
 
 # execute current file (must be executable)
-map x $$f
-map X !$f
+# map x $$f
+# map X !$f
 
 # dedicated keys for file opener actions
 map o &mimeopen $f
@@ -107,5 +128,3 @@ cmd zip ${{
     rm -rf $1
 }}
 
-# use icons
-set icons true
