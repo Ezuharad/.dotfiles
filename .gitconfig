@@ -1,0 +1,49 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore
+[init]
+	defaultBranch = main
+[user]
+	name = Steven Chiacchira
+	email = schiacchira@Gmail.com
+[alias]
+	last = log -1 HEAD
+	main = checkout main
+[color]
+	ui = auto
+[advice]
+	statusHints = false
+	pushUpdateRejected = false
+	pushNonFFCurrent = false
+	pushNonFFMatching = false
+	pushAlreadyExists = false
+	pushFetchFirst = false
+	pushNeedsForce = false
+	statusHints = false
+	statusUoption = false
+	commitBeforeMerge = false
+	resolveConflict = false
+	implicitIdentity = false
+	detachedHead = false
+	amWorkDir = false
+	rmHints = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+	helper = store
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
+[http]
+	postBuffer = 524288000
+	sslVerify = false

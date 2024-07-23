@@ -1,0 +1,7 @@
+# globally ignored files in Git
+*.code-workspace
+.vscode
+.conda
+.legacy
+NOTES.md
+TODO.md
