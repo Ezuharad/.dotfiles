@@ -7,7 +7,7 @@ These dotfiles were configured to be used with a GNU Linux distribution, in my c
 - [Git Version Control](https://git-scm.com/)
 - [GNU Stow](https://www.gnu.org/software/stow/)
 
-**optional**
+#### Optional
 - [Bat](https://github.com/sharkdp/bat)
 - [GNU Make](https://www.gnu.org/software/make/)
 
@@ -26,7 +26,7 @@ Run:
 ### Requirements
 - [WezTerm](https://wezfurlong.org/wezterm/index.html)
 
-**optional**
+#### Optional
 - [Jetbrains Patched Nerdfonts](https://github.com/ryanoasis/nerd-fonts)
 
 ## Zsh
@@ -56,7 +56,11 @@ Open a tmux prompt and press `C-s` then `I`.
     - [gcc](https://gcc.gnu.org/)
     - [zig](https://ziglang.org/)
 
-**optional**
+#### Optional
+For images:
+- [imagemagick](https://imagemagick.org/)
+- The [magic](https://github.com/leafo/magick) rock installable through [luarocks](https://luarocks.org/)
+
 For python:
 - [pynvim](https://github.com/neovim/pynvim)
 - The pyright LSP requires nodejs, which is installable through [nvm](https://github.com/nvm-sh/nvm)
@@ -64,6 +68,10 @@ For python:
 ### Installation
 Run:
 > nvim --headless "+Lazy! sync" +qa
+
+#### Optional
+For images, run:
+> luarocks install magick
 
 ## Yazi
 ### Requirements
