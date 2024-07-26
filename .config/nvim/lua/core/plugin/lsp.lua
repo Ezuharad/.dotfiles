@@ -25,7 +25,7 @@ return {
           require("lspconfig")[server_name].setup({
             handlers = require(
               "core.plugin.lsp.handler"),
-              settings = require("core.plugin.lsp.settings")
+            settings = require("core.plugin.lsp.settings")
           })
         end,
       })
