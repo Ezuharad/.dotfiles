@@ -1,0 +1,6 @@
+channels:
+  - conda-forge
+solver: libmamba
+pkgs_dirs:
+  - ~/.conda/pkgs
+pip_interop_enabled: true
