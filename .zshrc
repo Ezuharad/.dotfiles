@@ -36,20 +36,19 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-if [ -f "/opt/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/opt/mambaforge/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
-[ -f /opt/mambaforge/etc/profile.d/conda.sh ] && source /opt/mambaforge/etc/profile.d/conda.sh
-
 # set R local package installation location
 export R_LIBS_USER=~/.rpackages
 
+source ~/.zshinit/conda.zsh
 # set haskell executable path
-export PATH="$PATH:/home/ezuharad/.ghcup/bin"
+if [ -f ~/.ghcup/bin ]; then
+  export PATH="$PATH:/home/ezuharad/.ghcup/bin"
+fi
 
 # set local executable path
-export PATH="$PATH:/home/ezuharad/.local/bin"
+if [ -f ~/.local/bin ]; then
+  export PATH="$PATH:/home/ezuharad/.local/bin"
+fi
 
 # set XLA flags
 export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
