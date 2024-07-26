@@ -18,8 +18,11 @@ for python:
 ### Installation
 Run:
 > cd ~
+> 
 > git clone https://github.com/Ezuharad/dotfiles.git .dotfiles
+>
 > cd .dotfiles
+>
 > stow .
 
 ## WezTerm
