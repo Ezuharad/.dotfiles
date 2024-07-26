@@ -1,3 +1,7 @@
+if [ -z "$TMUX" ]; then
+  exec tmux new-session -A -s tmux
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -50,12 +54,7 @@ export PATH="$PATH:/home/ezuharad/.local/bin"
 # set XLA flags
 export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
 
-source ~/.script/fzf.zsh
-source ~/.script/alias.zsh
-source ~/.script/update-all.zsh
-
-if [ -z "$TMUX" ]
-then
-    tmux attach -t TMUX || tmux new -s TMUX
-fi
+source ~/.zshinit/fzf.zsh
+source ~/.zshinit/alias.zsh
+source ~/.zshinit/update-all.zsh
 
