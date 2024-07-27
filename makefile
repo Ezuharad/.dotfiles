@@ -5,7 +5,7 @@ ZSH_SUBMODULE_PREFIX=zsh/.zshinit/plugin/
 
 
 $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm/tpm:
-	git submodule init $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmp
+	git submodule init $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm
 
 $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux/nord.tmux:
 	git submodule init $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux
