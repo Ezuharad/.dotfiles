@@ -1,7 +1,11 @@
 .git
+.gitmodules
+!.gitignore
 .stow-local-ignore
-makefile
+
 README.md
 LICENSE.md
-!.gitignore
+
+makefile
+tool/
 

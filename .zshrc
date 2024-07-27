@@ -23,7 +23,7 @@ compinit
 # End of lines added by compinstall
 
 # syntax highlighting
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/.zshinit/plugin/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Autocompletion menu
 zstyle ':completion:*' menu select
@@ -31,7 +31,7 @@ zstyle ':completion:*' menu select
 # powerline-daemon -q
 # . /usr/share/powerline/bindings/zsh/powerline.zsh
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/.zshinit/plugin/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
