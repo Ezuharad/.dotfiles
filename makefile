@@ -5,16 +5,16 @@ ZSH_SUBMODULE_PREFIX=zsh/.zshinit/plugin/
 
 
 $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm/tpm:
-	git submodule init tpm
+	git submodule init $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmp
 
 $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux/nord.tmux:
-	git submodule init tmux-nord
+	git submodule init $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux
 
 $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme:
-	git submodule init powerlevel10k
+	git submodule init $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k
 
 $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh:
-	git submodule init fast-syntax-highlighting
+	git submodule init $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting
 
 include .tool/makefile.$(shell . .tool/script/which-os.sh)
 
