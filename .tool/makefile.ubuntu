@@ -1,12 +1,15 @@
 # Ubuntu Linux specific recipes
 BINDIR=/usr/bin/
 
+$(BINDIR)fzf:
+	sudo apt install -y fzf
+
 $(BINDIR)tmux:
-	sudo apt install tmux
+	sudo apt install -y tmux
 
 $(BINDIR)stow:
-	sudo apt install stow
+	sudo apt install -y stow
 
 $(BINDIR)zsh:
-	sudo apt install zsh
+	sudo apt install -y zsh
 

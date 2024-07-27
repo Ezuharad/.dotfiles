@@ -25,7 +25,7 @@ tmux: $(BINDIR)tmux $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm/tpm $(STOWDIR)$(TMUX_S
 	cd $(STOWDIR) && stow tmux
 	tmux source ~/.tmux.conf
 
-zsh: $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(BINDIR)stow
+zsh: $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(BINDIR)stow $(BINDIR)fzf
 	chsh -s $(shell which zsh)
 	cd $(STOWDIR) && stow zsh
 

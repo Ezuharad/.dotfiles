@@ -1,6 +1,9 @@
 # Arch Linux specfied recipes
 BINDIR=/usr/bin/
 
+$(BINDIR)fzf:
+	sudo pacman -S --noconfirm fzf
+
 $(BINDIR)stow:
 	sudo pacman -S --noconfirm stow
 
