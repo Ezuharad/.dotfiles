@@ -13,7 +13,9 @@ vim.opt.spell = false
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- enable termcolor
+-- terminal settings
+vim.g.terminal_emulator = 'wezterm'
+vim.opt.shell = 'zsh'
 vim.opt.termguicolors = true
 
 -- misc. options
