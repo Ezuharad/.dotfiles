@@ -1,9 +1,12 @@
-[submodule ".zshinit/plugin/powerlevel10k"]
-	path = .zshinit/plugin/powerlevel10k
+[submodule "powerlevel10k"]
+	path = zsh/.zshinit/plugin/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k
-[submodule ".zshinit/plugin/fast-syntax-highlighting"]
-	path = .zshinit/plugin/fast-syntax-highlighting
+[submodule "fast-syntax-highlighting"]
+	path = zsh/.zshinit/plugin/fast-syntax-highlighting
 	url = https://github.com/zdharma-continuum/fast-syntax-highlighting
-[submodule ".tmux/plugins/tpm"]
-	path = .tmux/plugins/tpm
+[submodule "tpm"]
+	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux-nord"]
+	path = tmux/.tmux/plugins/tmux
+	url = https://github.com/nordtheme/tmux
