@@ -7,5 +7,6 @@ README.md
 LICENSE.md
 
 makefile
-tool/
+init.sh
+tool
 
