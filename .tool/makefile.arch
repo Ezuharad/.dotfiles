@@ -1,0 +1,12 @@
+# Arch Linux specfied recipes
+BINDIR=/usr/bin/
+
+$(BINDIR)stow:
+	sudo pacman -S --noconfirm stow
+
+$(BINDIR)tmux:
+	sudo pacman -S --noconfirm tmux
+	
+$(BINDIR)zsh:
+	sudo pacman -S --noconfirm zsh
+

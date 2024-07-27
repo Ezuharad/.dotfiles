@@ -1,0 +1,12 @@
+# Ubuntu Linux specific recipes
+BINDIR=/usr/bin/
+
+$(BINDIR)tmux:
+	sudo apt install tmux
+
+$(BINDIR)stow:
+	sudo apt install stow
+
+$(BINDIR)zsh:
+	sudo apt install zsh
+
