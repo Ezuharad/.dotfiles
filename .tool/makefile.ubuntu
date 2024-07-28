@@ -9,7 +9,7 @@ $(BINDIR)curl:
 	sudo apt install -y curl
 
 $(BINDIR)fastfetch: $(BINDIR)add-apt-repository
-	sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+	sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
 	sudo apt update
 	sudo apt install -y fastfetch
 
@@ -23,7 +23,7 @@ $(BINDIR)htop:
 	sudo apt install -y htop
 
 $(BINDIR)nvim: $(BINDIR)add-apt-repository
-	sudo add-apt-repository ppa:neovim-ppa/unstable
+	sudo add-apt-repository -y ppa:neovim-ppa/unstable
 
 	sudo apt update
 	sudo apt install -y neovim

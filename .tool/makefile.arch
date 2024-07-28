@@ -3,6 +3,9 @@ BINDIR=/usr/bin/
 PYTHONDIR=/usr/lib/python3.12/site-packages/
 
 
+$(BINDIR)curl:
+	sudo pacman -S --noconfirm curl
+
 $(BINDIR)df:
 	sudo pacman -S --noconfirm fd
 
