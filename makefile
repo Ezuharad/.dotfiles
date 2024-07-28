@@ -1,4 +1,4 @@
-STOWDIR=$(CURDIR)
+STOWDIR=$(CURDIR)/
 
 TMUX_SUBMODULE_PREFIX=tmux/.tmux/plugins/
 ZSH_SUBMODULE_PREFIX=zsh/.zshinit/plugin/
