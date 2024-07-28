@@ -21,7 +21,7 @@ case $ID in
 esac
 
 cd
-git clone https://github.com/Ezuharad/.dotfiles.git
+git clone --depth=1 https://github.com/Ezuharad/.dotfiles.git
 cd .dotfiles
 
 make all

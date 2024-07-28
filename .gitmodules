@@ -10,3 +10,11 @@
 [submodule "tmux-nord"]
 	path = tmux/.tmux/plugins/tmux
 	url = https://github.com/nordtheme/tmux
+[submodule "tmux/.tmux/plugins/tmux"]
+	shallow = true
+[submodule "tmux/.tmux/plugins/tpm"]
+	shallow = true
+[submodule "zsh/.zshinit/plugin/fast-syntax-highlighting"]
+	shallow = true
+[submodule "zsh/.zshinit/plugin/powerlevel10k"]
+	shallow = true
