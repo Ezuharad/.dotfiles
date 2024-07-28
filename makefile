@@ -26,17 +26,21 @@ include .tool/makefile.$(shell . .tool/script/which-os.sh)
 .PHONY: all headless fastfetch git htop nvim tmux wezterm zsh
 
 all:
-	$(MAKE) fastfetch
 	$(MAKE) git
-	$(MAKE) htop
 	$(MAKE) zsh
 	$(MAKE) tmux
 	$(MAKE) nvim
 	$(MAKE) wezterm
+	$(MAKE) htop
+	$(MAKE) fastfetch
 
 headless:
+	$(MAKE) git
 	$(MAKE) zsh
 	$(MAKE) tmux
+	$(MAKE) nvim
+	$(MAKE) htop
+	$(MAKE) fastfetch
 
 fastfetch: $(BINDIR)fastfetch $(BINDIR)htop $(BINDIR)stow
 	@echo "Installing fastfech configuration"
