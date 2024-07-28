@@ -1,3 +1,4 @@
+#!/bin/bash
 if [[ -f /etc/os-release ]]; then
   . /etc/os-release
 else
@@ -5,7 +6,7 @@ else
   exit 1
 fi
 
-case $ID in 
+case $NAME in 
   arch)
     sudo pacman -Syu --noconfirm git make
     ;;
