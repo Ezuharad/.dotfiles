@@ -15,7 +15,7 @@ case $ID in
     sudo apt install -y git make
     ;;
   *)
-    echo "Found unsupported distro $ID"
+    echo "Found unsupported distro '$ID'"
     exit 1
     ;;
 esac
