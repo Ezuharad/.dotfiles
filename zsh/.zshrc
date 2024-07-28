@@ -37,14 +37,17 @@ source ~/.zshinit/plugin/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# set R local package installation location
-[[ ! -f ~/.rpackages ]] || export R_LIBS_USER=~/.rpackages
+# set rust executable path
+[[ ! -f ~/.cargo/bin ]] || export PATH="$PATH:$HOME/.cargo/bin"
 
 # set haskell executable path
-[[ ! -f ~/.ghcup/bin ]] || export PATH="$PATH:~/.ghcup/bin"
+[[ ! -f ~/.ghcup/bin ]] || export PATH="$PATH:$HOME/ghcup/bin"
 
 # set local executable path
-[[ ! -f ~/.local/bin ]] || export PATH="$PATH:~/.local/bin"
+[[ ! -f ~/.local/bin ]] || export PATH="$PATH:$HOME/local/bin"
+
+# set R local package installation location
+[[ ! -f ~/.rpackages ]] || export R_LIBS_USER=~/.rpackages
 
 # set XLA flags
 export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
@@ -52,5 +55,8 @@ export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
 source ~/.zshinit/conda.zsh
 source ~/.zshinit/fzf.zsh
 source ~/.zshinit/alias.zsh
-source ~/.zshinit/update-all.zsh
+
+# source custom functions
+FPATH=~/.zshinit/function:$FPATH
+autoload -Uz update-all
 
