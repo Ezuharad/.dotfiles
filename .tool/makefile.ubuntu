@@ -28,9 +28,6 @@ $(BINDIR)git-lfs:
 $(BINDIR)htop:
 	sudo apt install -y htop
 
-$(BINDIR)lazygit: $(BINDIR)snap
-	sudo snap install -y lazygit-gm
-
 $(BINDIR)luajit:
 	sudo apt install -y luajit
 
@@ -48,6 +45,9 @@ $(BINDIR)nvim: $(BINDIR)add-apt-repository
 
 	sudo apt update
 	sudo apt install -y neovim
+
+$(BINDIR)tar:
+	sudo apt install -y tar
 
 $(BINDIR)tmux:
 	sudo apt install -y tmux
