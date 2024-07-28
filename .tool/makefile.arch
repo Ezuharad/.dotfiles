@@ -1,4 +1,4 @@
-# Arch Linux specfied recipes
+# Arch Linux package installations
 BINDIR=/usr/bin/
 PYTHONDIR=/usr/lib/python3.12/site-packages/
 
