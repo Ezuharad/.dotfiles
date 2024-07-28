@@ -1,4 +1,4 @@
-# Ubuntu Linux specific recipes
+# Ubuntu Linux package installations
 BINDIR=/usr/bin/
 PYTHONDIR=/usr/lib/python3/dist-packages/
 
@@ -28,7 +28,7 @@ $(BINDIR)git-lfs:
 $(BINDIR)htop:
 	sudo apt install -y htop
 
-$(BINDIR)lazygit:
+$(BINDIR)lazygit: $(BINDIR)snap
 	sudo snap install -y lazygit-gm
 
 $(BINDIR)luajit:
@@ -51,6 +51,9 @@ $(BINDIR)nvim: $(BINDIR)add-apt-repository
 
 $(BINDIR)tmux:
 	sudo apt install -y tmux
+
+$(BINDIR)snap:
+	sudo apt install -y snapd
 
 $(BINDIR)stow:
 	sudo apt install -y stow
