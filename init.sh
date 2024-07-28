@@ -6,11 +6,11 @@ else
   exit 1
 fi
 
-case "$ID" in 
-  "arch" )
+case $ID in 
+  arch )
     sudo pacman -Syu --noconfirm git make
     ;;
-  "ubuntu" )
+  ubuntu )
     sudo apt update
     sudo apt install -y git make
     ;;
