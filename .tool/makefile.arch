@@ -1,5 +1,7 @@
 # Arch Linux specfied recipes
 BINDIR=/usr/bin/
+PYTHONDIR=/usr/lib/python3.12/site-packages/
+
 
 $(BINDIR)df:
 	sudo pacman -S --noconfirm fd
@@ -30,4 +32,7 @@ $(BINDIR)wezterm:
 
 $(BINDIR)zsh:
 	sudo pacman -S --noconfirm zsh
+
+$(PYTHONDIR)pynvim:
+	sudo pacman -S --noconfirm python-pynvim
 

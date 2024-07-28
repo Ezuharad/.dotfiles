@@ -1,5 +1,10 @@
 # Ubuntu Linux specific recipes
 BINDIR=/usr/bin/
+PYTHONDIR=/usr/lib/python3/dist-packages/
+
+
+$(BINDIR)curl:
+	sudo apt install -y curl
 
 $(BINDIR)fzf:
 	sudo apt install -y fzf
@@ -28,4 +33,7 @@ $(BINDIR)wezterm:
 
 $(BINDIR)zsh:
 	sudo apt install -y zsh
+
+$(PYTHONDIR)pynvim:
+	sudo apt install -y python3-pynvim
 
