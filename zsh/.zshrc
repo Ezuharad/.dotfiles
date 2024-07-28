@@ -1,3 +1,4 @@
+# Automatically start tmux
 if [ -z "$TMUX" ]; then
   exec tmux new-session -A -s tmux
 fi
@@ -16,7 +17,7 @@ SAVEHIST=10
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/ezuharad/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -37,22 +38,18 @@ source ~/.zshinit/plugin/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # set R local package installation location
-export R_LIBS_USER=~/.rpackages
+[[ ! -f ~/.rpackages ]] || export R_LIBS_USER=~/.rpackages
 
-source ~/.zshinit/conda.zsh
 # set haskell executable path
-if [ -f ~/.ghcup/bin ]; then
-  export PATH="$PATH:/home/ezuharad/.ghcup/bin"
-fi
+[[ ! -f ~/.ghcup/bin ]] || export PATH="$PATH:~/.ghcup/bin"
 
 # set local executable path
-if [ -f ~/.local/bin ]; then
-  export PATH="$PATH:/home/ezuharad/.local/bin"
-fi
+[[ ! -f ~/.local/bin ]] || export PATH="$PATH:~/.local/bin"
 
 # set XLA flags
 export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
 
+source ~/.zshinit/conda.zsh
 source ~/.zshinit/fzf.zsh
 source ~/.zshinit/alias.zsh
 source ~/.zshinit/update-all.zsh
