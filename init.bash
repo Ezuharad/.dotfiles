@@ -7,10 +7,10 @@ else
 fi
 
 case $NAME in 
-  arch)
+  arch )
     sudo pacman -Syu --noconfirm git make
     ;;
-  ubuntu)
+  ubuntu )
     sudo apt update
     sudo apt install -y git make
     ;;
