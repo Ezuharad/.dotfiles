@@ -6,11 +6,19 @@ PYTHONDIR=/usr/lib/python3/dist-packages/
 $(BINDIR)curl:
 	sudo apt install -y curl
 
+$(BINDIR)fastfetch:
+	sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+	sudo apt update
+	sudo apt install -y fastfetch
+
 $(BINDIR)fzf:
 	sudo apt install -y fzf
 
 $(BINDIR)git-lfs:
 	sudo apt install -y git-lfs
+
+$(BINDIR)htop:
+	sudo apt install -y htop
 
 $(BINDIR)nvim:
 	sudo add-apt-repository ppa:neovim-ppa/unstable
