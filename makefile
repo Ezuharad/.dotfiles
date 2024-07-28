@@ -12,7 +12,7 @@ $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux/nord.tmux:
 	git submodule init $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux
 	git submodule update $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux
 
-$(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme: $(BINDIR)curl
+$(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme:
 	git submodule init $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k
 	git submodule update $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k
 
@@ -59,7 +59,7 @@ wezterm: $(BINDIR)stow $(BINDIR)wezterm
 	
 	cd $(STOWDIR) && stow wezterm --target ~/
 
-zsh: $(BINDIR)fzf $(BINDIR)stow $(BINDIR)tmux $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme 
+zsh: $(BINDIR)curl $(BINDIR)fzf $(BINDIR)stow $(BINDIR)tmux $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme 
 	@echo "Installing zsh configuration"
 
 	chsh -s $(shell which zsh)
