@@ -11,7 +11,6 @@ case $ID in
     sudo pacman -Syu --noconfirm git make
     ;;
   ubuntu )
-    sudo apt update
     sudo apt install -y git make
     ;;
   *)
