@@ -6,16 +6,16 @@ else
   exit 1
 fi
 
-case "$NAME" in 
+case "$ID" in 
   "arch" )
     sudo pacman -Syu --noconfirm git make
     ;;
-  "ubuntu" )
+  "Ubuntu" )
     sudo apt update
     sudo apt install -y git make
     ;;
   *)
-    echo "Found unsupported distro $NAME"
+    echo "Found unsupported distro $ID"
     exit 1
     ;;
 esac
