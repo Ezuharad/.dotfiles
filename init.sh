@@ -10,7 +10,7 @@ case "$ID" in
   "arch" )
     sudo pacman -Syu --noconfirm git make
     ;;
-  "Ubuntu" )
+  "ubuntu" )
     sudo apt update
     sudo apt install -y git make
     ;;
