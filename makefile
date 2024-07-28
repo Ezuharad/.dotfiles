@@ -48,7 +48,7 @@ git: $(BINDIR)stow $(BINDIR)git-lfs
 
 	cd $(STOWDIR) && stow git --target ~/
 
-htop: $(BINDIR)htop $(BINDIR) stow
+htop: $(BINDIR)htop $(BINDIR) $(BINDIR)stow
 	@echo "Installing htop configuration"
 
 	cd $(STOWDIR) && stow htop --target ~/
