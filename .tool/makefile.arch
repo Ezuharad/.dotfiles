@@ -3,14 +3,17 @@ BINDIR=/usr/bin/
 PYTHONDIR=/usr/lib/python3.12/site-packages/
 
 
+$(BINDIR)clang:
+	sudo pacman -S --noconfirm clang
+
 $(BINDIR)curl:
 	sudo pacman -S --noconfirm curl
 
-$(BINDIR)df:
-	sudo pacman -S --noconfirm fd
-
 $(BINDIR)fastfetch:
 	sudo pacman -S --noconfirm fastfetch
+
+$(BINDIR)fd:
+	sudo pacman -S --noconfirm fd
 
 $(BINDIR)fzf:
 	sudo pacman -S --noconfirm fzf
@@ -20,6 +23,19 @@ $(BINDIR)git-lfs:
 
 $(BINDIR)htop:
 	sudo pacman -S --noconfirm htop
+
+$(BINDIR)lazygit:
+	sudo pacman -S --noconfirm lazygit
+
+$(BINDIR)luarocks:
+	sudo pacman -S --noconfirm luarocks
+
+$(BINDIR)luajit: $(BINDIR)paru
+	paru -S --noconfirm luajit
+
+# TODO: may need to look at noconfirm for paru
+$(BINDIR)paru:
+	sudo pacman -S --noconfirm paru
 
 $(BINDIR)rg:
 	sudo pacman -S --noconfirm ripgrep

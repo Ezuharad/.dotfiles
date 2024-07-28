@@ -23,28 +23,34 @@ $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighti
 include .tool/makefile.$(shell . .tool/script/which-os.sh)
 
 
-.PHONY: all extra git tmux wezterm zsh
+.PHONY: all fastfetch git htop tmux wezterm zsh
 
 all:
 	$(MAKE) git
 	$(MAKE) zsh
 	$(MAKE) tmux
 	$(MAKE) wezterm
-	$(MAKE) extra
 
-extra: $(BINDIR)fastfetch $(BINDIR)htop $(BINDIR)stow
-	@echo "Installing extras"
+fastfetch: $(BINDIR)fastfetch $(BINDIR)htop $(BINDIR)stow
+	@echo "Installing fastfech configuration"
 	
 	cd $(STOWDIR) && stow fastfetch --target ~/
-	cd $(STOWDIR) && stow htop --target ~/
 
 git: $(BINDIR)stow $(BINDIR)git-lfs
 	@echo "Installing git configuration"
 
 	cd $(STOWDIR) && stow git --target ~/
 
-nvim: $(BINDIR)nvim $(BINDIR)stow $(PYTHONDIR)pynvim
+htop: $(BINDIR)htop $(BINDIR) stow
+	@echo "Installing htop configuration"
+
+	cd $(STOWDIR) && stow htop --target ~/
+
+nvim: $(BINDIR)clang $(BINDIR)lazygit $(BINDIR)luajit $(BINDIR)luarocks $(BINDIR)magick $(BINDIR)nvim $(BINDIR)stow $(PYTHONDIR)pynvim
 	@echo "Installing nvim configuration"
+
+	# magick bindings for 3rd/image.nvim
+	luarocks install --local magick
 
 	cd $(STOWDIR) && stow nvim --target ~/
 	nvim --headless "+Lazy! sync" +qa
@@ -59,7 +65,7 @@ wezterm: $(BINDIR)stow $(BINDIR)wezterm
 	
 	cd $(STOWDIR) && stow wezterm --target ~/
 
-zsh: $(BINDIR)curl $(BINDIR)fzf $(BINDIR)stow $(BINDIR)tmux $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme 
+zsh: $(BINDIR)curl $(BINDIR)fzf $(BINDIR)stow $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme 
 	@echo "Installing zsh configuration"
 
 	chsh -s $(shell which zsh)

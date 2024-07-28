@@ -5,6 +5,9 @@ PYTHONDIR=/usr/lib/python3/dist-packages/
 $(BINDIR)add-apt-repository:
 	sudo apt install -y software-properties-common
 
+$(BINDIR)clang:
+	sudo apt install -y clang
+
 $(BINDIR)curl:
 	sudo apt install -y curl
 
@@ -12,6 +15,9 @@ $(BINDIR)fastfetch: $(BINDIR)add-apt-repository
 	sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
 	sudo apt update
 	sudo apt install -y fastfetch
+
+$(BINDIR)fd:
+	sudo apt install -y fd-find
 
 $(BINDIR)fzf:
 	sudo apt install -y fzf
@@ -21,6 +27,21 @@ $(BINDIR)git-lfs:
 
 $(BINDIR)htop:
 	sudo apt install -y htop
+
+$(BINDIR)lazygit:
+	sudo snap install -y lazygit-gm
+
+$(BINDIR)luajit:
+	sudo apt install -y luajit
+
+$(BINDIR)luarocks:
+	sudo apt install -y luarocks
+
+$(BINDIR)magick:
+	sudo apt install -y libmagickwand-dev
+	
+$(BINDIR)rg:
+	sudo apt install -y ripgrep
 
 $(BINDIR)nvim: $(BINDIR)add-apt-repository
 	sudo add-apt-repository -y ppa:neovim-ppa/unstable

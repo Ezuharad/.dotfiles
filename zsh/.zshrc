@@ -1,5 +1,5 @@
 # Automatically start tmux
-if [ -z "$TMUX" ]; then
+if [[ -z "$TMUX" && -f /usr/bin/tmux ]]; then
   exec tmux new-session -A -s tmux
 fi
 
