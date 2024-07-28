@@ -26,7 +26,7 @@ include .tool/makefile.$(shell . .tool/script/which-os.sh)
 
 $(BINDIR)cargo: $(BINDIR)curl
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-	. "$HOME/.cargo/env
+	. "$HOME/.cargo/env"
 	rustup update
 
 $(BINDIR)yazi: $(BINDIR)cargo
