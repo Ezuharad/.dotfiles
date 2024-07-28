@@ -53,7 +53,7 @@ wezterm: $(BINDIR)wezterm
 	
 	cd $(STOWDIR) && stow wezterm --target ~/
 
-zsh: $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(BINDIR)stow $(BINDIR)fzf
+zsh: $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(BINDIR)stow $(BINDIR)fzf $(BINDIR)tmux
 	@echo "Installing zsh configuration"
 
 	chsh -s $(shell which zsh)
