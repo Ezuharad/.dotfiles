@@ -12,7 +12,7 @@ $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux/nord.tmux:
 	git submodule init $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux
 	git submodule update $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux
 
-$(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme:
+$(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme: $(BINDIR)curl
 	git submodule init $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k
 	git submodule update $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k
 
