@@ -20,16 +20,26 @@ $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighti
 	git submodule init $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting
 	git submodule update $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting
 
+
 include .tool/makefile.$(shell . .tool/script/which-os.sh)
 
 
-.PHONY: all headless fastfetch git htop nvim tmux wezterm zsh
+$(BINDIR)cargo: $(BINDIR)curl
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+	rustup update
+
+$(BINDIR)yazi: $(BINDIR)cargo
+	cargo install --locked yazi-fm yazi-cli
+
+
+.PHONY: all headless fastfetch git htop nvim tmux wezterm yazi zsh
 
 all:
 	$(MAKE) git
 	$(MAKE) zsh
 	$(MAKE) tmux
 	$(MAKE) nvim
+	$(MAKE) yazi
 	$(MAKE) wezterm
 	$(MAKE) htop
 	$(MAKE) fastfetch
@@ -39,6 +49,7 @@ headless:
 	$(MAKE) zsh
 	$(MAKE) tmux
 	$(MAKE) nvim
+	$(MAKE) yazi
 	$(MAKE) htop
 	$(MAKE) fastfetch
 
@@ -75,6 +86,11 @@ wezterm: $(BINDIR)stow $(BINDIR)wezterm
 	@echo "Installing wezterm configuration"
 	
 	cd $(STOWDIR) && stow wezterm --target ~/
+
+yazi: $(BINDIR)stow $(BINDIR)yazi
+	@echo "Installing yazi configuration"
+
+	cd $(STOWDIR) && stow yazi --target ~/
 
 zsh: $(BINDIR)curl $(BINDIR)fzf $(BINDIR)stow $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme 
 	@echo "Installing zsh configuration"
