@@ -5,6 +5,9 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 
+-- set clipboard to OS clipboard
+vim.o.clipboard = "unnamedplus"
+
 -- language settings
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = false
