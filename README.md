@@ -3,6 +3,6 @@ These dotfiles were configured to be used with a GNU Linux distribution, in my c
 
 # Bootstrapping the Repo
 ```
-curl https://raw.githubusercontent.com/Ezuharad/.dotfiles/main/init.bash | bash
+curl https://raw.githubusercontent.com/Ezuharad/.dotfiles/main/init.sh | bash
 ```
 
