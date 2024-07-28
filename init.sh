@@ -17,6 +17,7 @@ case $NAME in
   *)
     echo "Found unsupported distro $ID"
     exit 1
+    ;;
 esac
 
 cd
