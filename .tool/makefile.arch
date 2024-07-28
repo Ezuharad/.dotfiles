@@ -1,15 +1,33 @@
 # Arch Linux specfied recipes
 BINDIR=/usr/bin/
 
+$(BINDIR)df:
+	sudo pacman -S --noconfirm fd
+
+$(BINDIR)fastfetch:
+	sudo pacman -S --noconfirm fastfetch
+
 $(BINDIR)fzf:
 	sudo pacman -S --noconfirm fzf
+
+$(BINDIR)git-lfs:
+	sudo pacman -S --noconfirm git-lfs
+
+$(BINDIR)htop:
+	sudo pacman -S --noconfirm htop
+
+$(BINDIR)rg:
+	sudo pacman -S --noconfirm ripgrep
 
 $(BINDIR)stow:
 	sudo pacman -S --noconfirm stow
 
 $(BINDIR)tmux:
 	sudo pacman -S --noconfirm tmux
-	
+
+$(BINDIR)wezterm:
+	sudo pacman -S --noconfirm wezterm
+
 $(BINDIR)zsh:
 	sudo pacman -S --noconfirm zsh
 
