@@ -23,13 +23,20 @@ $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighti
 include .tool/makefile.$(shell . .tool/script/which-os.sh)
 
 
-.PHONY: all fastfetch git htop tmux wezterm zsh
+.PHONY: all headless fastfetch git htop nvim tmux wezterm zsh
 
 all:
+	$(MAKE) fastfetch
 	$(MAKE) git
+	$(MAKE) htop
 	$(MAKE) zsh
 	$(MAKE) tmux
+	$(MAKE) nvim
 	$(MAKE) wezterm
+
+headless:
+	$(MAKE) zsh
+	$(MAKE) tmux
 
 fastfetch: $(BINDIR)fastfetch $(BINDIR)htop $(BINDIR)stow
 	@echo "Installing fastfech configuration"
@@ -46,7 +53,7 @@ htop: $(BINDIR)htop $(BINDIR) stow
 
 	cd $(STOWDIR) && stow htop --target ~/
 
-nvim: $(BINDIR)clang $(BINDIR)lazygit $(BINDIR)luajit $(BINDIR)luarocks $(BINDIR)magick $(BINDIR)nvim $(BINDIR)stow $(PYTHONDIR)pynvim
+nvim: $(BINDIR)clang $(BINDIR)luajit $(BINDIR)luarocks $(BINDIR)magick $(BINDIR)nvim $(BINDIR)stow $(PYTHONDIR)pynvim
 	@echo "Installing nvim configuration"
 
 	# magick bindings for 3rd/image.nvim
