@@ -3,8 +3,9 @@ STOWDIR=$(CURDIR)/
 include .build/makefile/distro/makefile.$(shell . .tool/script/which-os.sh)
 include .build/makefile/makefile.plugin
 include .build/makefile/makefile.rust
+include .build/makefile/makefile.python
 
-.PHONY: all headless extra bat fastfetch git htop nvim tmux wezterm yazi zsh
+.PHONY: all headless extra bat conda fastfetch git htop nvim tmux wezterm yazi zsh
 
 all:
 	$(MAKE) headless
@@ -20,10 +21,16 @@ headless:
 
 extra:
 	$(MAKE) bat
+	$(MAKE) conda
 	$(MAKE) htop
 	$(MAKE) fastfetch
 
 bat: $(CARGOBINDIR)bat
+
+conda: $(BINDIR)stow $(CONDABINDIR)conda
+	@echo "Installing conda configuration"
+
+	cd $(STOWDIR) && stow conda -- target ~/
 
 fastfetch: $(BINDIR)fastfetch $(BINDIR)htop $(BINDIR)stow
 	@echo "Installing fastfech configuration"

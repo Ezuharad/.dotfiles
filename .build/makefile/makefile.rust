@@ -1,5 +1,5 @@
 # Cargo packages
-CARGOBINDIR=.cargo/bin
+CARGOBINDIR=$(HOME)/.cargo/bin
 
 
 $(CARGOBINDIR)bat: $(CARGOBINDIR)cargo
@@ -7,7 +7,7 @@ $(CARGOBINDIR)bat: $(CARGOBINDIR)cargo
 
 $(CARGOBINDIR)cargo: $(BINDIR)curl
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-	. ~/.cargo/env
+	. $(HOME)/.cargo/env
 	rustup update
 
 $(CARGOBINDIR)fd: $(CARGOBINDIR)cargo $(BINDIR)cc
