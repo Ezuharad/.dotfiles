@@ -4,5 +4,5 @@ CONDABINDIR=$(CONDADIR)bin/
 
 $(CONDABINDIR)conda: $(BINDIR)curl
 	mkdir $(CONDADIR)
-	curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh | xargs bash -b -u -p $(CONDADIR)
+	curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh | bash -b -u -p $(CONDADIR)
 
