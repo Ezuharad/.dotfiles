@@ -1,4 +1,4 @@
-# conda iniitialization
+# conda initialization
 if [ -f "/opt/mambaforge/etc/profile.d/mamba.sh" ]; then
     . "/opt/mambaforge/etc/profile.d/mamba.sh"
 fi

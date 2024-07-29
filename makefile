@@ -3,6 +3,8 @@ STOWDIR=$(CURDIR)/
 TMUX_SUBMODULE_PREFIX=tmux/.tmux/plugins/
 ZSH_SUBMODULE_PREFIX=zsh/.zshinit/plugin/
 
+CARGOBINDIR=.cargo/bin
+
 
 $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm/tpm:
 	git submodule init $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm
@@ -24,26 +26,24 @@ $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighti
 include .tool/makefile.$(shell . .tool/script/which-os.sh)
 
 
-$(BINDIR)cargo: $(BINDIR)curl
+$(CARGOBINDIR)bat: $(CARGOBINDIR)cargo:
+	cargo install --locked bat
+
+$(CARGOBINDIR)cargo: $(BINDIR)curl
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 	. ~/.cargo/env
 	rustup update
 
-$(BINDIR)yazi: $(BINDIR)cargo
+$(CARGOBINDIR)yazi: $(CARGOBINDIR)cargo
 	cargo install --locked yazi-fm yazi-cli
 
 
-.PHONY: all headless fastfetch git htop nvim tmux wezterm yazi zsh
+.PHONY: all headless extra bat fastfetch git htop nvim tmux wezterm yazi zsh
 
 all:
-	$(MAKE) git
-	$(MAKE) zsh
-	$(MAKE) tmux
-	$(MAKE) nvim
-	$(MAKE) yazi
+	$(MAKE) headless
+	$(MAKE) extra
 	$(MAKE) wezterm
-	$(MAKE) htop
-	$(MAKE) fastfetch
 
 headless:
 	$(MAKE) git
@@ -51,9 +51,14 @@ headless:
 	$(MAKE) tmux
 	$(MAKE) nvim
 	$(MAKE) yazi
+
+extra:
+	$(MAKE) bat
 	$(MAKE) htop
 	$(MAKE) fastfetch
 
+bat: $(BINDIR)bat
+	
 fastfetch: $(BINDIR)fastfetch $(BINDIR)htop $(BINDIR)stow
 	@echo "Installing fastfech configuration"
 	
