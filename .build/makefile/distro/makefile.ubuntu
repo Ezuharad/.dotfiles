@@ -65,6 +65,9 @@ $(BINDIR)wezterm:
 
 	sudo apt install -y wezterm
 
+$(BINDIR)wget:
+	sudo apt install -y wget
+
 $(BINDIR)zsh:
 	sudo apt install -y zsh
 

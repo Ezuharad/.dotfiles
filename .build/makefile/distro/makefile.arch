@@ -51,6 +51,9 @@ $(BINDIR)tmux:
 $(BINDIR)wezterm:
 	sudo pacman -S --noconfirm wezterm
 
+$(BINDIR)wget:
+	sudo pacman -S --noconfirm wget
+
 $(BINDIR)zsh:
 	sudo pacman -S --noconfirm zsh
 

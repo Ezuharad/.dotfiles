@@ -12,6 +12,7 @@ case $ID in
     ;;
   ubuntu )
     sudo apt update -y
+    sudo add-apt-repository -y universe
     sudo apt install -y git make
     ;;
   *)

@@ -1,8 +1,8 @@
 STOWDIR=$(CURDIR)/
 
-include .tool/makefile/distro/makefile.$(shell . .tool/script/which-os.sh)
-include .tool/makefile/makefile.plugin
-include .tool/makefile/makefile.rust
+include .build/makefile/distro/makefile.$(shell . .tool/script/which-os.sh)
+include .build/makefile/makefile.plugin
+include .build/makefile/makefile.rust
 
 .PHONY: all headless extra bat fastfetch git htop nvim tmux wezterm yazi zsh
 
