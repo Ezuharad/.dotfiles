@@ -2,6 +2,8 @@
 BINDIR=/usr/bin/
 PYTHONDIR=/usr/lib/python3.12/site-packages/
 
+$(BINDIR)cc:
+	sudo pacman -S --noconfirm gcc
 
 $(BINDIR)clang:
 	sudo pacman -S --noconfirm clang

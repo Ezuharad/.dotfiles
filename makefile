@@ -40,7 +40,7 @@ htop: $(BINDIR)htop $(BINDIR) $(BINDIR)stow
 
 	cd $(STOWDIR) && stow htop --target ~/
 
-nvim: $(BINDIR)clang $(BINDIR)luajit $(BINDIR)luarocks $(BINDIR)magick $(BINDIR)nvim $(BINDIR)stow $(PYTHONDIR)pynvim
+nvim: $(BINDIR)cc $(BINDIR)luajit $(BINDIR)luarocks $(BINDIR)magick $(BINDIR)nvim $(BINDIR)stow $(PYTHONDIR)pynvim
 	@echo "Installing nvim configuration"
 
 	# magick bindings for 3rd/image.nvim

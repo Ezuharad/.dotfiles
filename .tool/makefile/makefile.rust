@@ -10,14 +10,14 @@ $(CARGOBINDIR)cargo: $(BINDIR)curl
 	. ~/.cargo/env
 	rustup update
 
-$(CARGOBINDIR)fd: $(CARGOBINDIR)cargo
-	cargo install fd-find  # missing cc in upstream
+$(CARGOBINDIR)fd: $(CARGOBINDIR)cargo $(BINDIR)cc
+	cargo install --locked fd-find
 
 $(CARGOBINDIR)fzf: $(CARGOBINDIR)cargo
 	cargo install --locked fzf
 
 $(CARGOBINDIR)rg: $(CARGOBINDIR)cargo
-	cargo install --locked rg
+	cargo install --locked ripgrep
 
 $(CARGOBINDIR)yazi: $(CARGOBINDIR)cargo
 	cargo install --locked yazi-fm yazi-cli

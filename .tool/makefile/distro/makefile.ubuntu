@@ -5,6 +5,9 @@ PYTHONDIR=/usr/lib/python3/dist-packages/
 $(BINDIR)add-apt-repository:
 	sudo apt install -y software-properties-common
 
+$(BINDIR)cc:
+	sudo apt install -y build-essential
+
 $(BINDIR)clang:
 	sudo apt install -y clang
 
