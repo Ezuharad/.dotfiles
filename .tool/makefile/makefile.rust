@@ -11,7 +11,7 @@ $(CARGOBINDIR)cargo: $(BINDIR)curl
 	rustup update
 
 $(CARGOBINDIR)fd: $(CARGOBINDIR)cargo
-	cargo install --locked fd-find
+	cargo install fd-find  # missing cc in upstream
 
 $(CARGOBINDIR)fzf: $(CARGOBINDIR)cargo
 	cargo install --locked fzf
