@@ -30,7 +30,7 @@ bat: $(CARGOBINDIR)bat
 conda: $(BINDIR)stow $(CONDABINDIR)conda
 	@echo "Installing conda configuration"
 
-	cd $(STOWDIR) && stow conda -- target ~/
+	cd $(STOWDIR) && stow conda --target ~/
 
 fastfetch: $(BINDIR)fastfetch $(BINDIR)htop $(BINDIR)stow
 	@echo "Installing fastfech configuration"
