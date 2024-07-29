@@ -26,7 +26,7 @@ $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighti
 include .tool/makefile.$(shell . .tool/script/which-os.sh)
 
 
-$(CARGOBINDIR)bat: $(CARGOBINDIR)cargo:
+$(CARGOBINDIR)bat: $(CARGOBINDIR)cargo
 	cargo install --locked bat
 
 $(CARGOBINDIR)cargo: $(BINDIR)curl
