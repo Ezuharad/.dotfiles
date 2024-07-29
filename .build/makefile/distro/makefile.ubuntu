@@ -38,6 +38,9 @@ $(BINDIR)luarocks:
 
 $(BINDIR)magick:
 	sudo apt install -y libmagickwand-dev
+
+$(BINDIR)man-db:
+	sudo apt install -y man-db
 	
 $(BINDIR)rg:
 	sudo apt install -y ripgrep
@@ -46,6 +49,12 @@ $(BINDIR)nvim: $(BINDIR)add-apt-repository
 	sudo add-apt-repository -y ppa:neovim-ppa/unstable
 
 	sudo apt install -y neovim
+
+$(BINDIR)pip:
+	sudo apt install -y pip
+
+$(BINDIR)python3:
+	sudo apt install -y python3
 
 $(BINDIR)tar:
 	sudo apt install -y tar

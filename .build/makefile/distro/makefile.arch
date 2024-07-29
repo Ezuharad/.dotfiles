@@ -35,9 +35,18 @@ $(BINDIR)luarocks:
 $(BINDIR)luajit: $(BINDIR)paru
 	paru -S --noconfirm luajit
 
+$(BINDIR)man-db:
+	sudo pacman -S --noconfirm man-db
+
 # TODO: may need to look at noconfirm for paru
 $(BINDIR)paru:
 	sudo pacman -S --noconfirm paru
+
+$(BINDIR)pip:
+	sudo pacman -S --noconfirm python-pip
+
+$(BINDIR)python3:
+	sudo pacman -S --noconfirm python
 
 $(BINDIR)rg:
 	sudo pacman -S --noconfirm ripgrep
