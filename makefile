@@ -1,42 +1,8 @@
 STOWDIR=$(CURDIR)/
 
-TMUX_SUBMODULE_PREFIX=tmux/.tmux/plugins/
-ZSH_SUBMODULE_PREFIX=zsh/.zshinit/plugin/
-
-CARGOBINDIR=.cargo/bin
-
-
-$(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm/tpm:
-	git submodule init $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm
-	git submodule update $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm
-
-$(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux/nord.tmux:
-	git submodule init $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux
-	git submodule update $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux
-
-$(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme:
-	git submodule init $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k
-	git submodule update $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k
-
-$(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh:
-	git submodule init $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting
-	git submodule update $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting
-
-
-include .tool/makefile.$(shell . .tool/script/which-os.sh)
-
-
-$(CARGOBINDIR)bat: $(CARGOBINDIR)cargo
-	cargo install --locked bat
-
-$(CARGOBINDIR)cargo: $(BINDIR)curl
-	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-	. ~/.cargo/env
-	rustup update
-
-$(CARGOBINDIR)yazi: $(CARGOBINDIR)cargo
-	cargo install --locked yazi-fm yazi-cli
-
+include .tool/makefile/distro/makefile.$(shell . .tool/script/which-os.sh)
+include .tool/makefile/makefile.plugin
+include .tool/makefile/makefile.rs
 
 .PHONY: all headless extra bat fastfetch git htop nvim tmux wezterm yazi zsh
 
@@ -57,8 +23,8 @@ extra:
 	$(MAKE) htop
 	$(MAKE) fastfetch
 
-bat: $(BINDIR)bat
-	
+bat: $(CARGOBINDIR)bat
+
 fastfetch: $(BINDIR)fastfetch $(BINDIR)htop $(BINDIR)stow
 	@echo "Installing fastfech configuration"
 	
@@ -93,12 +59,12 @@ wezterm: $(BINDIR)stow $(BINDIR)wezterm
 	
 	cd $(STOWDIR) && stow wezterm --target ~/
 
-yazi: $(BINDIR)stow $(BINDIR)yazi
+yazi: $(BINDIR)stow $(CARGOBINDIR)yazi
 	@echo "Installing yazi configuration"
 
 	cd $(STOWDIR) && stow yazi --target ~/
 
-zsh: $(BINDIR)curl $(BINDIR)fzf $(BINDIR)stow $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme 
+zsh: $(BINDIR)curl $(CARGOBINDIR)fd $(BINDIR)fzf $(CARGOBINDIR)rg $(BINDIR)stow $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme
 	@echo "Installing zsh configuration"
 
 	chsh -s $(shell which zsh)
