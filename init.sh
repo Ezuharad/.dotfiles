@@ -6,7 +6,7 @@ else
   exit 1
 fi
 
-case $ID in 
+(which git && which make) || case $ID in 
   arch )
     sudo pacman -Syu --noconfirm git make
     ;;
