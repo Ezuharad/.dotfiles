@@ -7,24 +7,11 @@ include .build/makefile/python.makefile
 
 .PHONY: all headless extra bat conda fastfetch git htop nvim tmux wezterm yazi zsh
 
-all:
-	$(MAKE) headless
-	$(MAKE) extra
-	$(MAKE) wezterm
+all: headless extra wezterm
 
-headless:
-	$(MAKE) git
-	$(MAKE) zsh
-	$(MAKE) tmux
-	$(MAKE) nvim
-	$(MAKE) yazi
+headless: git zsh tmux nvim yazi
 
-extra:
-	$(MAKE) bat
-	$(MAKE) conda
-	$(MAKE) fastfetch
-	$(MAKE) htop
-	$(MAKE) man
+extra: conda man bat fastfetch htop
 
 bat: $(CARGOBINDIR)bat
 
