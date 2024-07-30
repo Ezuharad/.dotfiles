@@ -77,6 +77,6 @@ yazi: $(BINDIR)stow $(CARGOBINDIR)yazi
 zsh: $(BINDIR)curl $(CARGOBINDIR)fd $(BINDIR)fzf $(CARGOBINDIR)rg $(BINDIR)stow $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)powerlevel10k/powerlevel10k.zsh-theme
 	@echo "Installing zsh configuration"
 
-	sudo chsh -s $(shell which zsh) $(whoami)
+	sudo chsh -s $(shell which zsh) $(shell whoami)
 	cd $(STOWDIR) && stow zsh --target ~/
 
