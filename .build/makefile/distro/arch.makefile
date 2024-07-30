@@ -38,7 +38,7 @@ $(BINDIR)luarocks:
 $(BINDIR)luajit: $(BINDIR)paru
 	paru -S --noconfirm luajit
 
-$(BINDIR)man-db:
+$(BINDIR)man:
 	sudo pacman -S --noconfirm man-db
 
 $(BINDIR)nvm: $(BINDIR)paru

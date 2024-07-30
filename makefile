@@ -44,7 +44,7 @@ nvim: $(BINDIR)cc $(BINDIR)luajit $(BINDIR)luarocks $(BINDIR)magick $(BINDIR)nvi
 	cd $(STOWDIR) && stow nvim --target ~/
 	nvim --headless "+Lazy! sync" +qa
 
-man: $(BINDIR)man-db
+man: $(BINDIR)man
 
 tmux: $(BINDIR)tmux $(BINDIR)stow $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm/tpm $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux/nord.tmux
 	@echo "Installing tmux configuration"

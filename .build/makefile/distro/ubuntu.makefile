@@ -42,7 +42,7 @@ $(BINDIR)luarocks:
 $(BINDIR)magick:
 	sudo apt install -y libmagickwand-dev
 
-$(BINDIR)man-db:
+$(BINDIR)man:
 	sudo apt install -y man-db
 	
 $(BINDIR)rg:
