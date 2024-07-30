@@ -15,23 +15,18 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=10
 bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
+
+# compinit
 zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
-
-# syntax highlighting
-source ~/.zshinit/plugin/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Autocompletion menu
 zstyle ':completion:*' menu select
 
-# powerline-daemon -q
-# . /usr/share/powerline/bindings/zsh/powerline.zsh
-
+# syntax highlighting
+source ~/.zshinit/plugin/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.zshinit/plugin/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

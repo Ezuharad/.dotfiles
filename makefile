@@ -1,9 +1,9 @@
 STOWDIR=$(CURDIR)/
 
-include .build/makefile/distro/makefile.$(shell . .build/script/which-os.sh)
-include .build/makefile/makefile.plugin
-include .build/makefile/makefile.rust
-include .build/makefile/makefile.python
+include .build/makefile/distro/$(shell . .build/script/which-os.sh).makefile
+include .build/makefile/plugin.makefile
+include .build/makefile/rust.makefile
+include .build/makefile/python.makefile
 
 .PHONY: all headless extra bat conda fastfetch git htop nvim tmux wezterm yazi zsh
 
@@ -38,7 +38,7 @@ fastfetch: $(BINDIR)fastfetch $(BINDIR)htop $(BINDIR)stow
 	
 	cd $(STOWDIR) && stow fastfetch --target ~/
 
-git: $(BINDIR)stow $(BINDIR)git-lfs
+git: $(BINDIR)gh $(BINDIR)git-lfs $(BINDIR)stow
 	@echo "Installing git configuration"
 
 	cd $(STOWDIR) && stow git --target ~/

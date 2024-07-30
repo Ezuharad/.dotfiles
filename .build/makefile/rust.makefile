@@ -1,5 +1,5 @@
 # Cargo packages
-CARGOBINDIR=$(HOME)/.cargo/bin
+CARGOBINDIR=$(HOME)/.cargo/bin/
 
 
 $(CARGOBINDIR)bat: $(CARGOBINDIR)cargo
@@ -7,8 +7,8 @@ $(CARGOBINDIR)bat: $(CARGOBINDIR)cargo
 
 $(CARGOBINDIR)cargo: $(BINDIR)curl
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-	. $(HOME)/.cargo/env
-	rustup update
+	# Because each command is in its own shell sourcing ~/.cargo/bin/env will not work
+	$(CARGOBINDIR)rustup update
 
 $(CARGOBINDIR)fd: $(CARGOBINDIR)cargo $(BINDIR)cc
 	cargo install --locked fd-find

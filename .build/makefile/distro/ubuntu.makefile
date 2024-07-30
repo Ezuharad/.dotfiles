@@ -24,6 +24,9 @@ $(BINDIR)fd:
 $(BINDIR)fzf:
 	sudo apt install -y fzf
 
+$(BINDIR)gh:
+	sudo apt install -y gh
+
 $(BINDIR)git-lfs:
 	sudo apt install -y git-lfs
 

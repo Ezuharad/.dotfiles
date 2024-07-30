@@ -20,6 +20,9 @@ $(BINDIR)fd:
 $(BINDIR)fzf:
 	sudo pacman -S --noconfirm fzf
 
+$(BINDIR)gh:
+	sudo pacman -S --noconfirm github-cli
+
 $(BINDIR)git-lfs:
 	sudo pacman -S --noconfirm git-lfs
 
@@ -37,6 +40,9 @@ $(BINDIR)luajit: $(BINDIR)paru
 
 $(BINDIR)man-db:
 	sudo pacman -S --noconfirm man-db
+
+$(BINDIR)nvm: $(BINDIR)paru
+	paru -S --noconfirm nvm
 
 # TODO: may need to look at noconfirm for paru
 $(BINDIR)paru:
