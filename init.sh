@@ -25,5 +25,5 @@ cd
 git clone --depth=1 https://github.com/Ezuharad/.dotfiles.git
 cd .dotfiles
 
-make all
+make $1
 
