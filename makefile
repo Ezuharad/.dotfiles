@@ -1,17 +1,18 @@
 STOWDIR=$(CURDIR)/
 
 include .build/makefile/distro/$(shell . .build/script/which-os.sh).makefile
+include .build/makefile/docker.makefile
 include .build/makefile/plugin.makefile
 include .build/makefile/rust.makefile
 include .build/makefile/python.makefile
 
-.PHONY: all headless extra bat conda fastfetch git htop nvim tmux wezterm yazi zsh
+.PHONY: all headless extra bat conda docker fastfetch git htop nvim tmux wezterm yazi zsh
 
 all: headless extra wezterm
 
 headless: git zsh tmux nvim yazi
 
-extra: conda man bat fastfetch htop
+extra: conda docker man bat fastfetch htop
 
 bat: $(CARGOBINDIR)bat
 
@@ -19,6 +20,9 @@ conda: $(BINDIR)stow $(CONDABINDIR)conda
 	@echo "Installing conda configuration"
 
 	cd $(STOWDIR) && stow conda --target ~/
+
+# docker-compose is dependent on docker, so the package manager will install it
+docker: $(BINDIR)docker-compose
 
 fastfetch: $(BINDIR)fastfetch $(BINDIR)htop $(BINDIR)stow
 	@echo "Installing fastfech configuration"

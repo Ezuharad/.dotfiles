@@ -11,6 +11,12 @@ $(BINDIR)clang:
 $(BINDIR)curl:
 	sudo pacman -S --noconfirm curl
 
+$(BINDIR)docker:
+	sudo pacman -S --noconfirm docker
+
+$(BINDIR)docker-compose:
+	sudo pacman -S --noconfirm docker-compose
+
 $(BINDIR)fastfetch:
 	sudo pacman -S --noconfirm fastfetch
 

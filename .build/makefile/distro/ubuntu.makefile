@@ -14,6 +14,12 @@ $(BINDIR)clang:
 $(BINDIR)curl:
 	sudo apt install -y curl
 
+$(BINDIR)docker:
+	sudo apt install -y docker
+
+$(BINDIR)docker-compose:
+	sudo apt install -y docker-compose-v2
+
 $(BINDIR)fastfetch: $(BINDIR)add-apt-repository
 	sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
 	sudo apt install -y fastfetch
