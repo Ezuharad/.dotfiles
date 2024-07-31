@@ -1,5 +1,6 @@
 # Ubuntu Linux package installations
 BINDIR=/usr/bin/
+LICENSEDIR=/usr/share/licenses/
 PYTHONDIR=/usr/lib/python3/dist-packages/
 
 $(BINDIR)add-apt-repository:
@@ -48,8 +49,11 @@ $(BINDIR)luarocks:
 $(BINDIR)magick:
 	sudo apt install -y libmagickwand-dev
 
-$(BINDIR)man:
+$(BINDIR)mandb:
 	sudo apt install -y man-db
+
+$(LICENSEDIR)man-pages:
+	sudo apt install -y manpages
 	
 $(BINDIR)rg:
 	sudo apt install -y ripgrep

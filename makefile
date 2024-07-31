@@ -48,7 +48,11 @@ nvim: $(BINDIR)cc $(BINDIR)luajit $(BINDIR)luarocks $(BINDIR)magick $(BINDIR)nvi
 	cd $(STOWDIR) && stow nvim --target ~/
 	nvim --headless "+Lazy! sync" +qa
 
-man: $(BINDIR)man
+# TODO: Ubuntu splits man-pages into a second manpages-dev package. Should get its own recipe
+man: $(BINDIR)mandb $(LICENSEDIR)man-pages
+	@echo "Installing manpages"
+	
+	sudo mandb
 
 tmux: $(BINDIR)tmux $(BINDIR)stow $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm/tpm $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux/nord.tmux
 	@echo "Installing tmux configuration"

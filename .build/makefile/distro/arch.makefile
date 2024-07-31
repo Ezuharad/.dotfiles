@@ -1,5 +1,6 @@
 # Arch Linux package installations
 BINDIR=/usr/bin/
+LICENSEDIR=/usr/share/licenses/
 PYTHONDIR=/usr/lib/python3.12/site-packages/
 
 $(BINDIR)cc:
@@ -44,8 +45,11 @@ $(BINDIR)luarocks:
 $(BINDIR)luajit: $(BINDIR)paru
 	paru -S --noconfirm luajit
 
-$(BINDIR)man:
+$(BINDIR)mandb:
 	sudo pacman -S --noconfirm man-db
+
+$(LICENSEDIR)man-pages:
+	sudo pacman -S --noconfirm man-pages
 
 $(BINDIR)nvm: $(BINDIR)paru
 	paru -S --noconfirm nvm
