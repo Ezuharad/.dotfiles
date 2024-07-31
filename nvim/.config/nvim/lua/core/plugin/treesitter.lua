@@ -4,7 +4,11 @@ return {
 	lazy = false,
 	ots = {
 		ensure_installed = {
+      "bash",
 			"lua",
+      "markdown",
+      "regex",
+      "vim",
 		},
 	},
 }
