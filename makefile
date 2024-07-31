@@ -1,7 +1,6 @@
 STOWDIR=$(CURDIR)/
 
 include .build/makefile/distro/$(shell . .build/script/which-os.sh).makefile
-include .build/makefile/docker.makefile
 include .build/makefile/plugin.makefile
 include .build/makefile/rust.makefile
 include .build/makefile/python.makefile
