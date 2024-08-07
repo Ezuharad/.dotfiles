@@ -49,7 +49,6 @@ fd
 filelight
 filezilla
 firefox
-flake8
 flatpak
 flatpak-kcm
 freerdp
@@ -202,7 +201,6 @@ python-dulwich
 python-ipykernel
 python-ipywidgets
 python-isort
-python-lsp-ruff
 python-matplotlib
 python-numba
 python-numpy-docs
