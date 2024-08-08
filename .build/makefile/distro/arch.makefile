@@ -54,6 +54,9 @@ $(LICENSEDIR)man-pages:
 $(BINDIR)nvm: $(BINDIR)paru
 	paru -S --noconfirm nvm
 
+$(BINDIR)oh-my-posh: $(BINDIR)paru
+	paru -S --noconfirm oh-my-posh
+
 # TODO: may need to look at noconfirm for paru
 $(BINDIR)paru:
 	sudo pacman -S --noconfirm paru

@@ -55,6 +55,9 @@ $(BINDIR)mandb:
 $(LICENSEDIR)man-pages:
 	sudo apt install -y manpages
 	
+$(BINDIR)oh-my-posh: $(BINDIR)curl
+	curl -s https://ohmyposh.dev/install.sh | bash -s
+
 $(BINDIR)rg:
 	sudo apt install -y ripgrep
 
