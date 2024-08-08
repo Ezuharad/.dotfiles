@@ -68,7 +68,7 @@ yazi: $(BINDIR)stow $(CARGOBINDIR)yazi
 
 	cd $(STOWDIR) && stow yazi --target ~/
 
-zsh: $(BINDIR)curl $(CARGOBINDIR)fd $(BINDIR)fzf $(BINDIR)oh-my-posh $(CARGOBINDIR)rg $(BINDIR)stow $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+zsh: $(BINDIR)curl $(CARGOBINDIR)fd $(BINDIR)fzf $(LOCALBINDIR)oh-my-posh $(CARGOBINDIR)rg $(BINDIR)stow $(BINDIR)zsh $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 	@echo "Installing zsh configuration"
 
 	sudo chsh -s $(shell which zsh) $(shell whoami)

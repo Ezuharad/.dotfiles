@@ -1,6 +1,7 @@
 # Ubuntu Linux package installations
 BINDIR=/usr/bin/
 LICENSEDIR=/usr/share/licenses/
+LOCALBINDIR=$(shell $HOME)/.local/bin
 PYTHONDIR=/usr/lib/python3/dist-packages/
 
 $(BINDIR)add-apt-repository:
@@ -55,7 +56,7 @@ $(BINDIR)mandb:
 $(LICENSEDIR)man-pages:
 	sudo apt install -y manpages
 	
-$(BINDIR)oh-my-posh: $(BINDIR)curl
+$(LOCALBINDIR)oh-my-posh: $(BINDIR)curl $(BINDIR)unzip
 	curl -s https://ohmyposh.dev/install.sh | bash -s
 
 $(BINDIR)rg:
@@ -77,6 +78,9 @@ $(BINDIR)tar:
 
 $(BINDIR)tmux:
 	sudo apt install -y tmux
+
+$(BINDIR)unzip:
+	sudo apt install -y unzip
 
 $(BINDIR)snap:
 	sudo apt install -y snapd

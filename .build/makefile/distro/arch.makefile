@@ -1,6 +1,7 @@
 # Arch Linux package installations
 BINDIR=/usr/bin/
 LICENSEDIR=/usr/share/licenses/
+LOCALBINDIR=/usr/bin  # AUR packages almost always install to /usr/bin
 PYTHONDIR=/usr/lib/python3.12/site-packages/
 
 $(BINDIR)cc:
@@ -54,7 +55,7 @@ $(LICENSEDIR)man-pages:
 $(BINDIR)nvm: $(BINDIR)paru
 	paru -S --noconfirm nvm
 
-$(BINDIR)oh-my-posh: $(BINDIR)paru
+$(LOCALBINDIR)oh-my-posh: $(BINDIR)paru
 	paru -S --noconfirm oh-my-posh
 
 # TODO: may need to look at noconfirm for paru
