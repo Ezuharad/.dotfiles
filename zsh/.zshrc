@@ -39,18 +39,20 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey "^x^e" edit-command-line
 
+# set local install path
+[[ ! -d $HOME/.local/bin ]] || export PATH="$PATH:$HOME/.local/bin"
 # set rust executable path
-[[ ! -f ~/.cargo/bin ]] || export PATH="$PATH:$HOME/.cargo/bin"
+[[ ! -d $HOME/cargo/bin ]] || export PATH="$PATH:$HOME/.cargo/bin"
 # set haskell executable path
-[[ ! -f ~/.ghcup/bin ]] || export PATH="$PATH:$HOME/ghcup/bin"
+[[ ! -d $HOME/ghcup/bin ]] || export PATH="$PATH:$HOME/ghcup/bin"
 # set local executable path
-[[ ! -f ~/.local/bin ]] || export PATH="$PATH:$HOME/local/bin"
+[[ ! -d $HOME/local/bin ]] || export PATH="$PATH:$HOME/local/bin"
 # set R local package installation location
-[[ ! -f ~/.rpackages ]] || export R_LIBS_USER=~/.rpackages
+[[ ! -d $HOME/rpackages ]] || export R_LIBS_USER="$HOME/.rpackages"
 
-export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
+source $HOME/zshinit/conda.zsh
+source $HOME/zshinit/fzf.zsh
+source $HOME/zshinit/alias.zsh
 
-source ~/.zshinit/conda.zsh
-source ~/.zshinit/fzf.zsh
-source ~/.zshinit/alias.zsh
+[[ ! -d /opt/cuda ]] || export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
 
