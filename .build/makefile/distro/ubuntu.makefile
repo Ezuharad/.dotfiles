@@ -1,8 +1,10 @@
 # Ubuntu Linux package installations
 BINDIR=/usr/bin/
 LICENSEDIR=/usr/share/licenses/
-LOCALBINDIR=$(HOME)/local/bin/
+LOCALBINDIR=$(HOME)/.local/bin/
 PYTHONDIR=/usr/lib/python3/dist-packages/
+
+_ = $(shell mkdir -p $(HOME)/.local/bin/)
 
 $(BINDIR)add-apt-repository:
 	sudo apt install -y software-properties-common
