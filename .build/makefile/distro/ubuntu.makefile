@@ -1,7 +1,7 @@
 # Ubuntu Linux package installations
 BINDIR=/usr/bin/
 LICENSEDIR=/usr/share/licenses/
-LOCALBINDIR=$(shell $HOME)/.local/bin
+LOCALBINDIR=$(HOME)/local/bin/
 PYTHONDIR=/usr/lib/python3/dist-packages/
 
 $(BINDIR)add-apt-repository:
@@ -57,7 +57,7 @@ $(LICENSEDIR)man-pages:
 	sudo apt install -y manpages
 	
 $(LOCALBINDIR)oh-my-posh: $(BINDIR)curl $(BINDIR)unzip
-	curl -s https://ohmyposh.dev/install.sh | bash -s
+	curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $(LOCALBINDIR)
 
 $(BINDIR)rg:
 	sudo apt install -y ripgrep
