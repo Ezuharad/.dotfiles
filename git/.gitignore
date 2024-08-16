@@ -3,5 +3,6 @@
 .vscode
 .conda
 .legacy
+awkvars.out
 NOTES.md
 TODO.md

@@ -5,13 +5,13 @@ include .build/makefile/plugin.makefile
 include .build/makefile/rust.makefile
 include .build/makefile/python.makefile
 
-.PHONY: all headless extra bat conda docker fastfetch git htop nvim tmux wezterm yazi zsh
+.PHONY: all headless extra bat conda docker fastfetch git htop man nvim tmux wezterm yazi zsh
 
 all: headless extra wezterm
 
 headless: git zsh tmux nvim yazi
 
-extra: conda docker man bat fastfetch htop
+extra: conda docker bat fastfetch htop man 
 
 bat: $(CARGOBINDIR)bat
 
