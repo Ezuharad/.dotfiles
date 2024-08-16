@@ -2,7 +2,7 @@
 CARGOBINDIR=$(HOME)/.cargo/bin/
 
 
-$(CARGOBINDIR)bat: $(CARGOBINDIR)cargo
+$(CARGOBINDIR)bat: $(CARGOBINDIR)cargo $(BINDIR)cc
 	$(CARGOBINDIR)cargo install --locked bat
 
 $(CARGOBINDIR)cargo: $(BINDIR)curl
