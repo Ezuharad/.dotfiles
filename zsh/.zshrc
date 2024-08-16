@@ -46,6 +46,8 @@ bindkey "^x^e" edit-command-line
 # set R local package installation location
 [[ ! -d $HOME/rpackages ]] || export R_LIBS_USER="$HOME/.rpackages"
 
+export GOPATH="$HOME/.go"
+
 source $HOME/.zshinit/conda.zsh
 source $HOME/.zshinit/fzf.zsh
 source $HOME/.zshinit/alias.zsh
