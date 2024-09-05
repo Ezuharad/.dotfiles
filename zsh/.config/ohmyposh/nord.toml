@@ -12,7 +12,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     type = 'session'
     style = 'diamond'
     leading_diamond = ''
-    # trailing_diamond = ''
+    trailing_diamond = ''
     template = ' {{ if .SSHSession }} {{ end }}{{ .UserName }} '
     background = 'p:ice'
     foreground = 'p:black'
@@ -113,18 +113,19 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
   [[blocks.segments]]
     type = 'python'
-    style = 'plain'
-    template = ' '
-    background = 'transparent'
-    foreground = 'p:yellow'
+    style = 'diamond'
+    leading_diamond = ''
+    # template = ' {{ .Full }} {{ if .Venv }}{{ .Venv }}{{ end}}'
+    template = ' {{ if .Venv }}{{ .Venv }}{{ end }} '
+
+    background = 'p:yellow'
+    foreground = 'p:black'
     Text = ''
     Duration = 0
     NameLength = 0
 
     [blocks.segments.properties]
-      display_mode = 'files'
-      fetch_version = false
-      fetch_virtual_env = false
+      fetch_virtual_env = true
 
 [transient_prompt]
   template = '» '
