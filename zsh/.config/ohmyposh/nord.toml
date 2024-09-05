@@ -10,7 +10,8 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
   [[blocks.segments]]
     type = 'path'
-    style = 'powerline'
+    style = 'diamond'
+    trailing_diamond = ''
     template = '  {{ path .Path .Location }} '
     background = 'p:sky'
     foreground = 'p:black'

@@ -10,7 +10,7 @@ alias grep='grep --colo=auto'
 alias egrep='grep -e --color=auto'
 alias fgrep='grep -f --color=auto'
 
-alias ll='ls -a'
+alias ll='ls -la'
 
 alias vi='nvim'
 alias vim='nvim'
