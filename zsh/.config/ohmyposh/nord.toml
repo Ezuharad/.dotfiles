@@ -9,21 +9,8 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   alignment = 'left'
 
   [[blocks.segments]]
-    type = 'session'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    template = ' {{ if .SSHSession }} {{ end }}{{ .UserName }} '
-    background = 'p:ice'
-    foreground = 'p:black'
-    Text = ''
-    Duration = 0
-    NameLength = 0
-
-  [[blocks.segments]]
     type = 'path'
     style = 'powerline'
-    powerline_symbol = ''
     template = '  {{ path .Path .Location }} '
     background = 'p:sky'
     foreground = 'p:black'
