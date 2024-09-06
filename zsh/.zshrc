@@ -39,13 +39,7 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey "^x^e" edit-command-line
 
-# set rust executable path
-[[ ! -d $HOME/cargo/bin ]] || export PATH="$PATH:$HOME/.cargo/bin"
-# set haskell executable path
-[[ ! -d $HOME/ghcup/bin ]] || export PATH="$PATH:$HOME/ghcup/bin"
-# set R local package installation location
-[[ ! -d $HOME/rpackages ]] || export R_LIBS_USER="$HOME/.rpackages"
-
+source .zshinit/path.zsh
 export GOPATH="$HOME/.go"
 
 source $HOME/.zshinit/conda.zsh

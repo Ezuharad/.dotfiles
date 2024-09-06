@@ -46,11 +46,17 @@ $(BINDIR)luarocks:
 $(BINDIR)luajit: $(BINDIR)paru
 	paru -S --noconfirm luajit
 
+$(BINDIR)magick:
+	sudo pacman -S --noconfirm imagemagick
+
 $(BINDIR)mandb:
 	sudo pacman -S --noconfirm man-db
 
 $(LICENSEDIR)man-pages:
 	sudo pacman -S --noconfirm man-pages
+
+$(BINDIR)nvim:
+	sudo pacman -S --noconfirm neovim
 
 $(BINDIR)nvm: $(BINDIR)paru
 	paru -S --noconfirm nvm
@@ -58,9 +64,14 @@ $(BINDIR)nvm: $(BINDIR)paru
 $(LOCALBINDIR)oh-my-posh: $(BINDIR)paru
 	paru -S --noconfirm oh-my-posh
 
-# TODO: may need to look at noconfirm for paru
 $(BINDIR)paru:
-	sudo pacman -S --noconfirm paru
+	sudo pacman -S --noconfirm --needed base-devel
+	cd $(STOWDIR) && mkdir .tmp/
+	cd $(STOWDIR).tmp/ && git clone https://aur.archlinux.org/paru.git
+	cd $(STOWDIR).tmp/paru && makepkg --noconfirm -si
+
+	cd $(STOWDIR) && rm -rf .tmp/
+	sudo pacman -Rns --noconfirm rust
 
 $(BINDIR)pip:
 	sudo pacman -S --noconfirm python-pip
