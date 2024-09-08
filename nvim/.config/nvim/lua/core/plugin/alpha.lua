@@ -21,4 +21,7 @@ return {
 		}
 		return dashboard.config
 	end,
+  keys = {
+    { "<leader>va", "<cmd> Alpha<cr>", desc = "Show splash screen (Alpha)"}
+  }
 }
