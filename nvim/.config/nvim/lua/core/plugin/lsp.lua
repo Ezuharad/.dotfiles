@@ -19,7 +19,6 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     config = function()
       require("mason-lspconfig").setup({ ensure_installed = { "lua_ls" } })
-
       require("mason-lspconfig").setup_handlers({
         function(server_name)
           require("lspconfig")[server_name].setup({
@@ -38,8 +37,9 @@ return {
       { "<leader>rn", vim.lsp.buf.rename, desc = "Rename Token" },
       { "<leader>ra", vim.lsp.buf.code_action,    desc = "Code Actions" },
       { "<leader>rs", vim.lsp.buf.signature_help, desc = "Signature Help" },
-      { "gd", vim.lsp.buf.declaration, desc = "Go to declaration" },
-      { "gD", vim.lsp.buf.definition, desc = "Go to definition" },
+      { "gi", vim.lsp.buf.implementation, desc = "Go to implementation" },
+      { "gd", vim.lsp.buf.definition, desc = "Go to definition" },
+      { "gD", vim.lsp.buf.declaration, desc = "Go to declaration" },
     }
   },
 }
