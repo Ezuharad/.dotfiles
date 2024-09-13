@@ -16,7 +16,7 @@ fi
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/nord.toml)"
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE=$HOME/histfile
 HISTSIZE=1000
 SAVEHIST=10
 bindkey -e
@@ -28,18 +28,18 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
 
-FPATH=~/.zshinit/function:$FPATH
+FPATH=$HOME/zshinit/function:$FPATH
 autoload -Uz update-all
 
 # syntax highlighting
-source ~/.zshinit/plugin/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source $HOME/.zshinit/plugin/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 export EDITOR=nvim
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey "^x^e" edit-command-line
 
-source .zshinit/path.zsh
+source $HOME/.zshinit/path.zsh
 export GOPATH="$HOME/.go"
 
 source $HOME/.zshinit/conda.zsh
