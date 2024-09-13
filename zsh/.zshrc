@@ -16,7 +16,7 @@ fi
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/nord.toml)"
 
 # Lines configured by zsh-newuser-install
-HISTFILE=$HOME/histfile
+HISTFILE=$HOME/.histfile
 HISTSIZE=1000
 SAVEHIST=10
 bindkey -e
