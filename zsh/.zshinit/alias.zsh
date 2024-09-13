@@ -1,6 +1,10 @@
 # comamnd aliases for zsh
 alias help='man zsh'
 
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
 alias more='less'
 
 alias bat='bat --color=auto'
