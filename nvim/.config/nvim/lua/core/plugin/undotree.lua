@@ -6,5 +6,4 @@ return {
 	keys = {
 		{ "<leader>vu", "<cmd>UndotreeToggle<cr>", desc = "Undo Tree (Undotree)" },
 	},
-	config = true,
 }

@@ -34,12 +34,13 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
     keys = {
-      { "<leader>rn", vim.lsp.buf.rename, desc = "Rename Token" },
+      { "<leader>rn", vim.lsp.buf.rename,         desc = "Rename Token" },
       { "<leader>ra", vim.lsp.buf.code_action,    desc = "Code Actions" },
       { "<leader>rs", vim.lsp.buf.signature_help, desc = "Signature Help" },
-      { "gi", vim.lsp.buf.implementation, desc = "Go to implementation" },
-      { "gd", vim.lsp.buf.definition, desc = "Go to definition" },
-      { "gD", vim.lsp.buf.declaration, desc = "Go to declaration" },
+      { "gi",         vim.lsp.buf.implementation, desc = "Go to implementation" },
+      { "gd",         vim.lsp.buf.definition,     desc = "Go to definition" },
+      { "gD",         vim.lsp.buf.declaration,    desc = "Go to declaration" },
+      { "gr",         vim.lsp.buf.references,     desc = "Go to references" },
     }
   },
 }
