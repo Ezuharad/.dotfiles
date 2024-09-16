@@ -28,7 +28,7 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
 
-FPATH=$HOME/zshinit/function:$FPATH
+FPATH=$HOME/.zshinit/function:$FPATH
 autoload -Uz update-all
 
 # syntax highlighting
