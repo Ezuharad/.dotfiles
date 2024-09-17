@@ -12,6 +12,9 @@ vim.o.clipboard = "unnamedplus"
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = false
 
+-- feedback for regex search
+vim.opt.incsearch = true
+
 -- disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

@@ -8,12 +8,9 @@ return {
 			{ "<leader>rf", vim.lsp.buf.format, desc = "Buffer Reformat (None-ls)" },
 		},
 		opts = function()
-      local cspell = require("cspell")
 			local null_ls = require("null-ls")
 			return {
 				sources = {
-          cspell.code_actions,
-          cspell.diagnostics,
 					null_ls.builtins.completion.luasnip,
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.completion.spell,
