@@ -1,7 +1,7 @@
 # fzf initialization
-# source <(fzf --zsh)
+source <(fzf --zsh)
 
 export FZF_DEFAULT_OPTS='--no-height --no-reverse'
 
-# alias fzf='fzf --tmux center'
+alias fzf='fzf --tmux center'
 

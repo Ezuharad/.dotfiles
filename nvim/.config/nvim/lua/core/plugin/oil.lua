@@ -14,7 +14,7 @@ return {
     is_hidden_file = function(name, _)
       return vim.startswith(name, ".")
     end,
-    is_always_hidden = {".git"}
+    is_always_hidden = {".git", ".conda", ".venv"}
   },
   keys = {
     { "<leader>vo", "<cmd>Oil --float<cr>", desc = "Oil Filesearch (Oil)" }
