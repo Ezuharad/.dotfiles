@@ -23,6 +23,8 @@ return {
 			{ "<leader>fr", "<cmd> Telescope marks<cr>", desc = "Telescope Vim Marks (Telescope)" },
 			{ "<leader>fp", "<cmd> Telescope man_pages<cr>", desc = "Telescope Man Pages (Telescope)" },
 
+      { "<leader>fe", "<cmd> Telescope treesitter<cr>", desc = "Telescope Treesitter (Telescope)"},
+
 			{ "<leader>gfb", "<cmd> Telescope git_branches<cr>", desc = "Telescope Git Branches (Telescope)" },
 			{ "<leader>gfc", "<cmd> Telescope git_commits<cr>", desc = "Telescope Git Commits (Telescope)" },
 		},
