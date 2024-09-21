@@ -7,7 +7,8 @@ alias ....='cd ../../..'
 
 alias more='less'
 
-alias bat='bat --color=auto'
+[[ ! -d /usr/bin/bat ]] || alias bat='bat --color=auto'
+[[ ! -d /usr/bin/bat ]] || alias cat='bat --style=plain'
 alias ls='ls --color=auto'
 alias grep='grep --colo=auto'
 
