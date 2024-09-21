@@ -22,6 +22,6 @@ return {
 		return dashboard.config
 	end,
   keys = {
-    { "<leader>va", "<cmd> Alpha<cr>", desc = "Show Splash Screen (Alpha)"}
+    { "<leader>va", "<cmd>Alpha<cr>", desc = "Show Splash Screen (Alpha)"}
   }
 }
