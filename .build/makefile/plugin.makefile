@@ -18,3 +18,7 @@ $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting/fast-syntax-highlighti
 	git submodule init $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting
 	git submodule update $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fast-syntax-highlighting
 
+$(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fzf-tab/fast-syntax-highlighting.plugin:
+	git submodule init $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fzf-tab
+	git submodule update $(STOWDIR)$(ZSH_SUBMODULE_PREFIX)fzf-tab
+

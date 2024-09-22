@@ -15,3 +15,6 @@
 	shallow = true
 [submodule "zsh/.zshinit/plugin/powerlevel10k"]
 	shallow = true
+[submodule "zsh/.zshinit/plugin/fzf-tab"]
+	path = zsh/.zshinit/plugin/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab

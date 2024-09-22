@@ -1,43 +1,40 @@
-# Automatically start tmux
+# automatically start tmux
 if [[ -z "$TMUX" && -f /usr/bin/tmux ]]; then
   exec tmux new-session -A -s tmux
 fi
 
-# set local install path
-[[ ! -d $HOME/.local/bin ]] || export PATH="$PATH:$HOME/.local/bin"
-
+# set prompt style
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/nord.toml)"
 
-# Lines configured by zsh-newuser-install
-HISTFILE=$HOME/.histfile
-HISTSIZE=1000
-SAVEHIST=10
-bindkey -e
-
 zstyle :compinstall filename '~/.zshrc'
-
-# completions
-autoload -Uz compinit
-compinit
-zstyle ':completion:*' menu select
-
-FPATH=$HOME/.zshinit/function:$FPATH
-autoload -Uz update-all
 
 # syntax highlighting
 source $HOME/.zshinit/plugin/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
-export EDITOR=nvim
+# set PATH, FPATH variables
+source $HOME/.zshinit/path.zsh
+
+# completions
+autoload -Uz compinit; compinit
+zstyle ':completion:*' menu no
+source $HOME/.zshinit/plugin/fzf-tab/fzf-tab.plugin.zsh
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+
+# edit command line
 autoload -U edit-command-line
 zle -N edit-command-line
-bindkey "^x^e" edit-command-line
+bindkey '^e' edit-command-line
 
-source $HOME/.zshinit/path.zsh
-export GOPATH="$HOME/.go"
+bindkey '^g' clear-screen
 
-source $HOME/.zshinit/conda.zsh
-source $HOME/.zshinit/fzf.zsh
+# custom commands
+autoload -Uz update-all
+
 source $HOME/.zshinit/alias.zsh
+source $HOME/.zshinit/conda.zsh
+source $HOME/.zshinit/env.zsh
+source $HOME/.zshinit/fzf.zsh
+source $HOME/.zshinit/history.zsh
+source $HOME/.zshinit/vibind.zsh
 
-[[ ! -d /opt/cuda ]] || export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
 
