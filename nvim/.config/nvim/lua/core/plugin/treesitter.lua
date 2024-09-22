@@ -62,16 +62,6 @@ return {
               ["]A"] = { query = "@assignment.outer", desc = "outer assignment" }
             },
             goto_previous_start = {
-              ["[F"] = { query = "@function.outer", desc = "outer function" },
-              ["[C"] = { query = "@class.outer", desc = "outer class" },
-              ["[O"] = { query = "@loop.outer", desc = "outer loop" },
-              ["[K"] = { query = "@block.outer", desc = "outer block" },
-              ["[L"] = { query = "@call.outer", desc = "outer call" },
-              ["[R"] = { query = "@parameter.outer", desc = "outer parameter" },
-              ["[D"] = { query = "@conditional.outer", desc = "outer conditional" },
-              ["[A"] = { query = "@assignment.outer", desc = "outer assignment" }
-            },
-            goto_previous_end = {
               ["[f"] = { query = "@function.outer", desc = "outer function" },
               ["[c"] = { query = "@class.outer", desc = "outer class" },
               ["[o"] = { query = "@loop.outer", desc = "outer loop" },
@@ -80,6 +70,16 @@ return {
               ["[r"] = { query = "@parameter.outer", desc = "outer parameter" },
               ["[d"] = { query = "@conditional.outer", desc = "outer conditional" },
               ["[a"] = { query = "@assignment.outer", desc = "outer assignment" }
+            },
+            goto_previous_end = {
+              ["[F"] = { query = "@function.outer", desc = "outer function" },
+              ["[C"] = { query = "@class.outer", desc = "outer class" },
+              ["[O"] = { query = "@loop.outer", desc = "outer loop" },
+              ["[K"] = { query = "@block.outer", desc = "outer block" },
+              ["[L"] = { query = "@call.outer", desc = "outer call" },
+              ["[R"] = { query = "@parameter.outer", desc = "outer parameter" },
+              ["[D"] = { query = "@conditional.outer", desc = "outer conditional" },
+              ["[A"] = { query = "@assignment.outer", desc = "outer assignment" }
             },
           },
         },
