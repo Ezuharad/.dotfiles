@@ -11,6 +11,16 @@ return {
 		opts = {
 			default_file_explorer = true,
 			skip_confirm_for_simple_edits = true,
+      preview = {
+        win_options = {
+          winhl = "Normal:Normal,Float:Float"
+        }
+      },
+      float = {
+        win_options = {
+          winhl = "Normal:Normal,Float:Float"
+        }
+      },
 			columns = {
 				"icon",
 			},
