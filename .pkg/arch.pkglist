@@ -74,6 +74,7 @@ hplip
 htop
 hunspell-en_us
 hyphen-en
+icat
 ifuse
 imagemagick
 informant
@@ -94,7 +95,6 @@ kde-gtk-config
 kdeconnect
 kdenlive
 kdeplasma-addons
-kfind
 khelpcenter
 kio-extras
 konversation
@@ -153,6 +153,7 @@ nmap
 nordvpn-bin
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 nvidia
 nvidia-prime
 nvidia-settings
@@ -161,6 +162,7 @@ obsidian
 ocaml
 octave
 octave-docs
+oh-my-posh-git
 okular
 openbsd-netcat
 openjdk-doc
@@ -170,7 +172,7 @@ pacman-contrib
 pacutils
 pandoc-bin
 partitionmanager
-paru
+paru-bin
 pcsx2-latest-bin
 perf
 pipewire
@@ -195,18 +197,22 @@ powerline-fonts
 proton-ge-custom-bin
 pypy
 pypy3
+pyright
 python-debugpy
 python-docs
 python-dulwich
+python-gdal
 python-ipykernel
 python-ipywidgets
 python-isort
 python-matplotlib
 python-numba
 python-numpy-docs
+python-owslib
 python-pandas
 python-pandas-docs
 python-pip
+python-psycopg2
 python-pynvim
 python-pytest
 python-pytorch-cuda
@@ -217,6 +223,7 @@ python-seaborn
 python-shodan
 python-sphinx
 python-torchvision
+qgis
 qt5-doc
 qt5-imageformats
 qt6-5compat
@@ -249,6 +256,7 @@ suyu-bin
 sweeper
 talloc
 tdb
+tdf-git
 tevent
 texlive-bibtexextra
 texlive-binextra
@@ -262,11 +270,11 @@ texlive-xetex
 thermald
 thunderbird
 timeshift
+tinysparql
 tk
 tmux
 torbrowser-launcher
 traceroute
-tracker3
 tree
 ttf-fira-code
 ttf-jetbrains-mono-nerd
@@ -291,9 +299,12 @@ wireless_tools
 wireshark-cli
 wl-clipboard
 wpa_supplicant
+xclip
 xdg-desktop-portal-kde
 xdg-utils
 xorgproto
+xsv
+xwaylandvideobridge
 yazi
 yt-dlp
 zig

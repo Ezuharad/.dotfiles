@@ -12,3 +12,4 @@ export GOPATH="$HOME/.go"
 
 # set zsh function path
 FPATH=$HOME/.zshinit/function:$FPATH
+

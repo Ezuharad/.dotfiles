@@ -3,6 +3,9 @@ if [[ -z "$TMUX" && -f /usr/bin/tmux ]]; then
   exec tmux new-session -A -s tmux
 fi
 
+# set PATH, FPATH variables
+source $HOME/.zshinit/path.zsh
+
 # set prompt style
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/nord.toml)"
 
@@ -10,9 +13,6 @@ zstyle :compinstall filename '~/.zshrc'
 
 # syntax highlighting
 source $HOME/.zshinit/plugin/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
-# set PATH, FPATH variables
-source $HOME/.zshinit/path.zsh
 
 # completions
 autoload -Uz compinit; compinit
@@ -36,5 +36,4 @@ source $HOME/.zshinit/env.zsh
 source $HOME/.zshinit/fzf.zsh
 source $HOME/.zshinit/history.zsh
 source $HOME/.zshinit/vibind.zsh
-
 
