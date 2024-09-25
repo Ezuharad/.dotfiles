@@ -16,7 +16,7 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    dependencies = { "williamboman/mason.nvim" },
+    dependencies = { "williamboman/mason.nvim", "hrsh7th/nvim-cmp"},
     config = function()
       require("mason-lspconfig").setup({ ensure_installed = { "lua_ls" } })
       local capabilities = require("cmp_nvim_lsp").default_capabilities()

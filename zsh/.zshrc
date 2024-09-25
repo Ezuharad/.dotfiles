@@ -6,9 +6,6 @@ fi
 # set PATH, FPATH variables
 source $HOME/.zshinit/path.zsh
 
-# set prompt style
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/nord.toml)"
-
 zstyle :compinstall filename '~/.zshrc'
 
 # syntax highlighting
@@ -36,4 +33,7 @@ source $HOME/.zshinit/env.zsh
 source $HOME/.zshinit/fzf.zsh
 source $HOME/.zshinit/history.zsh
 source $HOME/.zshinit/vibind.zsh
+
+# set prompt style
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/default.toml)"
 

@@ -11,3 +11,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
   desc = "Close certain windows with 'q'"
 })
+
+-- mason transparent background
+vim.cmd("autocmd FileType mason setlocal winblend=0")
+

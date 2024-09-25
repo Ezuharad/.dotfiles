@@ -48,6 +48,9 @@ return {
       defaults = {
         file_ignore_patterns = require("core.plugin.file.hidden")
       }
+    },
+    cmd = {
+      "Telescope"
     }
   },
 }
