@@ -1,7 +1,10 @@
 -- Splash screen for nvim
 return {
 	"goolord/alpha-nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons", "nvim-lua/plenary.nvim" },
+	dependencies = {
+		"echasnovski/mini.icons", -- replaced "nvim-tree/nvim-web-devicons",
+		"nvim-lua/plenary.nvim",
+	},
 	cmd = "Alpha",
 	opts = function()
 		local dashboard = require("alpha.themes.dashboard")
@@ -21,7 +24,7 @@ return {
 		}
 		return dashboard.config
 	end,
-  keys = {
-    { "<leader>va", "<cmd>Alpha<cr>", desc = "Show Splash Screen (Alpha)"}
-  }
+	keys = {
+		{ "<leader>va", "<cmd>Alpha<cr>", desc = "Show Splash Screen (Alpha)" },
+	},
 }

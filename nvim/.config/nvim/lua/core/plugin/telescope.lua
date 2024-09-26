@@ -5,7 +5,7 @@ return {
     branch = "0.1.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
+      "echasnovski/mini.icons",  -- replaced "nvim-tree/nvim-web-devicons"
       "nvim-treesitter/nvim-treesitter",
     },
     lazy = true,

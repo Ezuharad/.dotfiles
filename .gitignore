@@ -1,2 +1,4 @@
 installed.log
 nvim/.config/nvim/lazy-lock.json
+zsh/.env
+
