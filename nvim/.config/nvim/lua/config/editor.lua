@@ -1,4 +1,4 @@
--- General editor configurations
+-- general editor configurations
 -- set tab spacing
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
@@ -11,6 +11,9 @@ vim.o.clipboard = "unnamedplus"
 -- language settings
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = false
+
+-- use UTF 8
+vim.opt.encoding = "UTF-8"
 
 -- feedback for regex search
 vim.opt.incsearch = true

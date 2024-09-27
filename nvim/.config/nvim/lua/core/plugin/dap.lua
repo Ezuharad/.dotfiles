@@ -21,56 +21,56 @@ return {
         function()
           require("dapui").toggle()
         end,
-        desc = "Toggle Debugger",
+        desc = "Toggle Debugger (Dap-ui)",
       },
       {
         "<leader>db",
         function()
           require("dap").toggle_breakpoint()
         end,
-        desc = "Toggle Debugger Breakpoint",
+        desc = "Toggle Debugger Breakpoint (Dap-ui)",
       },
       {
         "<leader>dc",
         function()
           require("dap").continue()
         end,
-        desc = "Continue Debugger",
+        desc = "Continue Debugger (Dap-ui)",
       },
       {
         "<leader>dl",
         function()
           require("dap").step_over()
         end,
-        desc = "Debugger Step Over",
+        desc = "Debugger Step Over (Dap-ui)",
       },
       {
         "<leader>dj",
         function()
           require("dap").step_into()
         end,
-        desc = "Debugger Step Into",
+        desc = "Debugger Step Into (Dap-ui)",
       },
       {
         "<leader>dk",
         function()
           require("dap").step_out()
         end,
-        desc = "Debugger Step Out",
+        desc = "Debugger Step Out (Dap-ui)",
       },
       {
         "<leader>dr",
         function()
           require("dap").repl.open()
         end,
-        desc = "Show REPL",
+        desc = "Show REPL (Dap-ui)",
       },
       {
         "<leader>do",
         function()
           require("dap.ui.variables").scopes()
         end,
-        desc = "Show Debugger Scopes",
+        desc = "Show Debugger Scopes (Dap-ui)",
       },
     },
   },

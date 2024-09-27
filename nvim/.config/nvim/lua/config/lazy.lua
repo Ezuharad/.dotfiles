@@ -25,5 +25,9 @@ require("lazy").setup({
   -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { vim.g.config.theme.name } },
   -- automatically check for plugin updates
-  checker = { enabled = true }
+  checker = { enabled = true },
+  ui = {
+    border = "single",
+    backdrop = 100
+  }
 })
