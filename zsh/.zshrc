@@ -22,7 +22,7 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-bindkey '^l' clear-screen
+bindkey '^g' clear-screen
 
 # custom commands
 autoload -Uz update-all
