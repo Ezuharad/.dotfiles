@@ -1,7 +1,4 @@
 # history settings
-bindkey '^l' history-search-forward
-bindkey '^h' history-search-backward
-
 setopt appendhistory
 setopt sharehistory
 

@@ -22,12 +22,11 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-bindkey '^g' clear-screen
-
 # custom commands
 autoload -Uz update-all
 
 source $HOME/.zshinit/alias.zsh
+source $HOME/.zshinit/opt.zsh
 source $HOME/.zshinit/conda.zsh
 source $HOME/.zshinit/env.zsh
 source $HOME/.zshinit/fzf.zsh
