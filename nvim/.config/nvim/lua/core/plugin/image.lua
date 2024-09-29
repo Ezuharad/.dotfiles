@@ -4,6 +4,7 @@ package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/shar
 
 return {
   "3rd/image.nvim",
+  enabled = false,
   opts = {
     backend = "kitty",
     integrations = {

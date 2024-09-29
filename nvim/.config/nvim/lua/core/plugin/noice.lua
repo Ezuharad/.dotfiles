@@ -14,11 +14,18 @@ return {
       command_palette = true,
       lsp_doc_border = true
     },
+    message = { -- disable LSP server messages
+      enabled = false
+    },
     notify = {
       enabled = false
     },
-    message = { -- disable LSP server messages
-      enabled = false
+    views = {
+      mini = {
+        win_options = {
+          winblend = 0
+        }
+      }
     }
 	},
 	dependencies = {

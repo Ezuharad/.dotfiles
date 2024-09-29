@@ -3,7 +3,7 @@ vim.g.config = {
   theme = {
     name = "nord",
     alpha = {
-      header = "zelda",
+      header = "llvm_dragon",
     },
   },
 }
