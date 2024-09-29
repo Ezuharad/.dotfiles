@@ -1,4 +1,4 @@
--- Themes in theme/ directory
+-- themes in theme/ directory
 local themes = {
   nord = {
     require("core.plugin.theme.nord"),
@@ -6,4 +6,3 @@ local themes = {
 }
 
 return themes[vim.g.config.theme.name]
-

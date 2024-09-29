@@ -5,9 +5,13 @@ vim.g.maplocalleader = "\\"
 local map = vim.keymap.set
 local default_opts = {noremap = true, silent = true}
 
--- rebind ; and , to n and N
+-- recenter after n and N
 map('n', 'n', 'nzz', default_opts)
 map('n', 'N', 'Nzz', default_opts)
+
+-- unbind ; and ,
+map('n', ';', '<nop>', default_opts)
+map('n', ',', '<nop>', default_opts)
 
 -- jump half page
 map('n', '<c-u>', '<c-u>zz', default_opts)
