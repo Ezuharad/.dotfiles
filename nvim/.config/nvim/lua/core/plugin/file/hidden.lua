@@ -10,4 +10,7 @@ return {
 	".venv",
   ".ruff_cache",
 	"__pycache__",
+
+  -- rust
+  "target/debug/"
 }

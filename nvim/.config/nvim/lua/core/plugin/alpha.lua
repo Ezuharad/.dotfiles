@@ -6,6 +6,7 @@ return {
 		"nvim-lua/plenary.nvim",
 	},
 	cmd = "Alpha",
+  lazy = true,
 	opts = function()
 		local dashboard = require("alpha.themes.dashboard")
 		dashboard.section.header.val = require("core.plugin.alpha.header")[vim.g.config.theme.alpha.header]

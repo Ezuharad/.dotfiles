@@ -4,6 +4,9 @@ return {
   event = "VeryLazy",
   lazy = true,
   opts = {
+    jump = {
+      autojump = true
+    },
     modes = {
       char = {
         keys = {
