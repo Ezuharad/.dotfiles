@@ -36,3 +36,6 @@ source $HOME/.zshinit/vibind.zsh
 # set prompt style
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/default.toml)"
 
+# set secret variables
+[ -f $HOME/.env ] && source .env
+

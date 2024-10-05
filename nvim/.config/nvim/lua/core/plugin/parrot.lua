@@ -1,8 +1,10 @@
 -- AI assistant support
 return {
   "frankroeder/parrot.nvim",
-  enabled = false,  -- TODO: wait for waitlist
+  enabled = true,
   dependencies = "nvim-lua/plenary.nvim",
+  lazy = false,
+
   opts = {
     providers = {
       github = {
@@ -11,4 +13,3 @@ return {
     }
   }
 }
-
