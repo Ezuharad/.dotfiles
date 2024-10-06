@@ -37,5 +37,5 @@ source $HOME/.zshinit/vibind.zsh
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/default.toml)"
 
 # set secret variables
-[ -f $HOME/.env ] && source .env
+[ -f $HOME/.env ] && source $HOME/.env
 

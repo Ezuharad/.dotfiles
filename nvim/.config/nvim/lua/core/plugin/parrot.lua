@@ -1,15 +1,19 @@
 -- AI assistant support
 return {
   "frankroeder/parrot.nvim",
-  enabled = true,
   dependencies = "nvim-lua/plenary.nvim",
-  lazy = false,
-
+  lazy = true,
   opts = {
     providers = {
       github = {
         api_key = os.getenv("GITHUB_TOKEN"),
-      }
-    }
-  }
+      },
+    },
+  },
+  keys = {
+    { "<leader>pt", ":PrtChatToggle<cr>", desc = "Toggle AI Chat (Parrot)" },
+    { "<leader>pn", ":PrtChatNew<cr>",    desc = "New AI Chat (Parrot)" },
+    { "<leader>pp", ":PrtChatPaste<cr>",  desc = "Paste Visual Selection into AI Chat (Parrot)" },
+    { "<leader>pa", ":PrtAsk<cr>",        desc = "Ask AI Question (Parrot)" }
+  },
 }
