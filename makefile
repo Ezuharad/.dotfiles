@@ -9,7 +9,7 @@ include .build/makefile/python.makefile
 
 all: headless extra wezterm
 
-headless: git zsh tmux nvim yazi
+headless: git zsh nvim yazi
 
 extra: conda docker bat fastfetch htop man 
 
@@ -53,7 +53,7 @@ man: $(BINDIR)mandb $(LICENSEDIR)man-pages
 	
 	sudo mandb
 
-tmux: $(BINDIR)tmux $(BINDIR)stow $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm/tpm $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux/nord.tmux
+tmux: $(BINDIR)tmux $(BINDIR)stow $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm/tpm $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tmux/nord.tmux  # deprecated after move to wezterm
 	@echo "Installing tmux configuration"
 
 	cd $(STOWDIR) && stow tmux --target ~/

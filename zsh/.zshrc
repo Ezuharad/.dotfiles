@@ -1,8 +1,3 @@
-# automatically start tmux
-if [[ -z "$TMUX" && -f /usr/bin/tmux ]]; then
-  exec tmux new-session -A -s tmux
-fi
-
 # set PATH, FPATH variables
 source $HOME/.zshinit/path.zsh
 
