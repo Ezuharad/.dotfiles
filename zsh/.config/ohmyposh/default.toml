@@ -7,7 +7,8 @@ shell_integration = true
 
 [transient_prompt]
 background = 'transparent'
-template = '> '
+foreground = 'blue'
+template = ' {{ .PWD }} $ '
 
 [[blocks]]
 type = 'prompt'

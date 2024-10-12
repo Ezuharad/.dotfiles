@@ -1,313 +1,316 @@
-akregator
-alsa-utils
-arch-install-scripts
-arch-wiki-docs
-ark
-base
-base-devel
-bat
-bat-extras
-bc
-bind
-bluedevil
-bluez
-bluez-utils
-boost
-brave-bin
-bup
-cfr
-citra-appimage
-clang
-cockatrice
-cppreference-doc
-cryfs
-cuda
-cuda-tools
-cups
-cython
-dbus-docs
-devtools
-discord
-dnsmasq
-docker
-docker-buildx
-docker-compose
-dolphin
-dolphin-emu
-dolphin-plugins
-dotnet-sdk
-doxygen
-doxygen-docs
-efibootmgr
-egl-wayland
-elisa
-elixir
-exfatprogs
-expac
-fastfetch
-fd
-filelight
-filezilla
-firefox
-flatpak
-flatpak-kcm
-freerdp
-fwupd
-fzf
-gamemode
-geogebra
-ghcup-hs-bin
-ghidra
-git
-git-lfs
-github-cli
-glib2-docs
-glm
-gnome-themes-extra
-go
-google-chrome
-grub
-gwenview
-hackrf
-haruna
-hplip
-htop
-hunspell-en_us
-hyphen-en
-icat
-ifuse
-imagemagick
-informant
-inkscape
-intel-ucode
-inxi
-iotop
-iptables-nft
-iwd
-jdk17-openjdk
-jdk8-openjdk
-julia
-jupyter-nbconvert
-kasts
-kcalc
-kcharselect
-kde-gtk-config
-kdeconnect
-kdenlive
-kdeplasma-addons
-khelpcenter
-kio-extras
-konversation
-krita
-kscreen
-ktorrent
-kup
-kwallet-pam
-kwalletmanager
-kwave
-ldb
-ldns
-less
-lib32-vulkan-intel
-libassuan
-libbsd
-libmythes
-libopenmpt
-libreoffice-extension-texmaths
-libreoffice-fresh
-libwbclient
-libx11
-linux
-linux-docs
-linux-firmware
-linux-firmware-qlogic
-llvm
-lostfiles
-lshw
-lua
-luarocks
-lutris
-mambaforge
-man-db
-man-pages
-mariadb
-marksman
-masscan
-melonds-bin
-meson
-metasploit
-mgba-qt
-modrinth-app
-mupen64plus-qt
-mupen64plus-video-gliden64-git
-mythes-en
-namcap
-nano
-nasm
-neovim
-net-tools
-networkmanager
-networkmanager-openconnect
-nftables
-nmap
-nordvpn-bin
-noto-fonts-cjk
-noto-fonts-emoji
-npm
-nvidia
-nvidia-prime
-nvidia-settings
-obs-studio
-obsidian
-ocaml
-octave
-octave-docs
-oh-my-posh-git
-okular
-openbsd-netcat
-openjdk-doc
-openmp
-openssh
-pacman-contrib
-pacutils
-pandoc-bin
-partitionmanager
-paru-bin
-pcsx2-latest-bin
-perf
-pipewire
-pipewire-audio
-pipewire-docs
-pipewire-pulse
-plasma-desktop
-plasma-firewall
-plasma-integration
-plasma-nm
-plasma-pa
-plasma-systemmonitor
-plasma-thunderbolt
-plasma-vault
-plasma-workspace
-plymouth-kcm
-powder-toy
-power-profiles-daemon
-powerdevil
-powerline
-powerline-fonts
-proton-ge-custom-bin
-pypy
-pypy3
-pyright
-python-debugpy
-python-docs
-python-dulwich
-python-gdal
-python-ipykernel
-python-ipywidgets
-python-isort
-python-matplotlib
-python-numba
-python-numpy-docs
-python-owslib
-python-pandas
-python-pandas-docs
-python-pip
-python-psycopg2
-python-pynvim
-python-pytest
-python-pytorch-cuda
-python-scikit-learn
-python-scipy
-python-scipy-docs
-python-seaborn
-python-shodan
-python-sphinx
-python-torchvision
-qgis
-qt5-doc
-qt5-imageformats
-qt6-5compat
-qt6-imageformats
-qt6-positioning
-r
-r2modman-appimage
-racket-minimal
-remmina
-ripgrep
-rsync
-ruby
-ruby-docs
-ruby-rdoc
-rubygems
-ruff
-ruffle-nightly-bin
-rustup
-sddm
-sddm-kcm
-shadow
-smartmontools
-smbclient
-snes9x-gtk
-spectacle
-stack-bin
-steam
-stow
-suyu-bin
-sweeper
-talloc
-tdb
-tdf-git
-tevent
-texlive-bibtexextra
-texlive-binextra
-texlive-fontsextra
-texlive-fontsrecommended
-texlive-latexextra
-texlive-mathscience
-texlive-plaingeneric
-texlive-publishers
-texlive-xetex
-thermald
-thunderbird
-timeshift
-tinysparql
-tk
-tmux
-torbrowser-launcher
-traceroute
-tree
-ttf-fira-code
-ttf-jetbrains-mono-nerd
-ttf-meslo-nerd-font-powerlevel10k
-ttf-times-new-roman
-ufw
-ungoogled-chromium-bin
-unrar
-update-grub
-valgrind
-vde2
-vim
-vscodium-bin
-vulkan-intel
-wayland-docs
-wezterm
-wget
-whois
-wine
-wine-mono
-wireless_tools
-wireshark-cli
-wl-clipboard
-wpa_supplicant
-xclip
-xdg-desktop-portal-kde
-xdg-utils
-xorgproto
-xsv
-xwaylandvideobridge
-yazi
-yt-dlp
-zig
-zls
-zram-generator
-zsh
+akregator 24.08.2-1
+alsa-utils 1.2.12-1
+arch-install-scripts 28-2
+arch-wiki-docs 20241001-1
+ark 24.08.2-1
+base 3-2
+base-devel 1-2
+bat 0.24.0-2
+bat-extras 2024.08.24-1
+bc 1.07.1-5
+bind 9.20.2-1
+bluedevil 1:6.2.0-1
+bluez 5.78-1
+bluez-utils 5.78-1
+boost 1.86.0-3
+brave-bin 1:1.70.126-1
+bup 0.33.4-1
+cfr 0.152-3
+chirp-next 20241003-1
+citra-appimage 1:20240516-3
+clang 18.1.8-3
+cockatrice 2.9.0-8
+cppreference-doc 20240610-1
+cryfs 0.11.4-9
+cuda 12.6.1-1
+cuda-tools 12.6.1-1
+cups 2:2.4.10-1
+cython 3.0.11-1
+dbus-docs 1.14.10-2
+devtools 1:1.2.1-1
+discord 0.0.71-1
+dnsmasq 2.90-1
+docker 1:27.3.1-1
+docker-buildx 0.17.1-1
+docker-compose 2.29.7-1
+dolphin 24.08.2-1
+dolphin-emu 1:2409-1
+dolphin-plugins 24.08.2-1
+dotnet-sdk 8.0.8.sdk108-1
+doxygen 1.12.0-2
+doxygen-docs 1.12.0-2
+efibootmgr 18-3
+egl-wayland 4:1.1.16-1
+elisa 24.08.2-1
+elixir 1.17.3-1
+exfatprogs 1.2.5-1
+expac 10-11
+fastfetch 2.27.1-1
+fd 10.2.0-1
+filelight 24.08.2-1
+filezilla 3.67.1-2
+firefox 131.0.2-1
+flatpak 1:1.15.10-1
+flatpak-kcm 6.2.0-1
+freerdp 2:3.8.0-1
+fwupd 1.9.25-1
+fzf 0.55.0-1
+gamemode 1.8.2-1
+geogebra 1:5.2.861.0-1
+ghcup-hs-bin 0.1.30.0-1
+ghidra 11.0.3-1
+git 2.47.0-1
+git-filter-repo 2.38.0-3
+git-lfs 3.5.1-1
+github-cli 2.58.0-1
+glib2-docs 2.82.1-2
+glm 1.0.1-1
+gnome-themes-extra 3.28+r6+g45b1d457-2
+go 2:1.23.2-1
+google-chrome 129.0.6668.100-1
+grub 2:2.12-3
+gwenview 24.08.2-1
+hackrf 2024.02.1-1
+haruna 1.2.1-1
+hplip 1:3.24.4-2
+htop 3.3.0-3
+hunspell-en_us 2020.12.07-5
+hyphen-en 2.8.8-6
+icat 0.5-1
+ifuse 1.1.4-5
+imagemagick 7.1.1.39-1
+informant 0.6.0-1
+inkscape 1.4-1
+intel-ucode 20240910-1
+inxi 3.3.36.1-1
+iotop 0.6-11
+iptables-nft 1:1.8.10-2
+iwd 2.22-1
+jdk17-openjdk 17.0.12.u7-1
+jdk8-openjdk 8.422.u05-1
+julia 2:1.11.0-1
+jupyter-nbconvert 7.16.4-3
+kasts 24.08.2-1
+kcalc 24.08.2-1
+kcharselect 24.08.2-1
+kde-gtk-config 6.2.0-1
+kdeconnect 24.08.2-1
+kdenlive 24.08.2-1
+kdeplasma-addons 6.2.0-1
+khelpcenter 24.08.2-1
+kio-extras 24.08.2-1
+konversation 24.08.2-1
+krita 5.2.6-2
+kscreen 6.2.0-1
+ktorrent 24.08.2-1
+kup 0.10.0-1
+kwallet-pam 6.2.0-1
+kwalletmanager 24.08.2-1
+kwave 24.08.2-1
+ldb 2:4.21.0-2
+ldns 1.8.4-1
+less 1:661-1
+lib32-vulkan-intel 1:24.2.4-1
+libassuan 3.0.0-1
+libbsd 0.12.2-2
+libmythes 1:1.2.5-2
+libopenmpt 0.7.10-1
+libreoffice-extension-texmaths 0.52.2-1
+libreoffice-fresh 24.8.2-1
+libwbclient 2:4.21.0-2
+libx11 1.8.10-1
+linux 6.11.3.arch1-1
+linux-docs 6.11.3.arch1-1
+linux-firmware 20240909.552ed9b8-1
+linux-firmware-qlogic 20240909.552ed9b8-1
+llvm 18.1.8-4
+lostfiles 4.14-1
+lshw B.02.20-1
+lua 5.4.7-1
+luarocks 3.11.1-2
+lutris 0.5.17-6
+mambaforge 24.7.1.0-1
+man-db 2.13.0-1
+man-pages 6.9.1-1
+mariadb 11.5.2-1
+marksman 20241007-1
+masscan 1.3.2-2
+melonds-bin 0.9.5-1
+meson 1.5.2-1
+metasploit 6.4.28-1
+mgba-qt 0.10.3-2
+modrinth-app 0.8.8-1
+mold 2.34.1-1
+mupen64plus-qt 1.15-4
+mupen64plus-video-gliden64-git 4.0.r676.gf4b0755e-1
+mythes-en 20240519-1
+namcap 3.5.2-2
+nano 8.2-1
+nasm 2.16.03-1
+neovim 0.10.2-2
+net-tools 2.10-3
+networkmanager 1.50.0-1
+networkmanager-openconnect 1.2.10-2
+nftables 1:1.1.1-1
+nmap 7.95-1
+nordvpn-bin 3.19.0-2
+noto-fonts-cjk 20230817-2
+noto-fonts-emoji 1:2.047-1
+npm 10.9.0-1
+nvidia 560.35.03-12
+nvidia-prime 1.0-5
+nvidia-settings 560.35.03-1
+obs-studio 30.2.1-1
+obsidian 1.6.7-1
+ocaml 5.2.0-1
+octave 9.2.0-2
+octave-docs 7.3.0-1
+oh-my-posh 23.17.0-1
+okular 24.08.2-1
+openbsd-netcat 1.226_1-2
+openjdk-doc 22.0.2.u9-1
+openmp 18.1.8-1
+openssh 9.9p1-1
+pacman-contrib 1.10.6-2
+pacutils 0.14.0-3
+pandoc-bin 3.5-1
+partitionmanager 24.08.2-1
+paru-bin 2.0.4-3
+pcsx2-latest-bin 2.1.169-1
+perf 6.10-2
+pipewire 1:1.2.5-1
+pipewire-audio 1:1.2.5-1
+pipewire-docs 1:1.2.5-1
+pipewire-pulse 1:1.2.5-1
+plasma-desktop 6.2.0-1
+plasma-firewall 6.2.0-1
+plasma-integration 6.2.0-1
+plasma-nm 6.2.0-1
+plasma-pa 6.2.0-1
+plasma-systemmonitor 6.2.0-1
+plasma-thunderbolt 6.2.0-1
+plasma-vault 6.2.0-1
+plasma-workspace 6.2.0-1
+plymouth-kcm 6.2.0-1
+powder-toy 98.2.365-1
+power-profiles-daemon 0.23-1
+powerdevil 6.2.0-1
+powerline 2.8.4-2
+powerline-fonts 2.8.4-2
+proton-ge-custom-bin 1:GE_Proton9_15-1
+pypy 7.3.17-1
+pypy3 7.3.17-1
+pyright 1.1.384-1
+python-debugpy 1.8.7-1
+python-docs 3.11.3-2
+python-dulwich 0.22.2-1
+python-gdal 3.9.2-3
+python-ipykernel 6.29.5-1
+python-ipywidgets 8.1.5-1
+python-isort 5.13.2-3
+python-matplotlib 3.9.2-1
+python-numba 0.60.0-2
+python-numpy-docs 1.26-1
+python-owslib 0.31.0-1
+python-pandas 2.2.2-3
+python-pandas-docs 2.1.2-1
+python-pip 24.2-1
+python-psycopg2 2.9.9-2
+python-pynvim 0.5.0-3
+python-pytest 1:8.3.3-1
+python-pytorch-cuda 2.3.1-8
+python-scikit-learn 1.5.2-1
+python-scipy 1.14.1-1
+python-scipy-docs 1.13.0-1
+python-seaborn 0.13.2-1
+python-shodan 1.31.0-2
+python-sphinx 8.0.2-1
+python-torchvision 0.18.1-1
+qgis 3.38.3-2
+qt5-doc 5.15.15-1
+qt5-imageformats 5.15.15+kde+r4-1
+qt6-5compat 6.7.3-1
+qt6-imageformats 6.7.3-1
+qt6-positioning 6.7.3-1
+r 4.4.1-1
+r2modman-appimage 3.1.50-1
+racket-minimal 8.14-1
+remmina 1:1.4.36-1
+ripgrep 14.1.1-1
+rsync 3.3.0-2
+ruby 3.2.5-2
+ruby-docs 3.2.5-2
+ruby-rdoc 6.5.1.1-2
+rubygems 3.4.19-1
+ruff 0.6.9-1
+ruffle-nightly-bin 2024.10.11-1
+rustup 1.27.1-1
+sddm 0.21.0-4
+sddm-kcm 6.2.0-1
+shadow 4.16.0-1
+smartmontools 7.4-2
+smbclient 2:4.21.0-2
+snes9x-gtk 1.63-1
+spectacle 24.08.2-1
+stack-bin 3.1.1-1
+steam 1.0.0.81-2
+stow 2.4.1-1
+suyu-bin 0.0.4-3
+sweeper 24.08.2-1
+talloc 2.4.2-3
+tdb 1.4.12-1
+tdf-git 20241008.r35.f6d3399-1
+tevent 1:0.16.1-3
+texlive-bibtexextra 2024.2-3
+texlive-binextra 2024.2-3
+texlive-fontsextra 2024.2-3
+texlive-fontsrecommended 2024.2-3
+texlive-latexextra 2024.2-3
+texlive-mathscience 2024.2-3
+texlive-plaingeneric 2024.2-3
+texlive-publishers 2024.2-3
+texlive-xetex 2024.2-3
+thermald 2.5.8-1
+thunderbird 128.3.0-1
+timeshift 24.06.3-1
+tinysparql 3.8.0-1
+tk 8.6.15-1
+torbrowser-launcher 0.3.7-2
+traceroute 2.1.5-1
+tree 2.1.3-1
+tree-sitter-cli 0.24.3-1
+ttf-fira-code 6.2-2
+ttf-jetbrains-mono-nerd 3.2.1-2
+ttf-meslo-nerd-font-powerlevel10k 2.3.3-1
+ttf-times-new-roman 2.0-3
+ufw 0.36.2-4
+ungoogled-chromium-bin 129.0.6668.100-1
+unrar 1:7.0.9-1
+update-grub 0.0.1-8
+valgrind 3.23.0-5
+vde2 2.3.3-5
+vim 9.1.0764-1
+vscodium-bin 1.94.2.24284-1
+vulkan-intel 1:24.2.4-1
+wayland-docs 1.23.1-1
+wezterm 20240203.110809.5046fc22-2
+wget 1.24.5-3
+whois 5.5.23-1
+wine 9.19-1
+wine-mono 9.3.0-1
+wireless_tools 30.pre9-4
+wireshark-cli 4.4.0-1
+wl-clipboard 1:2.2.1-2
+wpa_supplicant 2:2.11-2
+xclip 0.13-5
+xdg-desktop-portal-kde 6.2.0-1
+xdg-utils 1.2.1-1
+xorgproto 2024.1-2
+xsv 0.13.0-3
+xwaylandvideobridge 0.4.0-2
+yazi 0.3.3-1
+yt-dlp 2024.10.07-1
+zig 0.13.0-1
+zls 0.13.0-1
+zram-generator 1.1.2-1
+zsh 5.9-5

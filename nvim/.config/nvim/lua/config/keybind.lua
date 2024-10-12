@@ -14,8 +14,8 @@ map('n', ';', '<nop>', default_opts)
 map('n', ',', '<nop>', default_opts)
 
 -- jump half page
-map('n', '<c-u>', '<c-u>zz', default_opts)
-map('n', '<c-d>', '<c-d>zz', default_opts)
+map('n', '<C-u>', '<c-u>zz', default_opts)
+map('n', '<C-d>', '<c-d>zz', default_opts)
 
 -- arrow keys
 map('n', '<up>', '<nop>', default_opts)
