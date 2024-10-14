@@ -9,9 +9,9 @@ return {
       harpoon:setup()
     end,
     keys = {
-      { "<leader>ha", function() require("harpoon"):list():add() end,  desc = "Add current position to harpoon list." },
-      { "<leader>hl", function() require("harpoon"):list():next() end, desc = "Jump to next harpoon." },
-      { "<leader>hh", function() require("harpoon"):list():prev() end, desc = "Jump to last harpoon." },
+      { "<leader>ha", function() require("harpoon"):list():add() end,  desc = "Add current position to harpoon (Harpoon)" },
+      { "<leader>hl", function() require("harpoon"):list():next() end, desc = "Jump to next harpoon (Harpoon)" },
+      { "<leader>hh", function() require("harpoon"):list():prev() end, desc = "Jump to previous harpoon (Harpoon)" },
     },
   },
 }

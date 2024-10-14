@@ -9,13 +9,16 @@ local default_opts = {noremap = true, silent = true}
 map('n', 'n', 'nzz', default_opts)
 map('n', 'N', 'Nzz', default_opts)
 
+-- recenter after jump half page
+map('n', '<C-u>', '<c-u>zz', default_opts)
+map('n', '<C-d>', '<c-d>zz', default_opts)
+
+-- unbind Q
+map('n', 'Q', '<nop>', default_opts)
+
 -- unbind ; and ,
 map('n', ';', '<nop>', default_opts)
 map('n', ',', '<nop>', default_opts)
-
--- jump half page
-map('n', '<C-u>', '<c-u>zz', default_opts)
-map('n', '<C-d>', '<c-d>zz', default_opts)
 
 -- arrow keys
 map('n', '<up>', '<nop>', default_opts)

@@ -6,7 +6,8 @@ return {
       "L3MON4D3/LuaSnip",
     },
     config = true,
-    event = "VeryLazy",
+    lazy = true,
+    -- event = "VeryLazy",
     opts = {
       languages = require("core.plugin.neogen.config"),
       snippet_engine = "luasnip",

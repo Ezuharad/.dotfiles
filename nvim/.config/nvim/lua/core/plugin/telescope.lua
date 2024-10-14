@@ -45,12 +45,11 @@ return {
 			-- Strings
 			{ "<leader>fs", "<cmd>Telescope grep_string<cr>", desc = "Telescope Hovered Text (Telescope)" },
 			{ "<leader>ft", "<cmd>Telescope live_grep<cr>", desc = "Telescope Text (Telescope)" },
-			{ "<leader>fg", "<cmd>Telescope glyph<cr>", desc = "Telescope Gylphs (Telescope-Glyph)" },
 
 			-- Fixing stuff
 			{ "<leader>fx", "<cmd>Telescope diagnostics<cr>", desc = "Telescope Diagnostics (Telescope)" },
 			{ "<leader>fq", "<cmd>Telescope quickfix<cr>", desc = "Telescope Quick Fixes (Telescope)" },
-			{ "<leader>ft", "<cmd>Telescope treesitter<cr>", desc = "Telescope Treesitter (Telescope)" }, -- TODO: does not seem to work
+			{ "<leader>fe", "<cmd>Telescope treesitter<cr>", desc = "Telescope Treesitter (Telescope)" },
 
 			-- Git stuff
 			{ "<leader>gfb", "<cmd>Telescope git_branches<cr>", desc = "Telescope Git Branches (Telescope)" },
@@ -65,9 +64,25 @@ return {
 			defaults = {
 				file_ignore_patterns = require("core.plugin.file.hidden"),
 			},
+      extensions = {
+        glyph = {
+          action = function(glyph)
+            vim.api.nvim_put({ glyph.value }, 'c', false, true)
+          end
+        }
+      }
 		},
 		cmd = {
 			"Telescope",
+		},
+	},
+	{
+		"ghassan0/telescope-glyph.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+		},
+		keys = {
+			{ "<leader>fg", "<cmd>Telescope glyph<cr>", desc = "Telescope Gylphs (Telescope-Glyph)" },
 		},
 	},
 }
