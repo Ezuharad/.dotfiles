@@ -22,13 +22,19 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
-config.enable_tab_bar = false
 config.term = "xterm-256color"
 
 -- scrolling
 config.scrollback_lines = 3500
 
 -- colorscheme
+config.use_fancy_tab_bar = false
 config.color_scheme = "nord"
+config.colors = {
+  tab_bar = {
+    background = "rgba(0,0,0,0)"
+  }
+}
+require("config.tabbarstyle")
 
 return config
