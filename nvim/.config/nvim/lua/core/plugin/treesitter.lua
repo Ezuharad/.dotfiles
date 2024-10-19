@@ -82,6 +82,10 @@ return {
               ["[A"] = { query = "@assignment.outer", desc = "outer assignment" }
             },
           },
+          lsp_interop = {
+            enable = true,
+            border = "single",
+          }
         },
       })
 
@@ -103,6 +107,10 @@ return {
         "regex",
         "vim",
       },
+      highlight = {
+        enabled = true
+      },
+      additional_vim_regex_highlighting = false
     },
   },
 }

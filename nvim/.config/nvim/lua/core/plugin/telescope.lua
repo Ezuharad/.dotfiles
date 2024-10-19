@@ -26,16 +26,8 @@ return {
 			{ "<leader>fm", "<cmd>Telescope man_pages<cr>", desc = "Telescope Man Pages (Telescope)" },
 
 			-- LSP
-			{
-				"<leader>fd",
-				"<cmd>Telescope lsp_definitions<cr>",
-				desc = "Telescope Hovered Definitions (Telescope)",
-			},
-			{
-				"<leader>fi",
-				"<cmd>Telescope lsp_implementations<cr>",
-				desc = "Telescope Hovered Implementations (Telescope)",
-			},
+			{ "<leader>fd", "<cmd>Telescope lsp_definitions<cr>", desc = "Telescope Hovered Definitions (Telescope)" },
+			{ "<leader>fi", "<cmd>Telescope lsp_implementations<cr>", desc = "Telescope Hovered Implementations (Telescope)", },
 			{
 				"<leader>fr",
 				"<cmd>Telescope lsp_references<cr>",
@@ -54,23 +46,19 @@ return {
 			-- Git stuff
 			{ "<leader>gfb", "<cmd>Telescope git_branches<cr>", desc = "Telescope Git Branches (Telescope)" },
 			{ "<leader>gfc", "<cmd>Telescope git_commits<cr>", desc = "Telescope Git Commits (Telescope)" },
-			{
-				"<leader>gff",
-				"<cmd>Telescope git_files<cr>",
-				desc = "Telescope Git-Tracked Files (Telescope)",
-			},
+			{ "<leader>gff", "<cmd>Telescope git_files<cr>", desc = "Telescope Git-Tracked Files (Telescope)" },
 		},
 		opts = {
 			defaults = {
 				file_ignore_patterns = require("core.plugin.file.hidden"),
 			},
-      extensions = {
-        glyph = {
-          action = function(glyph)
-            vim.api.nvim_put({ glyph.value }, 'c', false, true)
-          end
-        }
-      }
+			extensions = {
+				glyph = {
+					action = function(glyph)
+						vim.api.nvim_put({ glyph.value }, "c", false, true)
+					end,
+				},
+			},
 		},
 		cmd = {
 			"Telescope",

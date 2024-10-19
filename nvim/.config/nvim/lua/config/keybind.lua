@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 local map = vim.keymap.set
-local default_opts = {noremap = true, silent = true}
+local default_opts = { noremap = true, silent = true }
 
 -- recenter after n and N
 map('n', 'n', 'nzz', default_opts)
@@ -35,4 +35,3 @@ map('v', '<up>', '<nop>', default_opts)
 map('v', '<down>', '<nop>', default_opts)
 map('v', '<left>', '<nop>', default_opts)
 map('v', '<right>', '<nop>', default_opts)
-

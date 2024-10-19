@@ -13,6 +13,9 @@ return {
           "f", "F", "t", "T"
         }
       },
+    },
+    prompt = {
+      prefix = { { "", "FlashPromptIcon" } }
     }
   },
   keys = {

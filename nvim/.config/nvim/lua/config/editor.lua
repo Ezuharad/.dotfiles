@@ -15,6 +15,9 @@ vim.opt.spell = false
 -- use UTF 8
 vim.opt.encoding = "UTF-8"
 
+-- see whitespace
+vim.opt.list = true
+
 -- feedback for regex search
 vim.opt.incsearch = true
 

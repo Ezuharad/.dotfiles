@@ -2,7 +2,7 @@
 return {
   Lua = {
     diagnostics = {
-      globals = { "vim" }
+      globals = { "vim", "wezterm" }
     },
     telemetry = {
       enable = false
