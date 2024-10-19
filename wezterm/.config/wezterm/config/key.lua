@@ -58,10 +58,10 @@ local keybinds = {
 	{ key = "u", mods = "ALT", action = act.ScrollByPage(-0.5) },
 	{ key = "d", mods = "ALT", action = act.ScrollByPage(0.5) },
   -- pane resizing
-	{ key = "h", mods = "ALT|SHIFT", action = act.AdjustPaneSize({ "Right", 15 }) },
+	{ key = "h", mods = "ALT|SHIFT", action = act.AdjustPaneSize({ "Left", 15 }) },
 	{ key = "j", mods = "ALT|SHIFT", action = act.AdjustPaneSize({ "Down", 15 }) },
 	{ key = "k", mods = "ALT|SHIFT", action = act.AdjustPaneSize({ "Up", 15 }) },
-	{ key = "l", mods = "ALT|SHIFT", action = act.AdjustPaneSize({ "Left", 15 }) },
+	{ key = "l", mods = "ALT|SHIFT", action = act.AdjustPaneSize({ "Right", 15 }) },
   -- pane rotation
 	{ key = "r", mods = "ALT", action = act.RotatePanes("Clockwise") },
 	{ key = "r", mods = "ALT|SHIFT", action = act.RotatePanes("CounterClockwise") },
