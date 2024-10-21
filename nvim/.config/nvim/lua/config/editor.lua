@@ -16,6 +16,11 @@ vim.opt.spell = false
 vim.opt.encoding = "UTF-8"
 
 -- see whitespace
+vim.opt.listchars = {
+  tab = "▶ ",
+  trail = "·",
+  nbsp = "·"
+}
 vim.opt.list = true
 
 -- feedback for regex search
@@ -30,8 +35,12 @@ vim.g.terminal_emulator = 'wezterm'
 vim.opt.shell = 'zsh'
 vim.opt.termguicolors = true
 
--- misc. options
+-- line numbers
 vim.wo.number = true
 vim.wo.relativenumber = true
+
+-- disable mouse
 vim.opt.mouse = ''
+
+-- allow hiding unsaved buffers
 vim.opt.hidden = true

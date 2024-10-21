@@ -26,9 +26,9 @@ map('n', 'x', '"_x', default_opts)
 -- unbind Q
 map('n', 'Q', '<nop>', default_opts)
 
--- unbind ; and ,
-map('n', ';', '<nop>', default_opts)
+-- unbind , and ;
 map('n', ',', '<nop>', default_opts)
+map('n', ';', '<nop>', default_opts)
 
 -- arrow keys
 map('n', '<up>', '<nop>', default_opts)

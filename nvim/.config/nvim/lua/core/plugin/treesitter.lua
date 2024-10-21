@@ -106,6 +106,7 @@ return {
         "markdown",
         "regex",
         "vim",
+        "vimdoc"
       },
       highlight = {
         enabled = true
