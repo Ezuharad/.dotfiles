@@ -10,8 +10,18 @@ map('n', 'n', 'nzz', default_opts)
 map('n', 'N', 'Nzz', default_opts)
 
 -- recenter after jump half page
-map('n', '<C-u>', '<c-u>zz', default_opts)
-map('n', '<C-d>', '<c-d>zz', default_opts)
+map('n', '<M-u>', '<C-u>zz', default_opts)
+map('n', '<M-d>', '<C-d>zz', default_opts)
+
+map('n', '<C-u>', '<nop>', default_opts)
+map('n', '<C-d>', '<nop>', default_opts)
+
+-- disable yanking with select operations
+map('n', 'C', '"_C', default_opts)
+map('n', 'cc', '"_cc', default_opts)
+map('n', 'D', '"_D', default_opts)
+map('n', 'dd', '"_dd', default_opts)
+map('n', 'x', '"_x', default_opts)
 
 -- unbind Q
 map('n', 'Q', '<nop>', default_opts)

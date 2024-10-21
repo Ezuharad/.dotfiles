@@ -9,30 +9,30 @@ return {
 				["vim.lsp.util.stylize_markdown"] = true,
 				["cmp.entry.get_documentation"] = true,
 			},
-      progress = {
-        enabled = false
-      }
+			progress = {
+				enabled = false,
+			},
 		},
-    presets = {
-      command_palette = true,
-      lsp_doc_border = true
-    },
-    message = { -- disable LSP server messages
-      enabled = false
-    },
-    notify = {
-      enabled = false
-    },
-    views = {
-      mini = {
-        win_options = {
-          winblend = 0
-        }
-      }
-    }
+		presets = {
+			command_palette = true,
+			lsp_doc_border = true,
+		},
+		message = { -- disable LSP server messages
+			enabled = false,
+		},
+		notify = {
+			enabled = false,
+		},
+		views = {
+			mini = {
+				win_options = {
+					winblend = 0,
+				},
+			},
+		},
 	},
 	dependencies = {
 		"MunifTanjim/nui.nvim",
-    "hrsh7th/nvim-cmp"
+		"hrsh7th/nvim-cmp",
 	},
 }

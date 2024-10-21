@@ -1,6 +1,6 @@
 -- other configs
 require("config.global")
-require("config.keybind")
+require("config.key")
 require("config.autocmd")
 require("config.editor")
 require("config.silence")
