@@ -42,5 +42,8 @@ vim.wo.relativenumber = true
 -- disable mouse
 vim.opt.mouse = ''
 
+-- show tabs
+vim.opt.showtabline = 1
+
 -- allow hiding unsaved buffers
 vim.opt.hidden = true
