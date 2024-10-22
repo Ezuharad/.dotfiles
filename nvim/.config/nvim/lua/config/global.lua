@@ -5,5 +5,8 @@ vim.g.config = {
     alpha = {
       header = "llvm_dragon",
     },
+    border = {
+      float_border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }
+    }
   },
 }

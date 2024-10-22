@@ -1,5 +1,5 @@
 -- Symlink support
 return {
-	"aymericbeaumet/vim-symlink",
-	dependencies = { "moll/vim-bbye" }
+  "aymericbeaumet/vim-symlink",
+  dependencies = { "moll/vim-bbye" }
 }

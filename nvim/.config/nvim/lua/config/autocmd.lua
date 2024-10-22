@@ -4,6 +4,14 @@ vim.api.nvim_create_autocmd("FileType", {
     "help",
     "man",
     "oil",
+    -- dap stuff
+    "dap-repl",
+    "dapui_breakpoints",
+    "dapui_console",
+    "dapui_scopes",
+    "dapui_stacks",
+    "dapui_watches",
+
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false

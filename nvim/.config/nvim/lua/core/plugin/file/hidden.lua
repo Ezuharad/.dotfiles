@@ -1,16 +1,16 @@
 -- hidden file names
 return {
-	"\\.git",
+  "\\.git",
 
-	-- VSCode
-	"\\.vscode",
+  -- VSCode
+  "\\.vscode",
 
-	-- Python
-	"\\.conda",
-	"\\.venv",
-	"\\.ruff_cache",
-	"__pycache__",
+  -- Python
+  "\\.conda",
+  "\\.venv",
+  "\\.ruff_cache",
+  "__pycache__",
 
-	-- rust
-	"target/debug/",
+  -- rust
+  "target/debug/",
 }

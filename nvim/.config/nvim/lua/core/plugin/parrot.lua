@@ -14,7 +14,7 @@ return {
     { "<leader>pa", ":PrtAsk<cr>",        desc = "Ask AI Question (Parrot)" },
     { "<leader>pr", ":PrtRewrite<cr>",    desc = "Rewrite Visual Selection with AI (Parrot)" },
     { "<leader>pt", ":PrtChatToggle<cr>", desc = "Toggle AI Chat (Parrot)" },
-    { "<leader>pn", ":PrtChatNew<cr>",    desc = "New AI Chat (Parrot)" },
+    { "<leader>pc", ":PrtChatNew<cr>",    desc = "New AI Chat (Parrot)" },
     { "<leader>pp", ":PrtChatPaste<cr>",  desc = "Paste Visual Selection into AI Chat (Parrot)" },
   },
 }
