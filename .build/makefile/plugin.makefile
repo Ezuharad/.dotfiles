@@ -1,6 +1,6 @@
 # zsh and tmux plugins
 TMUX_SUBMODULE_PREFIX=tmux/.tmux/plugins/
-ZSH_SUBMODULE_PREFIX=zsh/.zshinit/plugin/
+ZSH_SUBMODULE_PREFIX=.config/zsh/plugin/
 
 $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm/tpm:
 	git submodule init $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm

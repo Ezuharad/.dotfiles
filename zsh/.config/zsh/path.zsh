@@ -11,5 +11,5 @@
 export GOPATH="$HOME/.go"
 
 # set zsh function path
-FPATH=$HOME/.zshinit/function:$FPATH
+FPATH=$HOME/.config/zsh/function:$FPATH
 

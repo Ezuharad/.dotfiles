@@ -20,3 +20,4 @@ alias ll='ls -la'
 alias vi='nvim'
 alias vim='nvim'
 
+alias imgcat='wezterm imgcat'

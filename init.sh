@@ -21,7 +21,6 @@ fi
     ;;
 esac
 
-cd
 git clone --depth=1 https://github.com/Ezuharad/.dotfiles.git
 cd .dotfiles
 
