@@ -1,4 +1,15 @@
 -- Linter and formatter support for LSP
+local config = function()
+  local null_ls = require("null-ls")
+  return {
+    sources = {
+      null_ls.builtins.completion.luasnip,
+      null_ls.builtins.formatting.stylua,
+      null_ls.builtins.completion.spell,
+    },
+  }
+end
+
 return {
   {
     "nvimtools/none-ls.nvim",
@@ -7,15 +18,15 @@ return {
     keys = {
       { "<leader>rf", vim.lsp.buf.format, desc = "Buffer Reformat (None-ls)" },
     },
-    opts = function()
-      local null_ls = require("null-ls")
-      return {
-        sources = {
-          null_ls.builtins.completion.luasnip,
-          null_ls.builtins.formatting.stylua,
-          null_ls.builtins.completion.spell,
-        },
-      }
-    end,
+    opts = config,
+  },
+  {
+    "jay-babu/mason-null-ls.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "williamboman/mason.nvim",
+      "nvimtools/none-ls.nvim",
+    },
+    opts = config
   },
 }

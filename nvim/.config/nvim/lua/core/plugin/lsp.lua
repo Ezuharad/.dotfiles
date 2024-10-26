@@ -5,7 +5,7 @@ return {
     config = true,
     opts = {
       ui = {
-        border = "single",
+        border = "rounded",
         icons = {
           package_installed = "✓",
           package_pending = "➜",
@@ -37,6 +37,8 @@ return {
     dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
     keys = {
       { "<leader>ra", vim.lsp.buf.code_action, desc = "Code Actions" },
+      { "<leader>rf", vim.lsp.buf.format, desc = "Format Code"},
+      { "<leader>rn", vim.lsp.buf.rename, desc = "Rename Symbol"},
       { "<leader>rs", vim.lsp.buf.signature_help, desc = "Signature Help" },
       { "gi", vim.lsp.buf.implementation, desc = "Go to implementation" },
       { "gd", vim.lsp.buf.definition, desc = "Go to definition" },

@@ -84,7 +84,7 @@ return {
           },
           lsp_interop = {
             enable = true,
-            border = "single",
+            border = "rounded",
           }
         },
       })

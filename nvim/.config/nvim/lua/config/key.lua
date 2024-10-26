@@ -22,7 +22,6 @@ map('n', '<C-d>', '<nop>', default_opts)
 map('n', 'C', '"_C', default_opts)
 map('n', 'cc', '"_cc', default_opts)
 map('n', 'D', '"_D', default_opts)
-map('n', 'dd', '"_dd', default_opts)
 map('n', 'x', '"_x', default_opts)
 
 -- unbind Q

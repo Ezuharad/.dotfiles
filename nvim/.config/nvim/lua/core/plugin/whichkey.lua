@@ -4,7 +4,7 @@ return {
   event = "VeryLazy",
   opts = {
     win = {
-      border = "single"
+      border = "rounded"
     }
   },
   keys = {

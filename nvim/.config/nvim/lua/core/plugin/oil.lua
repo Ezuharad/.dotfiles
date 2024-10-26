@@ -27,7 +27,7 @@ return {
       is_always_hidden = require("core.plugin.file.hidden")
     },
     keys = {
-      { "<leader>vo", "<cmd>Oil --float<cr>", desc = "Oil Filesearch (Oil)" },
+      { "<leader>vf", "<cmd>Oil --float<cr>", desc = "Oil Filesearch (Oil)" },
     },
   },
 }
