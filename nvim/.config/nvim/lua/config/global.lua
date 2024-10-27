@@ -3,7 +3,7 @@ vim.g.config = {
   theme = {
     name = "nord",
     alpha = {
-      header = "llvm_dragon",
+      header = "zelda_hylian_crest",
     },
     border = {
       float_border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }

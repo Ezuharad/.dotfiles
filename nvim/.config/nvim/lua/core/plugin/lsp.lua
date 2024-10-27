@@ -40,10 +40,10 @@ return {
       { "<leader>rf", vim.lsp.buf.format, desc = "Format Code"},
       { "<leader>rn", vim.lsp.buf.rename, desc = "Rename Symbol"},
       { "<leader>rs", vim.lsp.buf.signature_help, desc = "Signature Help" },
-      { "gi", vim.lsp.buf.implementation, desc = "Go to implementation" },
+      { "<leader>rgi", vim.lsp.buf.implementation, desc = "Go to implementation" },
       { "gd", vim.lsp.buf.definition, desc = "Go to definition" },
       { "gD", vim.lsp.buf.declaration, desc = "Go to declaration" },
-      { "gr", vim.lsp.buf.references, desc = "Go to references" },
+      { "<leader>rgr", vim.lsp.buf.references, desc = "Go to references" },
     },
   },
 }

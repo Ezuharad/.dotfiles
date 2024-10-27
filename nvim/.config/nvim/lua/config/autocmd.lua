@@ -4,6 +4,7 @@ vim.api.nvim_create_autocmd("FileType", {
     "help",
     "man",
     "oil",
+    "qf",
     -- dap stuff
     "dap-repl",
     "dapui_breakpoints",

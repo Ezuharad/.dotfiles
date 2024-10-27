@@ -4,16 +4,16 @@ return {
   event = "VeryLazy",
   opts = {
     win = {
-      border = "rounded"
-    }
-  },
-  keys = {
-    {
-      "<leader>?",
-      function()
-        require("which-key").show({ global = false })
-      end,
-      desc = "Local Buffer Keymaps (which-key)",
+      border = "rounded",
     },
   },
+  keys = {
+     {
+       "<leader>?",
+       function()
+         require("which-key").show({ global = false })
+       end,
+       desc = "Local Buffer Keymaps",
+     },
+   },
 }

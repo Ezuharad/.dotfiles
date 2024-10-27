@@ -2,47 +2,57 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-local map = vim.keymap.set
-local default_opts = { noremap = true, silent = true }
+local map = function(mode, lhs, rhs, desc)
+  if desc then
+    vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true, desc = desc})
+  else
+    vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true})
+  end
+end
+
+-- keybind for find and replace
+map("n", "<leader>vr", ":%s//gc<Left><Left><Left>", "Find Replace")
 
 -- recenter after n and N
-map('n', 'n', 'nzz', default_opts)
-map('n', 'N', 'Nzz', default_opts)
-map('n', '<tab>', '<cmd>bnext<cr>', default_opts)
-map('n', '<S-tab>', '<cmd>bprev<cr>', default_opts)
+map("n", "n", "nzz")
+map("n", "N", "Nzz")
+
+-- switch buffers with tab
+map("n", "<tab>", "<cmd>bnext<cr>")
+map("n", "<S-tab>", "<cmd>bprev<cr>")
 
 -- recenter after jump half page
-map('n', '<M-u>', '<C-u>zz', default_opts)
-map('n', '<M-d>', '<C-d>zz', default_opts)
+map("n", "<M-u>", "<C-u>zz")
+map("n", "<M-d>", "<C-d>zz")
 
-map('n', '<C-u>', '<nop>', default_opts)
-map('n', '<C-d>', '<nop>', default_opts)
+map("n", "<C-u>", "<nop>")
+map("n", "<C-d>", "<nop>")
 
 -- disable yanking with select operations
-map('n', 'C', '"_C', default_opts)
-map('n', 'cc', '"_cc', default_opts)
-map('n', 'D', '"_D', default_opts)
-map('n', 'x', '"_x', default_opts)
+map("n", "C", '"_C')
+map("n", "cc", '"_cc')
+map("n", "D", '"_D')
+map("n", "x", '"_x')
 
 -- unbind Q
-map('n', 'Q', '<nop>', default_opts)
+map("n", "Q", "<nop>")
 
 -- unbind , and ;
-map('n', ',', '<nop>', default_opts)
-map('n', ';', '<nop>', default_opts)
+map("n", ",", "<nop>")
+map("n", ";", "<nop>")
 
--- arrow keys
-map('n', '<up>', '<nop>', default_opts)
-map('n', '<down>', '<nop>', default_opts)
-map('n', '<left>', '<nop>', default_opts)
-map('n', '<right>', '<nop>', default_opts)
+-- unbind arrow keys
+map("n", "<up>", "<nop>")
+map("n", "<down>", "<nop>")
+map("n", "<left>", "<nop>")
+map("n", "<right>", "<nop>")
 
-map('i', '<up>', '<nop>', default_opts)
-map('i', '<down>', '<nop>', default_opts)
-map('i', '<left>', '<nop>', default_opts)
-map('i', '<right>', '<nop>', default_opts)
+map("i", "<up>", "<nop>")
+map("i", "<down>", "<nop>")
+map("i", "<left>", "<nop>")
+map("i", "<right>", "<nop>")
 
-map('v', '<up>', '<nop>', default_opts)
-map('v', '<down>', '<nop>', default_opts)
-map('v', '<left>', '<nop>', default_opts)
-map('v', '<right>', '<nop>', default_opts)
+map("v", "<up>", "<nop>")
+map("v", "<down>", "<nop>")
+map("v", "<left>", "<nop>")
+map("v", "<right>", "<nop>", default_opts)

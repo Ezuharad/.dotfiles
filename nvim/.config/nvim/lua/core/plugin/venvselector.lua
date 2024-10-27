@@ -22,8 +22,8 @@ return {
         },
         anaconda_project = {
           command = "fd /python$ ~/Code --full-path --color never -E /proc",
-          type = "anaconda"
-        }
+          type = "anaconda",
+        },
       },
     },
   },
