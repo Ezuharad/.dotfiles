@@ -1,6 +1,4 @@
 # set PATH, FPATH variables
-source $HOME/.config/zsh/path.zsh
-
 zstyle :compinstall filename '~/.zshrc'
 
 # syntax highlighting
