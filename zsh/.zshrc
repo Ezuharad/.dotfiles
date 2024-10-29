@@ -19,7 +19,6 @@ bindkey '^e' edit-command-line
 autoload -Uz update-all
 
 source $HOME/.config/zsh/alias.zsh
-source $HOME/.config/zsh/opt.zsh
 source $HOME/.config/zsh/conda.zsh
 source $HOME/.config/zsh/env.zsh
 source $HOME/.config/zsh/fzf.zsh
@@ -28,7 +27,7 @@ source $HOME/.config/zsh/vibind.zsh
 source $HOME/.config/zsh/less.zsh
 
 # set prompt style
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/default.toml)"
+which oh-my-posh > /dev/null && eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/default.toml)"
 
 # set secret variables
 [ -f $HOME/.env ] && source $HOME/.env

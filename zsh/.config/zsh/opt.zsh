@@ -1,2 +1,0 @@
-# shell settings
-# setopt autocd
