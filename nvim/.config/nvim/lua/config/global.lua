@@ -3,7 +3,7 @@ vim.g.config = {
   theme = {
     name = "nord",
     alpha = {
-      header = "zelda_hylian_crest",
+      header = "nerv_logo",
     },
     border = {
       float_border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }

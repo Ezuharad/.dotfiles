@@ -13,8 +13,6 @@ return {
       skip_confirm_for_simple_edits = true,
       columns = {
         "icon",
-        "permissions",
-        "size"
       },
       constrain_cursor = "name",
       watch_for_changes = true,

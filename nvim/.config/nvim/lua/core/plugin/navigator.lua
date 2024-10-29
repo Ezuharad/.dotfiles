@@ -1,4 +1,4 @@
--- Tmux integration
+-- Muxer integration
 return {
   {
     "numToStr/Navigator.nvim",

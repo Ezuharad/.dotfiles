@@ -24,9 +24,13 @@ map("n", "<S-tab>", "<cmd>bprev<cr>")
 -- recenter after jump half page
 map("n", "<M-u>", "<C-u>zz")
 map("n", "<M-d>", "<C-d>zz")
+map("v", "<M-u>", "<C-u>zz")
+map("v", "<M-d>", "<C-d>zz")
 
 map("n", "<C-u>", "<nop>")
 map("n", "<C-d>", "<nop>")
+map("v", "<C-u>", "<nop>")
+map("v", "<C-d>", "<nop>")
 
 -- disable yanking with select operations
 map("n", "C", '"_C')
@@ -55,4 +59,27 @@ map("i", "<right>", "<nop>")
 map("v", "<up>", "<nop>")
 map("v", "<down>", "<nop>")
 map("v", "<left>", "<nop>")
-map("v", "<right>", "<nop>", default_opts)
+map("v", "<right>", "<nop>")
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {
+    "help",
+    "man",
+    "oil",
+    "qf",
+    -- dap stuff
+    "dap-repl",
+    "dapui_breakpoints",
+    "dapui_console",
+    "dapui_scopes",
+    "dapui_stacks",
+    "dapui_watches",
+
+  },
+  callback = function(event)
+    vim.bo[event.buf].buflisted = false
+    vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
+  end,
+  desc = "Close certain windows with 'q'"
+})
+

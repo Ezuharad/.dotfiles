@@ -11,3 +11,5 @@ vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { bg = "none" })
 vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { bg = "none" })
 vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { bg = "none" })
 vim.opt.pumblend = 0
+-- vim.cmd("autocmd FileType mason setlocal winblend=0")
+
