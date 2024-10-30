@@ -5,7 +5,7 @@ zstyle :compinstall filename '~/.zshrc'
 source $HOME/.config/zsh/plugin/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # completions
-autoload -Uz compinit; compinit
+autoload -Uz compinit; compinit -d $HOME/.cache/zsh/.zcompdump
 zstyle ':completion:*' menu no
 source $HOME/.config/zsh/plugin/fzf-tab/fzf-tab.plugin.zsh
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'

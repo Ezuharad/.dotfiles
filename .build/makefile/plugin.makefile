@@ -1,5 +1,5 @@
 # zsh and tmux plugins
-TMUX_SUBMODULE_PREFIX=tmux/.tmux/plugins/
+TMUX_SUBMODULE_PREFIX=tmux/.config/tmux/plugins/
 ZSH_SUBMODULE_PREFIX=.config/zsh/plugin/
 
 $(STOWDIR)$(TMUX_SUBMODULE_PREFIX)tpm/tpm:
