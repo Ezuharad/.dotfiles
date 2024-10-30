@@ -17,7 +17,7 @@ return {
     settings = {
       search = {
         anaconda_base = {
-          command = "fd /python$ /opt/mambaforge --full-path --color never -E /proc",
+          command = "fd /python$ ~/.miniconda3/ --full-path --color never -E /proc",
           type = "anaconda",
         },
         anaconda_project = {

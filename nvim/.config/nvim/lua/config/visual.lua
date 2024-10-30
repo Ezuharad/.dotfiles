@@ -13,3 +13,5 @@ vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { bg = "none" })
 vim.opt.pumblend = 0
 -- vim.cmd("autocmd FileType mason setlocal winblend=0")
 
+vim.opt.laststatus = 3
+

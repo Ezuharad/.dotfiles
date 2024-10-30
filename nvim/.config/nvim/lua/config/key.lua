@@ -12,6 +12,7 @@ end
 
 -- keybind for find and replace
 map("n", "<leader>vr", ":%s//gc<Left><Left><Left>", "Find Replace")
+map("v", "<leader>vr", ":%s//gc<Left><Left><Left>", "Find Replace")
 
 -- recenter after n and N
 map("n", "n", "nzz")
