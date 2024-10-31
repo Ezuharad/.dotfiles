@@ -3,17 +3,27 @@ return {
   "folke/which-key.nvim",
   event = "VeryLazy",
   opts = {
+    spec = {
+      { "<leader>f", group = "Telescope" },
+      { "<leader>d", group = "Debug" },
+      { "<leader>g", group = "Git" },
+      { "<leader>gf", group = "Telescope Pickers"},
+      { "<leader>gv", group = "Misc"},
+      { "<leader>p", group = "AI" },
+      { "<leader>r", group = "Actions" },
+      { "<leader>v", group = "Misc"}
+    },
     win = {
       border = "rounded",
     },
   },
   keys = {
-     {
-       "<leader>?",
-       function()
-         require("which-key").show({ global = false })
-       end,
-       desc = "Local Buffer Keymaps",
-     },
-   },
+    {
+      "<leader>?",
+      function()
+        require("which-key").show({ global = false })
+      end,
+      desc = "Local Buffer Keymaps",
+    },
+  },
 }
