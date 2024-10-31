@@ -13,7 +13,7 @@ alias grep='grep --colo=auto'
 which wezterm > /dev/null && alias imgcat='wezterm imgcat'
 alias help='man zsh'
 
-alias ll='ls -la'
+alias ll='ls -lA'
 
 alias ..='cd ..'
 alias ...='cd ../..'
