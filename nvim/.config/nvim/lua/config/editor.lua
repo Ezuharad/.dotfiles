@@ -44,3 +44,8 @@ vim.opt.mouse = ""
 
 -- allow hiding unsaved buffers
 vim.opt.hidden = true
+
+-- use treesitter for folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = false
