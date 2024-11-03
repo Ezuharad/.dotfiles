@@ -1,4 +1,4 @@
--- Searching plugin for files, buffers, tags, and git objects
+-- searching for files, buffers, tags, and git objects
 return {
   {
     "nvim-telescope/telescope.nvim",

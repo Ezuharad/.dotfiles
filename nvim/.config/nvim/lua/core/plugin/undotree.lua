@@ -1,4 +1,4 @@
--- Tree-visualization for nonlinear undo operations
+-- tree-visualization for nonlinear undo operations
 return {
   "mbbill/undotree",
   lazy = true,

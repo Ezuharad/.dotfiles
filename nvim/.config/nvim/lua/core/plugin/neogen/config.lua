@@ -1,4 +1,4 @@
--- Neogen language configs
+-- neogen language configs
 return {
   python = {
     template = {

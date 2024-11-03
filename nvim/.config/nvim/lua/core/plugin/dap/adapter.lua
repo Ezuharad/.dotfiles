@@ -1,4 +1,4 @@
--- Debug Adapter Protocol adapters
+-- debug adapter protocol adapters
 return {
   python = {
     type = "executable",

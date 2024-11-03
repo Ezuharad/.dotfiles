@@ -1,4 +1,4 @@
--- Debug Adapter Protocol support
+-- debug adapter protocol support
 return {
   {
     "mfussenegger/nvim-dap",

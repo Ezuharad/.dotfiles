@@ -1,4 +1,4 @@
--- AI assistant support
+-- AI assistant
 return {
   "frankroeder/parrot.nvim",
   dependencies = "nvim-lua/plenary.nvim",

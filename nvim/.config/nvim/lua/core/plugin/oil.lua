@@ -1,4 +1,4 @@
--- Buffer-like file explorer
+-- buffer-like file explorer
 return {
   {
     "echasnovski/mini.icons",

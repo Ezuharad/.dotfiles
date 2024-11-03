@@ -30,6 +30,9 @@ vim.opt.incsearch = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- disable matchit
+vim.g.loaded_matchit = 1
+
 -- terminal settings
 vim.g.terminal_emulator = "wezterm"
 vim.opt.shell = "zsh"

@@ -1,4 +1,4 @@
--- Splash screen for nvim
+-- splash screen for nvim
 return {
   "goolord/alpha-nvim",
   dependencies = {

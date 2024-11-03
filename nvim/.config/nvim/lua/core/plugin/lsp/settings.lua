@@ -1,4 +1,4 @@
--- Language specific settings for LSP
+-- language specific settings for LSP
 return {
   Lua = {
     diagnostics = {

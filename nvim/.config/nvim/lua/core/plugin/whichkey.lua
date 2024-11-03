@@ -1,4 +1,4 @@
--- Pane to show keymaps when keys are used
+-- pane to show keymaps when keys are used
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",

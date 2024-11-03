@@ -1,4 +1,4 @@
--- Custom editor keybinds
+-- custom editor keybinds
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 

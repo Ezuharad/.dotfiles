@@ -1,4 +1,4 @@
--- Linter and formatter support for LSP
+-- linter and formatter support for LSP
 local config = function()
   local null_ls = require("null-ls")
   return {

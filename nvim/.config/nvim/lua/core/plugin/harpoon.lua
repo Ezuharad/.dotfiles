@@ -1,4 +1,4 @@
--- Harpoon list
+-- harpoon list
 return {
   {
     "ThePrimeagen/harpoon",

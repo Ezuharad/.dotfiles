@@ -1,4 +1,4 @@
--- Marks visualization
+-- marks visualization
 return {
   "chentoast/marks.nvim",
   event = "VeryLazy",

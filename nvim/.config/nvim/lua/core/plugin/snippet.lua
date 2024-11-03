@@ -1,4 +1,4 @@
--- Snippets engine support
+-- snippets engine
 return {
   {
     "mireq/luasnip-snippets",

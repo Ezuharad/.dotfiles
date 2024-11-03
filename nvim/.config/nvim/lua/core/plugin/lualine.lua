@@ -1,4 +1,4 @@
--- Statusline support
+-- statusline
 return {
   "nvim-lualine/lualine.nvim",
   config = true,

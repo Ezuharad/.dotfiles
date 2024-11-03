@@ -1,4 +1,4 @@
--- CSC querying, highlight support
+-- CSV querying, highlight support
 return {
   "cameron-wags/rainbow_csv.nvim",
   config = true,

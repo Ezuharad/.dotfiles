@@ -1,7 +1,8 @@
--- Motions for surrounding text
+-- motions for surrounding text
 return {
   "kylechui/nvim-surround",
   version = "*",
   event = "VeryLazy",
+  config = true
 }
 

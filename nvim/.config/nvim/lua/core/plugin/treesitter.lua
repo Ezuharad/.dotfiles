@@ -1,4 +1,4 @@
--- Treesitter support
+-- treesitter
 return {
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
@@ -17,7 +17,7 @@ return {
               ["ia"] = { query = "@assignment.inner", desc = "inner assignment" },
 
               ["ab"] = { query = "@block.outer", desc = "outer block" },
-              ["ib"] = { query = "@block.inner", desc = "inner block"},
+              ["ib"] = { query = "@block.inner", desc = "inner block" },
 
               ["ac"] = { query = "@class.outer", desc = "outer class" },
               ["ic"] = { query = "@class.inner", desc = "inner class" },
@@ -92,7 +92,7 @@ return {
           lsp_interop = {
             enable = true,
             border = "rounded",
-          }
+          },
         },
       })
 
@@ -106,6 +106,13 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        matchup = {
+          enable = true,
+        },
+      })
+    end,
     opts = {
       ensure_installed = {
         "bash",
@@ -113,12 +120,12 @@ return {
         "markdown",
         "regex",
         "vim",
-        "vimdoc"
+        "vimdoc",
       },
       highlight = {
-        enabled = true
+        enabled = true,
       },
-      additional_vim_regex_highlighting = false
+      additional_vim_regex_highlighting = false,
     },
   },
 }

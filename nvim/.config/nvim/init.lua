@@ -1,2 +1,2 @@
--- setup lazy.nvim
+-- Setup lazy.nvim
 require("config")
