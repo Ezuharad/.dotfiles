@@ -1,4 +1,4 @@
--- Highlight TODO comments
+-- highlight TODO comments
 return {
   "folke/todo-comments.nvim",
   dependencies = {

@@ -1,5 +1,5 @@
 -- other configs
-require("config.global")
+require("config.theme")
 require("config.key")
 require("config.editor")
 require("config.silence")

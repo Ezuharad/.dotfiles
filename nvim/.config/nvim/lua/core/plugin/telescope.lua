@@ -82,6 +82,7 @@ return {
   },
   {
     "AckslD/nvim-neoclip.lua",
+    enabled = false,
     dependencies = {
       "nvim-telescop/telescope.nvim",
     },

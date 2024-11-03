@@ -13,14 +13,20 @@ return {
             enable = true,
             lookahead = true,
             keymaps = {
-              ["af"] = { query = "@function.outer", desc = "outer function" },
-              ["if"] = { query = "@function.inner", desc = "inner function" },
+              ["aa"] = { query = "@assignment.outer", desc = "outer assignment" },
+              ["ia"] = { query = "@assignment.inner", desc = "inner assignment" },
+
+              ["ab"] = { query = "@block.outer", desc = "outer block" },
+              ["ib"] = { query = "@block.inner", desc = "inner block"},
 
               ["ac"] = { query = "@class.outer", desc = "outer class" },
               ["ic"] = { query = "@class.inner", desc = "inner class" },
 
-              ["ao"] = { query = "@loop.outer", desc = "outer loop" },
-              ["io"] = { query = "@loop.inner", desc = "inner loop" },
+              ["ad"] = { query = "@conditional.outer", desc = "outer conditional" },
+              ["id"] = { query = "@conditional.inner", desc = "inner conditional" },
+
+              ["af"] = { query = "@function.outer", desc = "outer function" },
+              ["if"] = { query = "@function.inner", desc = "inner function" },
 
               ["ak"] = { query = "@block.outer", desc = "outer block" },
               ["ik"] = { query = "@block.inner", desc = "inner block" },
@@ -28,58 +34,59 @@ return {
               ["al"] = { query = "@call.outer", desc = "outer call" },
               ["il"] = { query = "@call.inner", desc = "inner call" },
 
+              ["ao"] = { query = "@loop.outer", desc = "outer loop" },
+              ["io"] = { query = "@loop.inner", desc = "inner loop" },
+
               ["ar"] = { query = "@parameter.outer", desc = "outer parameter" },
               ["ir"] = { query = "@parameter.inner", desc = "inner parameter" },
-
-              ["ad"] = { query = "@conditional.outer", desc = "outer conditional" },
-              ["id"] = { query = "@conditional.inner", desc = "inner conditional" },
-
-              ["aa"] = { query = "@assignment.outer", desc = "outer assignment" },
-              ["ia"] = { query = "@assignment.inner", desc = "inner assignment" },
             },
           },
           move = {
             enable = true,
             set_jumpts = true,
             goto_next_start = {
-              ["]f"] = { query = "@function.outer", desc = "outer function" },
+              ["]a"] = { query = "@assignment.outer", desc = "outer assignment" },
+              ["]b"] = { query = "@block.outer", desc = "outer block" },
               ["]c"] = { query = "@class.outer", desc = "outer class" },
-              ["]o"] = { query = "@loop.outer", desc = "outer loop" },
+              ["]d"] = { query = "@conditional.outer", desc = "outer conditional" },
+              ["]f"] = { query = "@function.outer", desc = "outer function" },
               ["]k"] = { query = "@block.outer", desc = "outer block" },
               ["]l"] = { query = "@call.outer", desc = "outer call" },
+              ["]o"] = { query = "@loop.outer", desc = "outer loop" },
               ["]r"] = { query = "@parameter.outer", desc = "outer parameter" },
-              ["]d"] = { query = "@conditional.outer", desc = "outer conditional" },
-              ["]a"] = { query = "@assignment.outer", desc = "outer assignment" }
             },
             goto_next_end = {
-              ["]F"] = { query = "@function.outer", desc = "outer function" },
+              ["]A"] = { query = "@assignment.outer", desc = "outer assignment" },
+              ["]B"] = { query = "@block.outer", desc = "outer block" },
               ["]C"] = { query = "@class.outer", desc = "outer class" },
-              ["]O"] = { query = "@loop.outer", desc = "outer loop" },
+              ["]D"] = { query = "@conditional.outer", desc = "outer conditional" },
+              ["]F"] = { query = "@function.outer", desc = "outer function" },
               ["]K"] = { query = "@block.outer", desc = "outer block" },
               ["]L"] = { query = "@call.outer", desc = "outer call" },
+              ["]O"] = { query = "@loop.outer", desc = "outer loop" },
               ["]R"] = { query = "@parameter.outer", desc = "outer parameter" },
-              ["]D"] = { query = "@conditional.outer", desc = "outer conditional" },
-              ["]A"] = { query = "@assignment.outer", desc = "outer assignment" }
             },
             goto_previous_start = {
-              ["[f"] = { query = "@function.outer", desc = "outer function" },
+              ["[a"] = { query = "@assignment.outer", desc = "outer assignment" },
+              ["[b"] = { query = "@block.outer", desc = "outer block" },
               ["[c"] = { query = "@class.outer", desc = "outer class" },
-              ["[o"] = { query = "@loop.outer", desc = "outer loop" },
+              ["[d"] = { query = "@conditional.outer", desc = "outer conditional" },
+              ["[f"] = { query = "@function.outer", desc = "outer function" },
               ["[k"] = { query = "@block.outer", desc = "outer block" },
               ["[l"] = { query = "@call.outer", desc = "outer call" },
+              ["[o"] = { query = "@loop.outer", desc = "outer loop" },
               ["[r"] = { query = "@parameter.outer", desc = "outer parameter" },
-              ["[d"] = { query = "@conditional.outer", desc = "outer conditional" },
-              ["[a"] = { query = "@assignment.outer", desc = "outer assignment" }
             },
             goto_previous_end = {
-              ["[F"] = { query = "@function.outer", desc = "outer function" },
+              ["[A"] = { query = "@assignment.outer", desc = "outer assignment" },
+              ["[B"] = { query = "@block.outer", desc = "outer block" },
               ["[C"] = { query = "@class.outer", desc = "outer class" },
-              ["[O"] = { query = "@loop.outer", desc = "outer loop" },
+              ["[D"] = { query = "@conditional.outer", desc = "outer conditional" },
+              ["[F"] = { query = "@function.outer", desc = "outer function" },
               ["[K"] = { query = "@block.outer", desc = "outer block" },
               ["[L"] = { query = "@call.outer", desc = "outer call" },
+              ["[O"] = { query = "@loop.outer", desc = "outer loop" },
               ["[R"] = { query = "@parameter.outer", desc = "outer parameter" },
-              ["[D"] = { query = "@conditional.outer", desc = "outer conditional" },
-              ["[A"] = { query = "@assignment.outer", desc = "outer assignment" }
             },
           },
           lsp_interop = {

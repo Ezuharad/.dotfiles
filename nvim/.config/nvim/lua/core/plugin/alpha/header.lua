@@ -51,7 +51,7 @@ return {
     "                   .d888b.  Y88b.      Y        `Y88888    ",
     "                                                  `Y88K    ",
     "                                                    `Y8    ",
-    "                                                      '    ",
+    "                                                      `    ",
     "    GOD'S IN HIS HEAVEN. ALL'S RIGHT WITH THE WORLD.       ",
   },
   talos_eye = {

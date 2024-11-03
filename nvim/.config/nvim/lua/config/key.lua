@@ -3,24 +3,12 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 local map = function(mode, lhs, rhs, desc)
-  if desc then
     vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true, desc = desc})
-  else
-    vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true})
-  end
 end
-
--- keybind for find and replace
-map("n", "<leader>vr", ":%s//gc<Left><Left><Left>", "Find Replace")
-map("v", "<leader>vr", ":%s//gc<Left><Left><Left>", "Find Replace")
 
 -- recenter after n and N
 map("n", "n", "nzz")
 map("n", "N", "Nzz")
-
--- switch buffers with tab
-map("n", "<tab>", "<cmd>bnext<cr>")
-map("n", "<S-tab>", "<cmd>bprev<cr>")
 
 -- recenter after jump half page
 map("n", "<M-u>", "<C-u>zz")
@@ -33,18 +21,32 @@ map("n", "<C-d>", "<nop>")
 map("v", "<C-u>", "<nop>")
 map("v", "<C-d>", "<nop>")
 
+-- keybind for find and replace
+map("n", "?", ":%s//gc<Left><Left><Left>", "Find Replace")
+map("v", "?", ":%s//gc<Left><Left><Left>", "Find Replace")
+
+-- switch buffers with tab
+map("n", "<tab>", "<cmd>bnext<cr>")
+map("n", "<S-tab>", "<cmd>bprev<cr>")
+map("v", "<tab>", "<cmd>bnext<cr>")
+map("v", "<S-tab>", "<cmd>bprev<cr>")
+
 -- disable yanking with select operations
 map("n", "C", '"_C')
 map("n", "cc", '"_cc')
 map("n", "D", '"_D')
 map("n", "x", '"_x')
 
--- unbind Q
+-- unbind unused keys
 map("n", "Q", "<nop>")
-
--- unbind , and ;
 map("n", ",", "<nop>")
 map("n", ";", "<nop>")
+map("n", "^", "<nop>")
+
+map("v", "Q", "<nop>")
+map("v", ",", "<nop>")
+map("v", ";", "<nop>")
+map("v", "^", "<nop>")
 
 -- unbind arrow keys
 map("n", "<up>", "<nop>")
