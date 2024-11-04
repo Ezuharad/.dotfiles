@@ -7,5 +7,5 @@ require("config.silence")
 -- Lazy plugins
 require("config.lazy")
 
-require("config.visual")
+require("config.highlight")
 
