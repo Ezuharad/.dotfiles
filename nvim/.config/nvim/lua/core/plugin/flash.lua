@@ -1,4 +1,4 @@
--- leaping support
+-- jumping between characters
 return {
   "folke/flash.nvim",
   event = "VeryLazy",

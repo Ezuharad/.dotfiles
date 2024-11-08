@@ -1,4 +1,4 @@
--- treesitter
+-- treesitter integration with textobjects
 return {
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
@@ -117,11 +117,13 @@ return {
         },
       })
 
-      local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
-
       -- make motions repeat with `]]` and `[[`
+      local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
       vim.keymap.set({ "n", "x", "o" }, "]]", ts_repeat_move.repeat_last_move)
       vim.keymap.set({ "n", "x", "o" }, "[[", ts_repeat_move.repeat_last_move_opposite)
+
+      vim.keymap.set({ "v", "x", "o" }, "]]", ts_repeat_move.repeat_last_move)
+      vim.keymap.set({ "v", "x", "o" }, "[[", ts_repeat_move.repeat_last_move_opposite)
     end,
   },
   {
@@ -132,21 +134,32 @@ return {
         matchup = {
           enable = true,
         },
+        ensure_installed = {
+          "bash",
+          "lua",
+          "markdown",
+          "regex",
+          "vim",
+          "vimdoc",
+        },
+        incremental_selection = {
+          enable = true,
+          keymaps = {
+            init_selection = "gnn",
+            node_incremental = "grn",
+            scope_incremental = "grc",
+            node_decremental = "grm",
+          },
+        },
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = true,
+        },
+        indent = {
+          enable = true,
+        },
+        additional_vim_regex_highlighting = true,
       })
-    end,
-    opts = {
-      ensure_installed = {
-        "bash",
-        "lua",
-        "markdown",
-        "regex",
-        "vim",
-        "vimdoc",
-      },
-      highlight = {
-        enabled = true,
-      },
-      additional_vim_regex_highlighting = false,
-    },
+    end
   },
 }

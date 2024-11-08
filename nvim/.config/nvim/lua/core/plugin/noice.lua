@@ -1,7 +1,10 @@
 -- nicer UIs
 return {
   "folke/noice.nvim",
-  event = "VeryLazy",
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+    "hrsh7th/nvim-cmp",
+  },
   opts = {
     lsp = {
       override = {
@@ -28,11 +31,15 @@ return {
         win_options = {
           winblend = 0,
         },
+        border = {
+          style = "rounded",
+          size = {
+            width = 60,
+            height = "auto"
+          }
+        }
       },
     },
   },
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-    "hrsh7th/nvim-cmp",
-  },
+  event = "VeryLazy",
 }

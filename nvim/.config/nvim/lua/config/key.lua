@@ -31,22 +31,28 @@ map("n", "<S-tab>", "<cmd>bprev<cr>")
 map("v", "<tab>", "<cmd>bnext<cr>")
 map("v", "<S-tab>", "<cmd>bprev<cr>")
 
--- disable yanking with select operations
-map("n", "C", '"_C')
-map("n", "cc", '"_cc')
-map("n", "D", '"_D')
-map("n", "x", '"_x')
+-- use ^ instead of _
+map("n", "^", "_")
+map("v", "^", "_")
 
 -- unbind unused keys
+map("n", "gs", "<nop>")
+map("n", "H", "<nop>")
+map("n", "L", "<nop>")
+map("n", "M", "<nop>")
 map("n", "Q", "<nop>")
 map("n", ",", "<nop>")
 map("n", ";", "<nop>")
-map("n", "^", "<nop>")
+map("n", "_", "<nop>")
 
+map("v", "gs", "<nop>")
+map("v", "H", "<nop>")
+map("v", "L", "<nop>")
+map("v", "M", "<nop>")
 map("v", "Q", "<nop>")
 map("v", ",", "<nop>")
 map("v", ";", "<nop>")
-map("v", "^", "<nop>")
+map("v", "_", "<nop>")
 
 -- unbind arrow keys
 map("n", "<up>", "<nop>")
@@ -78,6 +84,7 @@ vim.api.nvim_create_autocmd("FileType", {
     "dapui_stacks",
     "dapui_watches",
 
+    "[No Name]",
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false

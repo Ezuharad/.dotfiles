@@ -11,42 +11,42 @@ fi
 )
 
 (
-set -e
-which apt > /dev/null && 'Updating \e[0l31mApt\033[0m...' && sudo apt update && sudo apt upgrade
+  set -e
+  which apt > /dev/null && 'Updating \e[0l31mApt\033[0m...' && sudo apt update && sudo apt upgrade
 )
 
 (
-set -e
-which flatpak > /dev/null && echo 'Updating \033[1mFlatpak\033[0m...' && flatpak --user update
+  set -e
+  which flatpak > /dev/null && echo 'Updating \033[1mFlatpak\033[0m...' && flatpak --user update
 )
 
 (
-set -e
-which cargo > /dev/null && echo 'Updating \e[0;31mCargo\033[0m...' && rustup update
+  set -e
+  which cargo > /dev/null && echo 'Updating \e[0;31mCargo\033[0m...' && rustup update
 )
 
 (
-set -e
-which ghcup > /dev/null && echo 'Updating \033[0;35mghcup\033[0m...' && ghcup upgrade
+  set -e
+  which ghcup > /dev/null && echo 'Updating \033[0;35mghcup\033[0m...' && ghcup upgrade
 )
 
 (
-set -e
-which raco > /dev/null && echo 'Updating \033[0;31mRac\033[0;34mket\033[0m packages...' &&   raco pkg update --all
+  set -e
+  which raco > /dev/null && echo 'Updating \033[0;31mRac\033[0;34mket\033[0m packages...' &&   raco pkg update --all
 )
 
 (
-set -e
-which gem > /dev/null && echo 'Updating \033[0;31mRubyGems\033[0m packages...' && gem update
+  set -e
+  which gem > /dev/null && echo 'Updating \033[0;31mRubyGems\033[0m packages...' && gem update
 )
 
 (
-set -e
+  set -e
   which nvim > /dev/null && echo 'Updating \033[0;34mNeo\033[1mVim\033[0m packages...' && nvim --headless "+Lazy! sync" +qa
 )
 
 (
-set -e
+  set -e
   which fwupdmgr > /dev/null && echo 'Updating \033[1mSystem Firmware\033[0m' && fwupdmgr refresh && fwupdmgr update
 )
 

@@ -5,8 +5,6 @@ return {
     "echasnovski/mini.icons", -- replaced "nvim-tree/nvim-web-devicons",
     "nvim-lua/plenary.nvim",
   },
-  cmd = "Alpha",
-  lazy = false,
   opts = function()
     local dashboard = require("alpha.themes.dashboard")
     dashboard.section.header.val = require("core.plugin.alpha.header")[vim.g.config.theme.alpha.header]
@@ -25,6 +23,8 @@ return {
     }
     return dashboard.config
   end,
+  cmd = { "Alpha" },
+  lazy = false,
   keys = {
     { "<leader>va", "<cmd>Alpha<cr>", desc = "Splash Screen (Alpha)" },
   },

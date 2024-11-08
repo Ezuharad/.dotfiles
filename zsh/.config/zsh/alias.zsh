@@ -7,6 +7,8 @@ alias more='less'
 which nvim > /dev/null && alias vi='nvim'
 which nvim > /dev/null && alias vim='nvim'
 
+which perl-rename > /dev/null && alias rename=perl-rename
+
 alias ls='ls --color=auto'
 alias grep='grep --colo=auto'
 

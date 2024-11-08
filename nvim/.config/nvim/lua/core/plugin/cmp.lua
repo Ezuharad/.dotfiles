@@ -1,6 +1,6 @@
 -- autcompletion support
 return {
-  "hrsh7th/nvim-cmp",
+  "yioneko/nvim-cmp",
   event = "InsertEnter",
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",

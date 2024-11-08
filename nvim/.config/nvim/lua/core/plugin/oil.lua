@@ -1,12 +1,10 @@
 -- buffer-like file explorer
 return {
   {
-    "echasnovski/mini.icons",
-    version = false,
-    config = true,
-  },
-  {
     "stevearc/oil.nvim",
+    dependencies = {
+          "echasnovski/mini.icons",
+    },
     lazy = false,
     opts = {
       default_file_explorer = true,
