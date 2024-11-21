@@ -13,6 +13,9 @@ alias ls='ls --color=auto'
 alias grep='grep --colo=auto'
 
 which wezterm > /dev/null && alias imgcat='wezterm imgcat'
+
+which fastfetch > /dev/null && alias neofetch='fastfetch'
+
 alias help='man zsh'
 
 alias ll='ls -lA'

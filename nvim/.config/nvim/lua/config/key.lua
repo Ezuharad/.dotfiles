@@ -10,6 +10,9 @@ end
 map("n", "n", "nzz")
 map("n", "N", "Nzz")
 
+map("v", "n", "nzz")
+map("v", "N", "Nzz")
+
 -- recenter after jump half page
 map("n", "<M-u>", "<C-u>zz")
 map("n", "<M-d>", "<C-d>zz")
@@ -33,7 +36,7 @@ map("v", "<S-tab>", "<cmd>bprev<cr>")
 
 -- use ^ instead of _
 map("n", "^", "_")
-map("v", "^", "_")
+map("v", "^", "")
 
 -- unbind unused keys
 map("n", "gs", "<nop>")

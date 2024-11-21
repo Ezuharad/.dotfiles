@@ -6,10 +6,12 @@ return {
   {
     "3rd/image.nvim",
     dependencies = {
-      "vhyrro/luarocks.nvim",
-      opts = {
-        rocks = { "magick" }
-      }
+      {
+        "vhyrro/luarocks.nvim",
+        opts = {
+          rocks = { "magick" },
+        },
+      },
     },
     enabled = false,
     opts = {

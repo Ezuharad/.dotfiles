@@ -7,11 +7,11 @@ return {
       { "<leader>f", group = "Telescope" },
       { "<leader>d", group = "Debug" },
       { "<leader>g", group = "Git" },
-      { "<leader>gf", group = "Telescope Pickers"},
-      { "<leader>gv", group = "Misc"},
+      { "<leader>gf", group = "Telescope Pickers" },
+      { "<leader>gv", group = "Git Misc." },
       { "<leader>p", group = "AI" },
-      { "<leader>r", group = "Actions" },
-      { "<leader>v", group = "Misc"}
+      { "<leader>r", group = "Code Actions" },
+      { "<leader>v", group = "Misc. UIs" },
     },
     win = {
       border = "rounded",

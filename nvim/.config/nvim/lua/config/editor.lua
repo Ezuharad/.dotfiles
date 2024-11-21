@@ -26,7 +26,7 @@ vim.wo.relativenumber = true
 vim.opt.listchars = {
   tab = "▶ ",
   trail = "·",
-  nbsp = "·"
+  nbsp = "·",
 }
 vim.opt.list = true
 
@@ -53,6 +53,9 @@ vim.o.clipboard = "unnamedplus"
 -- feedback for regex search
 vim.opt.incsearch = true
 
+-- increment octal
+vim.opt.nrformats = { "bin", "octal", "hex" }
+
 -- disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -64,9 +67,10 @@ vim.g.loaded_matchit = 1
 vim.opt.mouse = ""
 
 -- undo and swap files
+vim.opt.ul = 20
 local homedir = os.getenv("HOME")
 
-if (homedir ~= nil and homedir ~= "") then
+if homedir ~= nil and homedir ~= "" then
   vim.opt.undofile = true
   vim.opt.undodir = homedir .. "/.cache/nvim/undo"
   vim.dir = homedir .. ".cache/nvim/swap"

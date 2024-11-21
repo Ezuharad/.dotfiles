@@ -32,7 +32,7 @@ fi
 
 (
   set -e
-  which raco > /dev/null && echo 'Updating \033[0;31mRac\033[0;34mket\033[0m packages...' &&   raco pkg update --all
+  which raco > /dev/null && echo 'Updating \033[0;31mRac\033[0;34mket\033[0m packages...' && raco pkg update --all
 )
 
 (
