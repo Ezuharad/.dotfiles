@@ -15,7 +15,7 @@ wezterm.on("gui-startup", function()
 end)
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = .80
+config.window_background_opacity = .90
 config.window_padding = {
   left = 0,
   right = 0,
@@ -37,5 +37,8 @@ config.colors = {
 }
 require("config.tabbarstyle")
 config.hide_tab_bar_if_only_one_tab = true
+
+-- disable missing glyph warning
+config.warn_about_missing_glyphs = false
 
 return config

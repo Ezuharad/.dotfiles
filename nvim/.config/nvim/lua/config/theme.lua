@@ -17,8 +17,10 @@ vim.g.config = {
       RainbowDelimiterCyan = { fg = "#5E81AC", ctermfg = "Cyan" },
       RainbowDelimiterViolet = { fg = "#B48EAD", ctermfg = "Magenta" },
 
-      FlashMatch = { bg = "#BF616A", ctermfg = "Blue",  },
-      FlashLabel = { bg = "#D08770", ctermfg = "Blue",  },
+      FlashMatch = { bg = "#D08770", fg = "#000000", ctermfg = "Blue",  },
+      -- FlashLabel = { bg = "#D08770", ctermfg = "Blue",  },
+      FlashLabel = { bg = "#E0FF08", fg = "#000000", ctermfg = "Black"  },
+      -- FlashMatch = { bg = "", ctermfg = "" },
     }
   },
 }

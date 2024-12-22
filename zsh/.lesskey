@@ -1,0 +1,3 @@
+#command
+^[d forw-scroll
+^[u back-scroll

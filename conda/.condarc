@@ -4,3 +4,4 @@ solver: libmamba
 pkgs_dirs:
   - ~/.conda/pkgs
 pip_interop_enabled: true
+auto_activate_base: false

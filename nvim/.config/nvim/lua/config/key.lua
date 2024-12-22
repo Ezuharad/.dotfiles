@@ -26,7 +26,7 @@ map("v", "<C-d>", "<nop>")
 
 -- keybind for find and replace
 map("n", "?", ":%s//gc<Left><Left><Left>", "Find Replace")
-map("v", "?", ":%s//gc<Left><Left><Left>", "Find Replace")
+map("v", "?", ":s/\\%V\\%V/cg<Left><Left><Left>", "Find Replace")
 
 -- switch buffers with tab
 map("n", "<tab>", "<cmd>bnext<cr>")

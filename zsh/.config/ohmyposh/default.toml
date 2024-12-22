@@ -44,6 +44,8 @@ final_space = true
     type = 'python'
 
     [blocks.segments.properties]
+      display_mode = 'environment'
+      home_enabled = true
       fetch_virtual_env = true
 
 [[tooltips]]
