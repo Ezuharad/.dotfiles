@@ -24,6 +24,9 @@ map("n", "<C-d>", "<nop>")
 map("v", "<C-u>", "<nop>")
 map("v", "<C-d>", "<nop>")
 
+-- recenter after jump to previous position
+map("n", "<C-o>", "<C-o>zz")
+
 -- keybind for find and replace
 map("n", "?", ":%s//gc<Left><Left><Left>", "Find Replace")
 map("v", "?", ":s/\\%V\\%V/cg<Left><Left><Left>", "Find Replace")
