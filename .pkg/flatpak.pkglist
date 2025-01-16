@@ -1,3 +1,22 @@
-com.slack.Slack
-com.toontownrewritten.Launcher
-us.zoom.Zoom
+Slack	com.slack.Slack	4.41.105	stable	flathub	user
+Launcher	com.toontownrewritten.Launcher		master	launcher-origin	user
+Freedesktop Platform	org.freedesktop.Platform	freedesktop-sdk-23.08.27	23.08	flathub	user
+Freedesktop Platform	org.freedesktop.Platform	freedesktop-sdk-24.08.10	24.08	flathub	user
+Mesa	org.freedesktop.Platform.GL.default	24.3.1	23.08	flathub	user
+Mesa (Extra)	org.freedesktop.Platform.GL.default	24.3.1	23.08-extra	flathub	user
+Mesa	org.freedesktop.Platform.GL.default	24.3.1	24.08	flathub	user
+Mesa (Extra)	org.freedesktop.Platform.GL.default	24.3.1	24.08extra	flathub	user
+nvidia-535-113-01	org.freedesktop.Platform.GL.nvidia-535-113-01		1.4	flathub	user
+nvidia-545-29-02	org.freedesktop.Platform.GL.nvidia-545-29-02		1.4	flathub	user
+nvidia-545-29-06	org.freedesktop.Platform.GL.nvidia-545-29-06		1.4	flathub	user
+nvidia-565-77	org.freedesktop.Platform.GL.nvidia-565-77		1.4	flathub	user
+Intel VAAPI driver	org.freedesktop.Platform.VAAPI.Intel		23.08	flathub	user
+Intel VAAPI driver	org.freedesktop.Platform.VAAPI.Intel		24.08	flathub	user
+openh264	org.freedesktop.Platform.openh264		19.08	flathub	user
+openh264	org.freedesktop.Platform.openh264	2.1.0	2.2.0	flathub	user
+openh264	org.freedesktop.Platform.openh264	2.4.1	2.4.1	flathub	user
+Adwaita dark GTK theme	org.gtk.Gtk3theme.Adwaita-dark		3.22	flathub	user
+Breeze GTK theme	org.gtk.Gtk3theme.Breeze	6.2.5	3.22	flathub	user
+KDE Application Platform	org.kde.Platform		5.15-23.08	flathub	user
+KDE Application Platform	org.kde.Platform		6.6	flathub	user
+Zoom	us.zoom.Zoom	6.3.0.5527	stable	flathub	user
