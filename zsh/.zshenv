@@ -24,3 +24,4 @@ export SAVEHIST=1000
 export GOPATH="$HOME/.go"
 export FPATH=$HOME/.config/zsh/function:$FPATH
 
+. "$HOME/.cargo/env"

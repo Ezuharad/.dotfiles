@@ -1,8 +1,6 @@
-# globally ignored files in Git
-*.code-workspace
-.vscode
+# files and folders to ignore with fzf and rg
 .conda
-.legacy
-awkvars.out
-NOTES.md
-TODO.md
+
+.cache
+.steam
+
