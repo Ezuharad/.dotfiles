@@ -33,6 +33,11 @@ which starship > /dev/null && eval "$(starship init zsh)"
 # use direnv
 which direnv > /dev/null && eval "$(direnv hook zsh)"
 
+# custom calculator command
+function = {
+  which fend > /dev/null && echo "$@" | fend
+}
+
 # set secret variables
 [ -f $HOME/.env ] && source $HOME/.env
 

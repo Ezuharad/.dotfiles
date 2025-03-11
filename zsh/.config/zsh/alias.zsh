@@ -20,6 +20,8 @@ alias help='man zsh'
 
 alias ll='ls -lA'
 
+alias \?='man'
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
