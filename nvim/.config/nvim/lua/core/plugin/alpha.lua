@@ -9,7 +9,7 @@ return {
     local dashboard = require("alpha.themes.dashboard")
     dashboard.section.header.val = require("core.plugin.alpha.header")[vim.g.config.theme.alpha.header]
     dashboard.section.buttons.val = {
-      dashboard.button("e", "  > New file", "ene <bar> startinsert"),
+      dashboard.button("e", "  > New file", ":ene <bar> startinsert<cr>"),
       dashboard.button("f", "  > Find file", function()
         require("telescope")
         vim.cmd("Telescope find_files")

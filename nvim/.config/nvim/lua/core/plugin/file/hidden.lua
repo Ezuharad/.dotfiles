@@ -14,4 +14,5 @@ return {
 
   -- rust
   "target/debug/",
+  "doc",
 }
