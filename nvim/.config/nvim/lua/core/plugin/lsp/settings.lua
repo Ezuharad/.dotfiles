@@ -7,5 +7,8 @@ return {
     telemetry = {
       enable = false,
     },
+    spell = {
+      enabled = false
+    }
   },
 }

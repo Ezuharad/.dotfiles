@@ -2,7 +2,7 @@
 return {
   {
     "mireq/luasnip-snippets",
-    enabled = true,
+    enabled = false,
     dependencies = { "L3MON4D3/LuaSnip" },
     init = function()
       require("luasnip_snippets.common.snip_utils").setup()
@@ -10,7 +10,7 @@ return {
   },
   {
     "L3MON4D3/LuaSnip",
-    enabled = true,
+    enabled = false,
     version = "v2.*",
     build = "make install_jsregexp",
     init = function()
