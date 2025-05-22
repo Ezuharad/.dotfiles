@@ -16,10 +16,8 @@ export SAVEHIST=1000
 # nvm
 [[ -f $HOME/.nvm/nvm.sh ]] && export "NVM_DIR=$HOME/.nvm" && . "$NVM_DIR/nvm.sh"
 
-
 # CUDA environment variable for pytorch
 [[ -d /opt/cuda ]] && export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda
-
 
 export GOPATH="$HOME/.go"
 export FPATH=$HOME/.config/zsh/function:$FPATH

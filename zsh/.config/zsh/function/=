@@ -1,0 +1,5 @@
+# custom calculator command
+function = {
+  which fend > /dev/null && echo "$@" | fend
+}
+

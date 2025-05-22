@@ -62,6 +62,8 @@ fi
   which nvim > /dev/null 
   echo 'Updating \033[0;34mNeo\033[1mVim\033[0m packages...'
   nvim --headless "+Lazy! sync" +qa
+  nvim --headless "+TSUpdate" +qa
+  nvim --headless "+MasonUpdate" +qa
 )
 
 (

@@ -1,0 +1,3 @@
+function zle_ls {
+    ls --color=auto -la
+}

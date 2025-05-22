@@ -15,14 +15,16 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# custom commands
-autoload -Uz update-all
+zle -N zle_ls; bindkey "^F" zle_ls
 
+# other modules
 source $HOME/.config/zsh/alias.zsh
 source $HOME/.config/zsh/conda.zsh
+source $HOME/.config/zsh/command.zsh
 source $HOME/.config/zsh/env.zsh
 source $HOME/.config/zsh/fzf.zsh
 source $HOME/.config/zsh/history.zsh
+source $HOME/.config/zsh/nvm.zsh
 source $HOME/.config/zsh/vibind.zsh
 source $HOME/.config/zsh/less.zsh
 
@@ -32,11 +34,6 @@ which starship > /dev/null && eval "$(starship init zsh)"
 
 # use direnv
 which direnv > /dev/null && eval "$(direnv hook zsh)"
-
-# custom calculator command
-function = {
-  which fend > /dev/null && echo "$@" | fend
-}
 
 # set secret variables
 [ -f $HOME/.env ] && source $HOME/.env
