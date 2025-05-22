@@ -1,6 +1,24 @@
 # files and folders to ignore with fzf and rg
-.conda
-
+# system files
 .cache
 .steam
+
+# version control
+.git
+.hg
+
+# IDEs
+.idea
+.vscode
+
+# python
+.conda
+.venv
+.ruff_cache
+__pycache__
+dist
+
+# rust
+target/debug
+*.rs.bk
 
