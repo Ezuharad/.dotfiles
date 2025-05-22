@@ -14,7 +14,7 @@ return {
       { "<leader>v", group = "Misc. UIs" },
     },
     win = {
-      border = "rounded",
+      border = vim.g.config.theme.border.float_border
     },
   },
   keys = {

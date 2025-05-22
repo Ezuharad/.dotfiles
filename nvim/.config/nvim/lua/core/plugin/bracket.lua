@@ -1,5 +1,10 @@
--- rainbow colored braces and autopairing
 return {
+  {  -- surround with brackets
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = true
+  },
   {  -- Rainbow color matching off brackets
     "HiPhish/rainbow-delimiters.nvim"
   },

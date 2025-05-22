@@ -27,7 +27,7 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
   ui = {
-    border = "rounded",
+    border = vim.g.config.theme.border.float_border,
     backdrop = 100,
   },
 })

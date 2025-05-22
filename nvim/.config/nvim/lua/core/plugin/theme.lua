@@ -1,7 +1,7 @@
 -- themes in theme/ directory
 local themes = {
   nord = {
-    require("core.plugin.theme.nord"),
+    { "arcticicestudio/nord-vim" },
   },
 }
 

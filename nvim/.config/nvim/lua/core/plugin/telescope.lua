@@ -79,16 +79,5 @@ return {
     keys = {
       { "<leader>fg", "<cmd>Telescope glyph<cr>", desc = "Telescope Gylphs (Telescope-Glyph)" },
     },
-  },
-  {
-    "AckslD/nvim-neoclip.lua",
-    enabled = false,
-    dependencies = {
-      "nvim-telescop/telescope.nvim",
-    },
-    config = true,
-    keys = {
-      { "<leader>fl", "<cmd>Telescope neoclip<cr>", desc = "Telescope Clipboard (Neoclip)" },
-    },
-  },
+  }
 }

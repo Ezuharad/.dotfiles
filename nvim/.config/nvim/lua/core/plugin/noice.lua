@@ -3,7 +3,7 @@ return {
   "folke/noice.nvim",
   dependencies = {
     "MunifTanjim/nui.nvim",
-    "hrsh7th/nvim-cmp",
+    -- "hrsh7th/nvim-cmp",
   },
   opts = {
     lsp = {
@@ -32,7 +32,7 @@ return {
           winblend = 0,
         },
         border = {
-          style = "rounded",
+          style = vim.g.config.theme.border.float_border,
           size = {
             width = 60,
             height = "auto"

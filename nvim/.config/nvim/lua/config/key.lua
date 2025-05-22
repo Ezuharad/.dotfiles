@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 local map = function(mode, lhs, rhs, desc)
-    vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true, desc = desc})
+	vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true, desc = desc })
 end
 
 -- recenter after n and N
@@ -33,6 +33,16 @@ map("n", "G", "Gzz")
 -- keybind for find and replace
 map("n", "?", ":%s//gc<Left><Left><Left>", "Find Replace")
 map("v", "?", ":s/\\%V\\%V/cg<Left><Left><Left>", "Find Replace")
+
+-- LSP keybinds
+map("n", "<leader>ra", vim.lsp.buf.code_action, "Code Actions")
+map("n", "<leader>rf", vim.lsp.buf.format, "Format Code")
+map("n", "<leader>rn", vim.lsp.buf.rename, "Rename Symbol")
+map("n", "<leader>rs", vim.lsp.buf.signature_help, "Signature Help")
+map("n", "<leader>ri", vim.lsp.buf.implementation, "Go to Implementation")
+map("n", "gd", vim.lsp.buf.definition, "Go to Definition")
+map("n", "gD", vim.lsp.buf.declaration, "Go to Declaration")
+map("n", "<leader>rr", vim.lsp.buf.references, "Go to References")
 
 -- switch buffers with tab
 map("n", "<tab>", "<cmd>bnext<cr>")
@@ -80,25 +90,24 @@ map("v", "<left>", "<nop>")
 map("v", "<right>", "<nop>")
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = {
-    "help",
-    "man",
-    "oil",
-    "qf",
-    -- dap stuff
-    "dap-repl",
-    "dapui_breakpoints",
-    "dapui_console",
-    "dapui_scopes",
-    "dapui_stacks",
-    "dapui_watches",
+	pattern = {
+		"help",
+		"man",
+		"oil",
+		"qf",
+		-- dap stuff
+		"dap-repl",
+		"dapui_breakpoints",
+		"dapui_console",
+		"dapui_scopes",
+		"dapui_stacks",
+		"dapui_watches",
 
-    "[No Name]",
-  },
-  callback = function(event)
-    vim.bo[event.buf].buflisted = false
-    vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
-  end,
-  desc = "Close certain windows with 'q'"
+		"[No Name]",
+	},
+	callback = function(event)
+		vim.bo[event.buf].buflisted = false
+		vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
+	end,
+	desc = "Close certain windows with 'q'",
 })
-

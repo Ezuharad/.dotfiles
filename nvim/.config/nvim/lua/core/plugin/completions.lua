@@ -2,29 +2,51 @@
 return {
   {
     "Saghen/blink.cmp",
-    lazy = false,
-    enabled = true,
-    dependencies = { "rafamadriz/friendly-snippets", "xzbdmw/colorful-menu.nvim" },
-    version = "v0.5.1",
+    dependencies = { "xzbdmw/colorful-menu.nvim" },
+    version = "v1.*",
     opts = {
-      nerd_font_variant = "mono",
       sources = {
-        default = { "lsp", "path", "snippets", "buffer" },
+        default = {
+          -- "buffer",  -- just adds random text
+          "cmdline",
+          "lsp",
+          "omni",
+          "path",
+          "snippets"
+        },
+        per_filetype = {
+          markdown = {},
+        },
+        transform_items = function(_, items) -- remove text items from LSP
+          local blacklist =
+            {
+              vim.lsp.protocol.CompletionItemKind.Text,
+              -- vim.lsp.protocol.CompletionItemKind.Snippet
+            }
+          return vim.tbl_filter(function(item)
+            for _, v in ipairs(blacklist) do
+              if item.kind == v then
+                return false
+              end
+            end
+            return true
+          end, items)
+        end,
       },
       completion = {
         documentation = {
           window = {
-            border = "rounded",
-            winblend = "pumblend",
+            border = vim.g.config.theme.border.float_border,
+            winblend = 0,
           },
         },
         menu = {
-          border = "rounded",
-          winblend = "pumblend",
+          border = vim.g.config.theme.border.float_border,
+          winblend = 0,
           draw = {
             columns = {
-              { "kind_icon" },
-              { "label", gap = 1 },
+              { "kind_icon", "label", gap = 1 },
+              { "kind" },
             },
             treesitter = {
               "lsp",
@@ -42,11 +64,18 @@ return {
           },
         },
       },
+      signature = {
+        window = {
+          border = vim.g.config.theme.border.float_border,
+        },
+      },
       fuzzy = {
         implementation = "prefer_rust_with_warning",
         sorts = {
           function(a, b)
             local source_priority = {
+              cmdline = 6,
+              omni = 5,
               lsp = 4,
               path = 3,
               snippets = 2,

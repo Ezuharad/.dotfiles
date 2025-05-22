@@ -1,8 +1,11 @@
 -- hidden file names
 return {
-  "\\.git",
+  "\\.cache",
 
-  -- VSCode
+  "\\.git",
+  "\\.hg",
+
+  "\\.idea",
   "\\.vscode",
 
   -- python
@@ -14,5 +17,6 @@ return {
 
   -- rust
   "target/debug/",
+  "*.rs.bk",
   "doc",
 }

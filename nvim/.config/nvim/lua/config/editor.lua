@@ -67,7 +67,7 @@ vim.g.loaded_matchit = 1
 vim.opt.mouse = ""
 
 -- undo and swap files
-vim.opt.ul = 20
+vim.opt.ul = 32
 local homedir = os.getenv("HOME")
 
 if homedir ~= nil and homedir ~= "" then

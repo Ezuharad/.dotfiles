@@ -1,11 +1,22 @@
--- LSP configuration
+-- Mason configuration
+local null_ls_config = function()
+  local null_ls = require("null-ls")
+  return {
+    sources = {
+      -- null_ls.builtins.completion.luasnip,
+      null_ls.builtins.formatting.stylua,
+      null_ls.builtins.completion.spell,
+    },
+  }
+end
+
 return {
   {
     "williamboman/mason.nvim",
     config = true,
     opts = {
       ui = {
-        border = "rounded",
+        border = vim.g.config.theme.border.float_border,
         icons = {
           package_installed = "✓",
           package_pending = "➜",
@@ -15,36 +26,23 @@ return {
     },
   },
   {
-    "williamboman/mason-lspconfig.nvim",
-    dependencies = { "williamboman/mason.nvim", "hrsh7th/nvim-cmp" },
+    "nvimtools/none-ls.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "L3MON4D3/LuaSnip" },
+    lazy = true,
     enabled = true,
-    config = function()
-      require("mason-lspconfig").setup({ ensure_installed = { "lua_ls" } })
-      local capabilities = require("blink.cmp").get_lsp_capabilities()
-
-      require("mason-lspconfig").setup_handlers({
-        function(server_name)
-          require("lspconfig")[server_name].setup({
-            capabilities = capabilities,
-            handlers = require("core.plugin.lsp.handler"),
-            settings = require("core.plugin.lsp.settings"),
-          })
-        end,
-      })
-    end,
+    keys = {
+      { "<leader>rf", vim.lsp.buf.format, desc = "Buffer Reformat (None-ls)" },
+    },
+    opts = null_ls_config,
   },
   {
-    "neovim/nvim-lspconfig",
-    dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
-    keys = {
-      { "<leader>ra", vim.lsp.buf.code_action, desc = "Code Actions" },
-      { "<leader>rf", vim.lsp.buf.format, desc = "Format Code"},
-      { "<leader>rn", vim.lsp.buf.rename, desc = "Rename Symbol"},
-      { "<leader>rs", vim.lsp.buf.signature_help, desc = "Signature Help" },
-      { "<leader>ri", vim.lsp.buf.implementation, desc = "Go to Implementation" },
-      { "gd", vim.lsp.buf.definition, desc = "Go to Definition" },
-      { "gD", vim.lsp.buf.declaration, desc = "Go to Declaration" },
-      { "<leader>rr", vim.lsp.buf.references, desc = "Go to References" },
+    "jay-babu/mason-null-ls.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    enabled = true,
+    dependencies = {
+      "williamboman/mason.nvim",
+      "nvimtools/none-ls.nvim",
     },
+    opts = null_ls_config
   },
 }
