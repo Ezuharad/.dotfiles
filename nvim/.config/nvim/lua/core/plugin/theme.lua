@@ -1,8 +1,13 @@
--- themes in theme/ directory
-local themes = {
-  nord = {
-    { "arcticicestudio/nord-vim" },
-  },
-}
+-- themes
+return {
 
-return themes[vim.g.config.theme.name]
+  {
+    -- "arcticicestudio/nord-vim",  -- inferior to alternate theme
+    "shaunsingh/nord.nvim",
+    lazy = true,
+  },
+  {  -- nice light theme for screen sharing
+    "catppuccin/nvim",
+    lazy = true,
+  }
+}

@@ -4,12 +4,16 @@ return {
   config = true,
   opts = {
     options = {
-      theme = function()
-        local theme = require("lualine.themes." .. vim.g.config.theme.name)
-        theme.normal.c.bg = "None"
-        theme.inactive.c.bg = "None"
+      -- theme = "auto",
+      function()
+        local theme = require("lualine.themes.auto")
+        theme.normal.c.bg = "none"
+        theme.inactive.c.bg = "none"
         return theme
       end,
+      disabled_filetypes = {
+        "alpha"
+      }
     },
     extensions = { "man", "mason", "oil" },
     sections = {
@@ -30,3 +34,4 @@ return {
     },
   },
 }
+

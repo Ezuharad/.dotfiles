@@ -1,4 +1,4 @@
--- treesitter integration with textobjects
+-- treesitter integration with textobjects, brackets, and others
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -52,6 +52,9 @@ return {
     config = function()
       local ts_textobjects = require("nvim-treesitter.configs")
       ts_textobjects.setup({
+        highlight = {
+          enable = true
+        },
         textobjects = {
           select = {
             enable = true,
@@ -187,4 +190,13 @@ return {
       vim.g.matchup_matchparen_offscreen = { method = "popup" }
     end,
   },
+  {
+    "Wansmer/treesj",
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    keys = {{ "J",     mode = { "n", "x", "o" }, function() require("treesj").toggle() end, desc = "Expand or Contract Node (TreesJ)" }},
+    opts = {
+      use_default_keymaps = false,
+      max_join_length = 1024
+    }
+  }
 }

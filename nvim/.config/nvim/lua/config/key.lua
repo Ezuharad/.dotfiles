@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 local map = function(mode, lhs, rhs, desc)
-	vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true, desc = desc })
+  vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true, desc = desc })
 end
 
 -- recenter after n and N
@@ -35,14 +35,10 @@ map("n", "?", ":%s//gc<Left><Left><Left>", "Find Replace")
 map("v", "?", ":s/\\%V\\%V/cg<Left><Left><Left>", "Find Replace")
 
 -- LSP keybinds
-map("n", "<leader>ra", vim.lsp.buf.code_action, "Code Actions")
-map("n", "<leader>rf", vim.lsp.buf.format, "Format Code")
-map("n", "<leader>rn", vim.lsp.buf.rename, "Rename Symbol")
-map("n", "<leader>rs", vim.lsp.buf.signature_help, "Signature Help")
-map("n", "<leader>ri", vim.lsp.buf.implementation, "Go to Implementation")
+map("n", "grf", vim.lsp.buf.format, "Format Code")
+map("n", "grs", vim.lsp.buf.signature_help, "Signature Help")
 map("n", "gd", vim.lsp.buf.definition, "Go to Definition")
 map("n", "gD", vim.lsp.buf.declaration, "Go to Declaration")
-map("n", "<leader>rr", vim.lsp.buf.references, "Go to References")
 
 -- switch buffers with tab
 map("n", "<tab>", "<cmd>bnext<cr>")
@@ -55,6 +51,7 @@ map("n", "^", "_")
 map("v", "^", "")
 
 -- unbind unused keys
+map("n", "gra", "<nop>")
 map("n", "gs", "<nop>")
 map("n", "H", "<nop>")
 map("n", "L", "<nop>")
@@ -64,6 +61,9 @@ map("n", ",", "<nop>")
 map("n", ";", "<nop>")
 map("n", "_", "<nop>")
 
+map("n", "q:", "<nop>")
+
+map("v", "gra", "<nop>")
 map("v", "gs", "<nop>")
 map("v", "H", "<nop>")
 map("v", "L", "<nop>")
@@ -90,24 +90,22 @@ map("v", "<left>", "<nop>")
 map("v", "<right>", "<nop>")
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = {
-		"help",
-		"man",
-		"oil",
-		"qf",
-		-- dap stuff
-		"dap-repl",
-		"dapui_breakpoints",
-		"dapui_console",
-		"dapui_scopes",
-		"dapui_stacks",
-		"dapui_watches",
-
-		"[No Name]",
-	},
-	callback = function(event)
-		vim.bo[event.buf].buflisted = false
-		vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
-	end,
-	desc = "Close certain windows with 'q'",
+  pattern = {
+    "help",
+    "man",
+    "oil",
+    "qf",
+    -- dap stuff
+    "dap-repl",
+    "dapui_breakpoints",
+    "dapui_console",
+    "dapui_scopes",
+    "dapui_stacks",
+    "dapui_watches",
+  },
+  callback = function(event)
+    vim.bo[event.buf].buflisted = false
+    vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
+  end,
+  desc = "Close certain windows with 'q'",
 })

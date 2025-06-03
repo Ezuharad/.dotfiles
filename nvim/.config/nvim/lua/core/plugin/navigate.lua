@@ -1,6 +1,11 @@
--- muxer integration
+-- key navigation changes
 return {
   {
+    "nullromo/go-up.nvim",
+    opts = {},
+    config = true
+  },
+  {  -- muxer integration
     "numToStr/Navigator.nvim",
     lazy = true,
     config = true,

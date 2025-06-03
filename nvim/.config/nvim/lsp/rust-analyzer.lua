@@ -2,6 +2,12 @@ return {
   cmd = { "rust-analyzer" },
   filetypes = { "rust" },
   settings = {
-    ["rust-analyzer"] = {}
+    ["rust-analyzer"] = {},
+    checkOnSave = {
+      enable = false
+    },
+    diagnostics = {
+      enable = false
+    }
   }
 }

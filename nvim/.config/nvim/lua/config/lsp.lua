@@ -24,8 +24,11 @@ vim.lsp.config("*", {
 
 vim.lsp.enable({
   "bacon-ls",
+  "bash-ls",
   "clangd",
+  "css-ls",
   "luals",
+  "html-ls",
   "marksman",
   "pyright",
   "ruff",

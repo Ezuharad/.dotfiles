@@ -31,7 +31,7 @@ return {
     lazy = true,
     enabled = true,
     keys = {
-      { "<leader>rf", vim.lsp.buf.format, desc = "Buffer Reformat (None-ls)" },
+      { "grf", vim.lsp.buf.format, desc = "Buffer Reformat (None-ls)" },
     },
     opts = null_ls_config,
   },

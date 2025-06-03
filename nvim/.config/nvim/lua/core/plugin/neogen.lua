@@ -7,14 +7,13 @@ return {
     },
     config = true,
     lazy = true,
-    -- event = "VeryLazy",
     opts = {
       languages = require("core.plugin.neogen.config"),
       snippet_engine = "luasnip",
     },
     keys = {
       {
-        "<leader>rd",
+        "grd",
         function()
           require("neogen").generate()
         end,

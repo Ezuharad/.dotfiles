@@ -57,7 +57,19 @@ return {
     },
     opts = {
       defaults = {
-        file_ignore_patterns = require("core.plugin.file.hidden"),
+        file_ignore_patterns = vim.tbl_deep_extend(
+          "keep",
+          require("core.plugin.file.hidden"),
+          {  -- files to hide in telescope, but not the explorer
+            "*\\.heic",
+            "*\\.jpeg",
+            "*\\.jpg",
+            "*\\.pdf",
+            "*\\.png",
+            "*\\.raw",
+            "*\\.zip",
+          }
+        ),
       },
       extensions = {
         glyph = {

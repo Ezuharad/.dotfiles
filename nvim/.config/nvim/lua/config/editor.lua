@@ -9,7 +9,7 @@ vim.opt.spell = false
 -- terminal settings
 vim.g.terminal_emulator = "wezterm"
 vim.opt.shell = "zsh"
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
 vim.opt.ttyfast = true
 
 -- set tab spacing
@@ -33,8 +33,14 @@ vim.opt.list = true
 -- backspacing over autoindents
 vim.opt.backspace = { "indent", "eol", "start" }
 
+-- do not center on <C-o>
+vim.opt.jumpoptions = "stack,view"
+
 -- allow hiding unsaved buffers
 vim.opt.hidden = true
+
+-- set root for projects
+vim.g.root_spec = { { ".git" }, "lsp", "cwd" }
 
 -- automatically read file changes
 vim.opt.autoread = true
@@ -50,17 +56,18 @@ vim.opt.foldenable = false
 -- set default register to OS clipboard
 vim.o.clipboard = "unnamedplus"
 
--- feedback for regex search
+-- feedback for regex replace and search
+vim.opt.inccommand = "split"
 vim.opt.incsearch = true
 
 -- increment octal
 vim.opt.nrformats = { "bin", "octal", "hex" }
 
--- disable netrw
+-- disable netrw for plugin
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- disable matchit
+-- disable matchit for plugin
 vim.g.loaded_matchit = 1
 
 -- disable mouse

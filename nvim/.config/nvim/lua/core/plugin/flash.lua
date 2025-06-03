@@ -13,6 +13,9 @@ return {
           "f", "F", "t", "T"
         }
       },
+      search = {
+        enabled = true
+      },
     },
     prompt = {
       prefix = { { "", "FlashPromptIcon" } }

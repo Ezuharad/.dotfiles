@@ -36,11 +36,15 @@ return {
       completion = {
         documentation = {
           window = {
-            border = vim.g.config.theme.border.float_border,
-            winblend = 0,
-          },
+          border = vim.g.config.theme.border.float_border,
+          winblend = 0,
+          }
+        },
+        ghost_text = {
+          enabled = false
         },
         menu = {
+          auto_show = true,
           border = vim.g.config.theme.border.float_border,
           winblend = 0,
           draw = {
