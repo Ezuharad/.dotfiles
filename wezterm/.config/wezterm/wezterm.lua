@@ -9,10 +9,10 @@ config.keys = require("config.key")
 config.disable_default_mouse_bindings = true
 
 -- window settings
-wezterm.on("gui-startup", function()
-  local _, _, window = mux.spawn_window({})  -- tab, pane, window = ...
-  window:gui_window():maximize()
-end)
+-- wezterm.on("gui-startup", function()
+--   local _, _, window = mux.spawn_window({})  -- tab, pane, window = ...
+--   window:gui_window():maximize()
+-- end)
 
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.9
