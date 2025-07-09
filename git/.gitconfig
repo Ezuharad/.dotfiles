@@ -7,8 +7,15 @@
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore
+  pager = delta
+[delta]
+  navigate = true
 [init]
 	defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only
+[merge]
+  conflictstyle = zdiff3
 [user]
 	name = Steven Chiacchira
 	email = schiacchira@Gmail.com
