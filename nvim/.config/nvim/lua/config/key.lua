@@ -95,6 +95,7 @@ vim.api.nvim_create_autocmd("FileType", {
     "man",
     "oil",
     "qf",
+    "AvanteInput",
     -- dap stuff
     "dap-repl",
     "dapui_breakpoints",

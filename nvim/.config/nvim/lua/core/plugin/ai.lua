@@ -1,6 +1,6 @@
 -- AI assistant
 return {
-  {  -- TODO: figure out what this thing can do. Look into diffview
+  { -- TODO: figure out what this thing can do. Look into diffview
     "yetone/avante.nvim",
     lazy = true,
     event = "VeryLazy",
@@ -14,11 +14,27 @@ return {
           model = "claude-3-5-sonnet-20241022",
           api_key_name = "ANTHROPIC_API_KEY",
           extra_request_body = {
-            temerature = 0,
+            temperature = 0,
             max_tokens = 4096,
           },
         },
       },
+      -- rag_service = {
+      --   enabled = true,
+      --   host_mount = os.getenv("HOME") .. "Code",
+      --   runner = "docker",
+      --   llm = {
+      --     endpoint = "https://api.anthropic.com",
+      --     provider = "claude",
+      --     model = "claude-sonnet-4-20250514",
+      --     api_key = "ANTHROPIC_API_KEY",
+      --     extra = {}
+      --   },
+      --   embed = {
+      --     provider = "claude"
+      --   },
+      --   docker_extra_args = ""
+      -- },
       -- mode = "agentic",
       auto_suggestions = true,
       -- UI configuration
@@ -33,14 +49,14 @@ return {
         provider = "telescope",
       },
       hints = {
-        enabled = false
+        enabled = false,
       },
       windows = {
         ask = {
           start_insert = true,
         },
         edit = {
-          border = "rounded"
+          border = "rounded",
         },
       },
     },
@@ -56,11 +72,12 @@ return {
     },
     keys = {
       { "<leader>aa", "<cmd>AvanteAsk<cr>", desc = "Ask About Selection (Avante)" },
-      { "<leader>ac", "<cmd>AvanteChat<cr>", desc = "AI Chat (Avante)" },
+      { "<leader>ad", "<cmd>AvanteChat<cr>", desc = "AI Chat (Avante)" },
       { "<leader>at", "<cmd>AvanteToggle<cr>", desc = "Toggle AI Sidebar (Avante)" },
+      { "<leader>al", "<cmd>AvanteClear<cr>", desc = "Clear AI Sidebar (Avante)" },
       { "<leader>am", "<cmd>AvanteModels<cr>", desc = "Show Models (Avante)" },
       { "<leader>ah", "<cmd>AvanteHistory<cr>", desc = "Show AI History (Avante)" },
-      { "<leader>ae", ":AvanteEdit<cr>", desc = "Edit Selection (Avante)", mode = "v" },  -- use ":" for visual mode
+      { "<leader>ae", ":AvanteEdit<cr>", desc = "Edit Selection (Avante)", mode = "v" }, -- uce ":" for visual mode
     },
   },
   {

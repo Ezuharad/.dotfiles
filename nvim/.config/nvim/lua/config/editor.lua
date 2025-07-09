@@ -4,7 +4,7 @@ vim.opt.encoding = "UTF-8"
 
 -- language settings
 vim.opt.spelllang = "en_us"
-vim.opt.spell = false
+vim.opt.spell = (os.getenv("VIM_USE_SPELL_OPT") == "true")
 
 -- terminal settings
 vim.g.terminal_emulator = "wezterm"
@@ -74,7 +74,7 @@ vim.g.loaded_matchit = 1
 vim.opt.mouse = ""
 
 -- undo and swap files
-vim.opt.ul = 32
+vim.opt.ul = 256
 local homedir = os.getenv("HOME")
 
 if homedir ~= nil and homedir ~= "" then

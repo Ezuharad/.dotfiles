@@ -46,7 +46,7 @@ return {
         menu = {
           auto_show = true,
           border = vim.g.config.theme.border.float_border,
-          winblend = 0,
+          winblend = 0, -- "pumblend",
           draw = {
             columns = {
               { "kind_icon", "label", gap = 1 },

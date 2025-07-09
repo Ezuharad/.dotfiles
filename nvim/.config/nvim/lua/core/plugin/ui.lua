@@ -41,6 +41,7 @@ return {
         WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
         PERF = { icon = "祥", color = "default", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
         IDEA = { icon = " ", color = "default", alt = {} },
+        DEBUG = { icon = " ", color = "info", alt = { "DEV" } },
         HMM = { icon = " ", color = "default", alt = { "QUESTION" } },
         NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
         TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
@@ -57,4 +58,5 @@ return {
 -- NOTE:
 -- TEST:
 -- IDEA:
+-- DEBUG:
 -- HMM:

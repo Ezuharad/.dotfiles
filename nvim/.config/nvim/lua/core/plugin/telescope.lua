@@ -44,7 +44,8 @@ return {
       { "<leader>fm", "<cmd>Telescope man_pages<cr>", desc = "Telescope Man Pages (Telescope)" },
 
       -- Strings
-      { "<leader>fs", "<cmd>Telescope grep_string<cr>", desc = "Telescope Hovered Text (Telescope)" },
+      { "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Telescope LSP Document Symbols (Telescope)" },
+      { "<leader>fS", "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "Telescope LSP Workspace Symbols (Telescope)" },
       { "<leader>ft", "<cmd>Telescope live_grep<cr>", desc = "Telescope Text (Telescope)" },
 
       -- Fixing stuff
@@ -60,7 +61,7 @@ return {
         file_ignore_patterns = vim.tbl_deep_extend(
           "keep",
           require("core.plugin.file.hidden"),
-          {  -- files to hide in telescope, but not the explorer
+          { -- files to hide in telescope, but not the explorer
             "*\\.heic",
             "*\\.jpeg",
             "*\\.jpg",
@@ -84,6 +85,26 @@ return {
     },
   },
   {
+    "debugloop/telescope-undo.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+    },
+    opts = {
+      undo = {},
+    },
+    keys = {
+      {
+        "<leader>fu",
+        "<cmd>Telescope undo<cr>",
+        desc = "Telescope Undo History (Telescope-Undo)",
+      },
+    },
+    config = function(_, opts)
+      require("telescope").setup(opts)
+      require("telescope").load_extension("undo")
+    end,
+  },
+  {
     "ghassan0/telescope-glyph.nvim",
     dependencies = {
       "nvim-telescope/telescope.nvim",
@@ -91,5 +112,5 @@ return {
     keys = {
       { "<leader>fg", "<cmd>Telescope glyph<cr>", desc = "Telescope Gylphs (Telescope-Glyph)" },
     },
-  }
+  },
 }
