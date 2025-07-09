@@ -1,3 +1,4 @@
 function zle_ls {
     ls --color=auto -la
+    zle reset-prompt
 }

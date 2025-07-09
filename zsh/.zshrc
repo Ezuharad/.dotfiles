@@ -16,6 +16,7 @@ zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 zle -N zle_ls; bindkey "^F" zle_ls
+zle -N zle_fg; bindkey "^Z" zle_fg
 
 # other modules
 source $HOME/.config/zsh/alias.zsh
