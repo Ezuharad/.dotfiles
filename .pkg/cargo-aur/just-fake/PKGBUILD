@@ -1,0 +1,6 @@
+pkgname=just-fake
+pkgver=1
+pkgrel=1
+pkgdesc="Just task runner (fake package)"
+arch=('any')
+provides=('just')

@@ -1,0 +1,6 @@
+pkgname=tdf-fake
+pkgver=1
+pkgrel=1
+pkgdesc="CLI PDF viewer(fake package)"
+arch=('any')
+provides=('tdf')

@@ -1,0 +1,6 @@
+pkgname=fd-fake
+pkgver=1
+pkgrel=1
+pkgdesc="fd CLI tool installer (fake package)"
+arch=('any')
+provides=('fd')
