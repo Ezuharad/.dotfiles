@@ -1,0 +1,76 @@
+-- installed the following:
+-- python-jupyter-client
+-- quarto-cli
+-- pandoc-bin
+return {
+  {
+    "benlubas/molten-nvim",
+    dependencies = {
+      "3rd/image.nvim",
+      "GCBallesteros/jupytext.nvim",
+      "quarto-dev/quarto-nvim",
+    },
+    build = ":UpdateRemotePlugins",
+    version = "^1.0.0",
+    setup = function()
+      vim.g.molten_image_provider = "image.nvim"
+      vim.g.molten_wrap_output = true
+      vim.g.molten_virt_lines_off_by_1 = true
+    end,
+    keys = {
+      { "<leader>jc", "<cmd>MoltenReevaluateCell<cr>", { desc = "Evaluate Cell", silent = true } },
+    },
+  },
+  {
+    "3rd/image.nvim",
+    opts = {
+      backend = "kitty",                        -- Kitty will provide the best experience, but you need a compatible terminal
+      integrations = {},                        -- do whatever you want with image.nvim's integrations
+      max_width = 100,                          -- tweak to preference
+      max_height = 12,                          -- ^
+      max_height_window_percentage = math.huge, -- this is necessary for a good experience
+      max_width_window_percentage = math.huge,
+      window_overlap_clear_enabled = true,
+      window_overlap_clear_ft_ignore = { "cmp_menu", "cmp_docs" },
+    },
+  },
+  {
+    "GCBallesteros/jupytext.nvim",
+    opts = {
+      style = "markdown",
+      output_extension = "md",
+      force_ft = "markdown",
+    },
+  },
+  {
+    "quarto-dev/quarto-nvim",
+    dependencies = {
+      "jmbuhr/otter.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    ft = {
+      "quarto",
+      "markdown",
+    },
+    opts = {
+      lspFeatures = {
+        languages = { "r", "python" },
+        chunks = "all",
+        diagnostics = {
+          enabled = true,
+          triggers = { "BufWritePost" },
+        },
+      },
+      keymap = {
+        hover = "K",
+        definition = "gd",
+        rename = "grn",
+        format = "gjf",
+      },
+      codeRunner = {
+        enabled = true,
+        default_method = "molten",
+      },
+    },
+  },
+}

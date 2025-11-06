@@ -26,6 +26,10 @@ return {
     },
   },
   {
+    "neovim/nvim-lspconfig",
+    -- config = true
+  },
+  {
     "nvimtools/none-ls.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "L3MON4D3/LuaSnip" },
     lazy = true,

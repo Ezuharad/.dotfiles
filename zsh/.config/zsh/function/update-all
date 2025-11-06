@@ -1,13 +1,13 @@
 # custom update command
 (
-set -e
-if [[ -f /usr/bin/paru ]]; then
-  echo 'Updating \033[0;34mArch\033[0m Linux...'
-  paru -Syu
-elif [[ -f /usr/bin/pacman ]]; then
-  echo 'Updating \033[0;34mArch\033[0m Linux...'
-  sudo pacman -Syu
-fi
+  set -e
+  which paru > /dev/null && {
+    echo 'Updating \033[0;34mArch\033[0m Linux...'
+    paru -Syu
+  } || which pacman > /dev/null && {
+    echo 'Updating \033[0;34mArch\033[0m Linux...'
+    sudo pacman -Syu
+  }
 )
 
 (
@@ -59,7 +59,7 @@ fi
 
 (
   set -e
-  which nvim > /dev/null 
+  which nvim > /dev/null
   echo 'Updating \033[0;34mNeo\033[1mVim\033[0m packages...'
   nvim --headless "+Lazy! sync" +qa
   nvim --headless "+TSUpdate" +qa

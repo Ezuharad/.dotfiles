@@ -15,7 +15,7 @@ config.disable_default_mouse_bindings = true
 -- end)
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.90
 config.window_padding = {
   left = 0,
   right = 0,

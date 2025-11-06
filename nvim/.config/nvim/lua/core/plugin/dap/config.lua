@@ -10,5 +10,17 @@ return {
         return "python"
       end,
     },
-  }
+  },
+  cpp = {
+    name = "lldb",
+    type = "cpp",
+    request = "launch",
+    program = function()
+      vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+    end,
+    cwd = "${workspaceFolder}",
+    externalTerminal = false,
+    stopOnEntry = false,
+    args = {}
+  },
 }

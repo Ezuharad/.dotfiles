@@ -27,12 +27,14 @@ vim.lsp.enable({
   "bash-ls",
   "clangd",
   "css-ls",
+  "eslint-ls",
   "luals",
   "html-ls",
   "marksman",
   "pyright",
   "ruff",
   "rust-analyzer",
+  "svelte-ls",
   "tinymist",
   "yaml-ls"
 })

@@ -1,0 +1,8 @@
+[project]
+name = "TEMPORARY"
+version = "0.1.0"
+description = "TEMPORARY"
+
+[tool.ruff]
+line-length = 120
+

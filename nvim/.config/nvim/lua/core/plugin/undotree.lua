@@ -1,7 +1,7 @@
 -- tree-visualization for nonlinear undo operations
 return {
   "mbbill/undotree",
-  lazy = true,
+  lazy = false,
   enabled = false,
   cmd = "UndotreeToggle",
   keys = {

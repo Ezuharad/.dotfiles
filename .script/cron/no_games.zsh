@@ -1,11 +1,14 @@
 #!/usr/bin/env zsh
 
+if [ -e ~/Desktop/how\ many\ pleasures\ have\ been\ enjoyed\ by\ robbers,\ patricides,\ tyrants. ]; then
+  exit 0;
+fi
+
 export XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:-/run/user/$(id -u)}
 export WAYLAND_DISPLAY=${WAYLAND_DISPLAY:-wayland-0}
 export DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS:-"unix:path=${XDG_RUNTIME_DIR}/bus"}
 
 DISALLOWED_PROCESSES=(
-  _none
   cockatrice
   citra-qt
   dolphin-emu

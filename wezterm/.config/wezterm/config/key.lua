@@ -87,7 +87,7 @@ local keybinds = {
   { key = "r",   mods = MODS,                  action = act.RotatePanes("Clockwise") },
   { key = "r",   mods = MODS .. "|SHIFT",      action = act.RotatePanes("CounterClockwise") },
   -- pane zoom / unzoom
-  { key = "g",   mods = MODS,                  action = act.TogglePaneZoomState },
+  { key = "m",   mods = MODS,                  action = act.TogglePaneZoomState },
   -- pane visual select
   { key = "v",   mods = MODS,                  action = act.ActivateCopyMode },
   -- resize full window

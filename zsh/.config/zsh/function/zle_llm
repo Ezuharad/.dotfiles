@@ -1,0 +1,13 @@
+function zle_llm {
+  zle kill-whole-line;
+  if !command -v llm &> /dev/null; then
+    zle -M "Error: 'llm' command not found. Install it with `uv tool install llm`";
+    zle reset-prompt;
+    return 1;
+  fi
+
+  zle push-line
+  BUFFER="llm chat"
+  zle accept-line
+  zle reset-prompt;
+}

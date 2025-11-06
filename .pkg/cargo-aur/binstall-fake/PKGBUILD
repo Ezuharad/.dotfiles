@@ -1,0 +1,6 @@
+pkgname=cargo-binstall-fake
+pkgver=1
+pkgrel=1
+pkgdesc="Cargo Binstall CLI tool (fake package)"
+arch=('any')
+provides=('choose')

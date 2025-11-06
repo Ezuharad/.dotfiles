@@ -9,6 +9,8 @@ which nvim > /dev/null && alias vim='nvim'
 
 which perl-rename > /dev/null && alias rename=perl-rename
 
+which paru > /dev/null && alias yay=paru
+
 alias ls='ls --color=auto'
 alias grep='grep --colo=auto'
 

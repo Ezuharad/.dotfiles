@@ -25,3 +25,8 @@ dist
 target/debug
 *.rs.bk
 
+# npm
+node_modules
+
+# secrets
+.env

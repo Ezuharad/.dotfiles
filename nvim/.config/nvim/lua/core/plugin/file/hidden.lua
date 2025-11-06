@@ -19,4 +19,7 @@ return {
   "target/debug/",
   "*.rs.bk",
   "doc",
+
+  -- npm
+  "node_modules",
 }
