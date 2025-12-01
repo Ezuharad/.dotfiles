@@ -1,15 +1,16 @@
+#!/usr/bin/env zsh
+
+# command for bringing processes to foreground
 function zle_fg {
-    # if [[ $(jobs | wc -l) -eq 0 ]]; then
-    #   echo "No background jobs"
     if [[ $(jobs | wc -l) -le 1 ]] || ! command -v fzf >/dev/null 2>&1; then
-        fg &> /dev/null
+        fg &> /dev/null;
     else
         job_number=$(jobs | fzf --height 40% --reverse | cut -c2 | tr -d '[]')
         if [[ -n "$job_number" ]]; then
-            fg %$job_number &> /dev/null
+            fg %$job_number &> /dev/null;
         fi
     fi
-    zle reset-prompt
+    zle reset-prompt;
 }
 
 

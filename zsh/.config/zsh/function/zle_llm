@@ -1,3 +1,6 @@
+#!/usr/bin/env zsh
+
+# command for LLM interaction in CLI
 function zle_llm {
   zle kill-whole-line;
   if !command -v llm &> /dev/null; then
@@ -6,8 +9,8 @@ function zle_llm {
     return 1;
   fi
 
-  zle push-line
-  BUFFER="llm chat"
-  zle accept-line
+  zle push-line;
+  BUFFER="llm chat";
+  zle accept-line;
   zle reset-prompt;
 }

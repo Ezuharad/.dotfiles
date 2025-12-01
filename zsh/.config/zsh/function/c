@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+# custom calculator command
+function c {
+  if command -v fend &>/dev/null; then
+    echo "$@" | fend;
+  fi
+  # which fend > /dev/null && echo "$@" | fend
+}
+

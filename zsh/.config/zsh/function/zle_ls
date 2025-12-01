@@ -1,4 +1,6 @@
+#!/usr/bin/env zsh
+
 function zle_ls {
-    ls --color=auto -la
-    zle reset-prompt
+    ls --color=auto -la;
+    zle reset-prompt;
 }

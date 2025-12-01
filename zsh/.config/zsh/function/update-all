@@ -1,76 +1,61 @@
+#!/usr/bin/env zsh
+
 # custom update command
-(
-  set -e
-  which paru > /dev/null && {
-    echo 'Updating \033[0;34mArch\033[0m Linux...'
-    paru -Syu
-  } || which pacman > /dev/null && {
-    echo 'Updating \033[0;34mArch\033[0m Linux...'
-    sudo pacman -Syu
-  }
-)
+function update-all() {
+  if command -v paru &>/dev/null; then
+    echo 'Updating \033[0;34mArch\033[0m Linux...';
+    paru -Syu;
+  elif command -v pacman &>/dev/null; then
+    echo 'Updating \033[0;34mArch\033[0m Linux...';
+    sudo pacman -Syu;
+  fi
 
-(
-  set -e
-  which apt > /dev/null
-  'Updating \e[0l31mApt\033[0m...'
-  sudo apt update
-  sudo apt upgrade
-)
+  if command -v apt &>/dev/null; then
+    'Updating \e[0l31mApt\033[0m...';
+    sudo apt update;
+    sudo apt upgrade;
+  fi
 
-(
-  set -e
-  which flatpak > /dev/null
-  echo 'Updating \033[1mFlatpak\033[0m...'
-  flatpak --user update
-)
+  if command -v flatpak &>/dev/null; then
+    echo 'Updating \033[1mFlatpak\033[0m...';
+    flatpak --user update;
+  fi
 
-(
-  set -e
-  which rustup > /dev/null
-  echo 'Updating \e[0;31mCargo\033[0m...'
-  rustup update
 
-  which cargo > /dev/null
-  cargo --list | grep install-update
-  cargo install-update --all
-)
+  if command -v rustup &>/dev/null; then
+    echo 'Updating \e[0;31mCargo\033[0m...';
+    rustup update;
+  fi
+  if command -v cargo &>/dev/null; then
+    cargo --list | grep install-update;
+    cargo install-update --all;
+  fi
 
-(
-  set -e
-  which ghcup > /dev/null
-  echo 'Updating \033[0;35mghcup\033[0m...'
-  ghcup upgrade
-)
+  if command -v ghcup &>/dev/null; then
+    echo 'Updating \033[0;35mghcup\033[0m...';
+    ghcup upgrade;
+  fi
 
-(
-  set -e
-  which raco > /dev/null
-  echo 'Updating \033[0;31mRac\033[0;34mket\033[0m packages...'
-  raco pkg update --all
-)
+  if command -v raco &>/dev/null; then
+    echo 'Updating \033[0;31mRac\033[0;34mket\033[0m packages...';
+    raco pkg update --all;
+  fi
 
-(
-  set -e
-  which gem > /dev/null
-  echo 'Updating \033[0;31mRubyGems\033[0m packages...'
-  gem update
-)
+  if command -v gem &>/dev/null; then
+    echo 'Updating \033[0;31mRubyGems\033[0m packages...';
+    gem update;
+  fi
 
-(
-  set -e
-  which nvim > /dev/null
-  echo 'Updating \033[0;34mNeo\033[1mVim\033[0m packages...'
-  nvim --headless "+Lazy! sync" +qa
-  nvim --headless "+TSUpdate" +qa
-  nvim --headless "+MasonUpdate" +qa
-)
+  if command -v nvim &>/dev/null; then
+    echo 'Updating \033[0;34mNeo\033[1mVim\033[0m packages...';
+    nvim --headless "+Lazy! sync" +qa;
+    nvim --headless "+TSUpdate" +qa;
+    nvim --headless "+MasonUpdate" +qa;
+  fi
 
-(
-  set -e
-  which fwupdmgr > /dev/null
-  echo 'Updating \033[1mSystem Firmware\033[0m'
-  fwupdmgr refresh
-  fwupdmgr update
-)
-
+  if command -v fwupdmgr &>/dev/null; then
+    echo 'Updating \033[1mSystem Firmware\033[0m'
+    fwupdmgr refresh
+    fwupdmgr update
+  fi
+}
