@@ -1,4 +1,7 @@
+#!/usr/bin/env zsh
+
 # conda initialization
+
 {
   which conda > /dev/null
 } || {

@@ -35,7 +35,7 @@ style = "bold yellow"
 truncation_length = 7
 
 [lua]
-disabled = true
+# disabled = true
 symbol = "󰢱 "
 
 [python]
@@ -44,11 +44,11 @@ symbol = " "
 style = "fg:green bold"
 
 [rust]
-disabled = true
+# disabled = true
 symbol = "󱘗 "
 
 [typst]
-disabled = true
+# disabled = true
 format = "[${symbol}${version}]($style)"
 symbol = " "
 

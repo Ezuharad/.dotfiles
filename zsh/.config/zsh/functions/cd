@@ -1,0 +1,98 @@
+#!/usr/bin/env zsh
+
+# custom cd command allowing for transparent reading and writing of of zip
+# archives.
+
+function cd {
+  # if fuse-zip is not found, then use builtin cd
+  if ! command -v fuse-zip &>/dev/null; then 
+      builtin cd "$@";
+      return "$?";
+  fi
+
+  local TARGET_FILE="$1";
+
+  if [[ "$#" == 0 || ! -f "$TARGET_FILE" ]]; then
+    builtin cd "$@";
+    return $?;
+  fi
+
+  local TARGET_FILE_EXTENSION="${TARGET_FILE:e}";
+  if [[ ! "$TARGET_FILE" =~ "apk|docx|epub|jar|pptx|pubx|xlsx|zip" ]]; then
+    builtin cd "$@";
+    return $?;
+  fi
+
+  if [[ ! -w "$TARGET_FILE" ]]; then
+    echo "Insufficient permissions to enter possible archive \"$TARGET_FILE\"" 1>&2;
+    return 1;
+  fi
+
+  echo "Attempting to enter possible archive \"$TARGET_FILE\"..." 1>&2;
+
+  local TARGET_FILE_PATH="$(realpath $TARGET_FILE)";
+  local FILE_NAME="${TARGET_FILE_PATH:t}";
+
+  # create a unique name for the stashed file
+  local TARGET_FILE_PATH_HASH="$(echo -n $TARGET_FILE_PATH | sha1sum | cut -d' ' -f1)";
+
+  # ensure stash exists
+  local STASH_DIR_PATH="$HOME/.zip_fuse_cache";
+  local STASH_FILE_PATH="$STASH_DIR_PATH/$TARGET_FILE_PATH_HASH-$FILE_NAME";
+
+  # prepare for mount
+  local MOUNT_POINT="$TARGET_FILE_PATH";
+  mv "$TARGET_FILE_PATH" "$STASH_FILE_PATH";
+  mkdir -p "$MOUNT_POINT";
+
+  # TODO: support other extensions:
+  # - tar
+  # - tar.gz
+  # - 7z
+  # - rar
+  case "$TARGET_FILE_EXTENSION" in
+    "apk" | "docx" | "epub" | "jar" | "pptx" | "pubx" | "xlsx" | "zip")  # a large number of filetypes are actually zip archives in disguise
+      if ! fuse-zip "$STASH_FILE_PATH" "$MOUNT_POINT"; then
+        echo "\"$FILE_NAME\" not a valid $TARGET_FILE_EXTENSION file" 1>&2;
+        rmdir "$MOUNT_POINT";
+        mv "$STASH_FILE_PATH" "$TARGET_FILE_PATH";
+
+        return 1;
+      fi
+      builtin cd "$TARGET_FILE_PATH";
+      ;;
+    *)
+      echo "Unsupported file type \"$TARGET_FILE_EXTENSION\"" 1>&2;
+      rmdir "$MOUNT_POINT";
+      mv "$STASH_FILE_PATH" "$TARGET_FILE_PATH";
+
+      return 1;
+  esac
+  echo "Stashed $TARGET_FILE at $STASH_FILE_PATH" 1>&2;
+
+  # background process to monitor for file closing
+  echo "Monitoring for unmount at process: " 1>&2;
+
+  (
+    cd "$HOME";
+    while fuser -m "$MOUNT_POINT" &>/dev/null ; do
+      sleep 3;
+    done
+
+    fusermount -u "$MOUNT_POINT";
+
+    # ensure fuse-zip finishes writing
+    sleep 1;
+    while ps aux | grep -q "[f]use-zip.*$STASH_FILE_PATH"; do
+      sleep 0.5;
+    done
+
+    rmdir "$MOUNT_POINT";
+    mv "$STASH_FILE_PATH" "$TARGET_FILE_PATH";
+
+    exit 0;
+    ) &
+    disown;
+
+  return 0;
+}

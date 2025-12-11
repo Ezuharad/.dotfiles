@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # place this after nvm initialization!
 [[ -a /usr/share/nvm/init-nvm.sh ]] && 
   (

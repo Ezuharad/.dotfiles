@@ -1,31 +1,34 @@
+#!/usr/bin/env zsh
+
 # comamnd aliases for zsh
-which bat > /dev/null && alias bat='bat --style=plain --color=auto'
-which bat > /dev/null && alias cat='bat --style=plain --color=auto'
 
-alias more='less'
+which bat > /dev/null && alias bat='bat --style=plain --color=auto';
+which bat > /dev/null && alias cat='bat --style=plain --color=auto';
 
-which nvim > /dev/null && alias vi='nvim'
-which nvim > /dev/null && alias vim='nvim'
+alias more='less';
 
-which perl-rename > /dev/null && alias rename=perl-rename
+which nvim > /dev/null && alias vi='nvim';
+which nvim > /dev/null && alias vim='nvim';
 
-which paru > /dev/null && alias yay=paru
+which perl-rename > /dev/null && alias rename=perl-rename;
 
-alias ls='ls --color=auto'
-alias grep='grep --colo=auto'
+which paru > /dev/null && alias yay=paru;
 
-which wezterm > /dev/null && alias imgcat='wezterm imgcat'
+alias ls='ls --color=auto';
+alias grep='grep --colo=auto';
 
-which fastfetch > /dev/null && alias neofetch='fastfetch'
+which wezterm > /dev/null && alias imgcat='wezterm imgcat';
 
-alias help='man zsh'
+which fastfetch > /dev/null && alias neofetch='fastfetch';
 
-alias ll='ls -lA'
+alias help='man zsh';
 
-alias \?='man'
+alias ll='ls -lA';
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
+alias \?='man';
+
+alias ..='cd ..';
+alias ...='cd ../..';
+alias ....='cd ../../..';
+alias .....='cd ../../../..';
 
