@@ -15,7 +15,7 @@ config.disable_default_mouse_bindings = true
 -- end)
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.90
+config.window_background_opacity = 1.0
 config.window_padding = {
   left = 0,
   right = 0,
@@ -35,6 +35,10 @@ config.colors = {
     background = "rgba(0,0,0,0)"
   }
 }
+
+-- Remove the title bar, but keep the resizable border
+config.window_decorations = "RESIZE"
+
 require("config.tabbarstyle")
 config.hide_tab_bar_if_only_one_tab = true
 

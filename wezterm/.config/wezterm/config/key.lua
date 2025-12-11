@@ -29,7 +29,7 @@ local function conditionalActivatePane(window, pane, pane_direction, vim_directi
 end
 
 local function conditionalScrollText(window, pane, amount, vim_direction)
-  if hasProcessNamed(pane, {"n?vim", "less", "man", "ssh"}) then
+  if hasProcessNamed(pane, {"git", "less", "man", "more", "n?vim", "ssh"}) then
     window:perform_action(act.SendKey({ key = vim_direction, mods = MODS }), pane)
   else
     window:perform_action(act.ScrollByPage(amount), pane)
