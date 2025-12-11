@@ -56,3 +56,5 @@
 [http]
 	postBuffer = 524288000
 	sslVerify = true
+[commit]
+	verbose = true
