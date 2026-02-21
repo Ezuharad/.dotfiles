@@ -21,14 +21,19 @@ function update-all() {
     flatpak --user update;
   fi
 
-
   if command -v rustup &>/dev/null; then
     echo 'Updating \e[0;31mCargo\033[0m...';
     rustup update;
   fi
+
   if command -v cargo &>/dev/null; then
     cargo --list | grep install-update;
     cargo install-update --all;
+  fi
+
+  if command -v uv &>/dev/null; then
+    echo 'Updating \e[0;32muv\033[0m...';
+    uv tool update --all
   fi
 
   if command -v ghcup &>/dev/null; then
@@ -46,11 +51,14 @@ function update-all() {
     gem update;
   fi
 
+  if command -v podman &>/dev/null; then
+    echo 'Updating \033[0;35mpodman\033[0m images...';
+    podman auto-update;
+  fi
+
   if command -v nvim &>/dev/null; then
     echo 'Updating \033[0;34mNeo\033[1mVim\033[0m packages...';
-    nvim --headless "+Lazy! sync" +qa;
-    nvim --headless "+TSUpdate" +qa;
-    nvim --headless "+MasonUpdate" +qa;
+    nvim --headless "+Lazy! sync" "+TSUpdate" "+MasonUpdate" +qa;
   fi
 
   if command -v fwupdmgr &>/dev/null; then

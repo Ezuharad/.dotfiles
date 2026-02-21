@@ -10,4 +10,5 @@ done
 zle -N zle_ls; bindkey "^F" zle_ls;
 zle -N zle_fg; bindkey "^Z" zle_fg;
 zle -N zle_llm; bindkey "^V" zle_llm;
+zle -N zle_yazi; bindkey "^Y" zle_yazi;
 

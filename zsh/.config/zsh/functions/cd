@@ -2,7 +2,6 @@
 
 # custom cd command allowing for transparent reading and writing of of zip
 # archives.
-
 function cd {
   # if fuse-zip is not found, then use builtin cd
   if ! command -v fuse-zip &>/dev/null; then 
@@ -11,7 +10,6 @@ function cd {
   fi
 
   local TARGET_FILE="$1";
-
   if [[ "$#" == 0 || ! -f "$TARGET_FILE" ]]; then
     builtin cd "$@";
     return $?;
@@ -72,7 +70,6 @@ function cd {
 
   # background process to monitor for file closing
   echo "Monitoring for unmount at process: " 1>&2;
-
   (
     cd "$HOME";
     while fuser -m "$MOUNT_POINT" &>/dev/null ; do

@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-function zle_ls {
-    ls --color=auto -lA;
+function zle_yazi {
+    yazi;
     zle reset-prompt;
 }
