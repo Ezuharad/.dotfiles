@@ -6,18 +6,22 @@ export HISTSIZE=1000;
 export SAVEHIST=1000;
 
 # local packages
-[[ -d $HOME/.local/bin ]] && export PATH="$PATH:$HOME/.local/bin";
+[[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin";
 # haskell
-[[ -d $HOME/.ghcup/bin ]] && export PATH="$PATH:$HOME/.ghcup/bin";
+[[ -d "$HOME/.ghcup/bin" ]] && export PATH="$PATH:$HOME/.ghcup/bin";
 # R
-[[ -d $HOME/.rpackages ]] && export R_LIBS_USER="$HOME/.rpackages";
+[[ -d "$HOME/.rpackages" ]] && export R_LIBS_USER="$HOME/.rpackages";
 # nvm
-[[ -f $HOME/.nvm/nvm.sh ]] && export "NVM_DIR=$HOME/.nvm" && . "$NVM_DIR/nvm.sh";
+[[ -f "$HOME/.nvm/nvm.sh" ]] && export "NVM_DIR=$HOME/.nvm" && . "$NVM_DIR/nvm.sh";
 
 # CUDA environment variable for pytorch
 [[ -d /opt/cuda ]] && export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda;
 
+# rc files
+which python3 > /dev/null && export PYTHONSTARTUP="$HOME/.startup.py";
+which lua > /dev/null && export LUA_INIT="@$HOME/.startup.lua";
+
 export GOPATH="$HOME/.go";
-export FPATH=$HOME/.config/zsh/functions:$FPATH;
+export FPATH="$HOME/.config/zsh/functions:$FPATH";
 
 . "$HOME/.cargo/env";
