@@ -14,7 +14,9 @@ function zle_llm {
 
     cd "$tmp";
     claude "$@" || true;
-    rm -rf "$tmp"
+    rm -rf "$tmp";
+
+    exit 0;
   )
     zle clear-screen;
   fi

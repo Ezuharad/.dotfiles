@@ -7,6 +7,9 @@ export HISTFILE=$HOME/.histfile;
 export HISTSIZE=1000;
 export SAVEHIST=1000;
 
+export EDITOR=nvim
+export VISUAL=nvim
+
 # local packages
 [[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:$HOME/.local/bin";
 # haskell
