@@ -1,5 +1,4 @@
 local wezterm = require("wezterm")
-local mux = wezterm.mux
 
 local config = wezterm.config_builder()
 
@@ -32,9 +31,11 @@ config.use_fancy_tab_bar = false
 config.color_scheme = "nord"
 config.colors = {
   tab_bar = {
-    background = "rgba(0,0,0,0)"
-  }
+    background = "rgba(0,0,0,0)",
+  },
 }
+
+config.debug_key_events = true
 
 -- Remove the title bar, but keep the resizable border
 config.window_decorations = "RESIZE"
@@ -44,5 +45,13 @@ config.hide_tab_bar_if_only_one_tab = true
 
 -- disable missing glyph warning
 config.warn_about_missing_glyphs = false
+
+-- enable extra fonts
+config.font = wezterm.font_with_fallback({
+  "JetBrains Mono",
+  "Noto Sans CJK JP",
+  "Noto Sans CJK SC",
+  "Noto Sans CJK KR",
+})
 
 return config

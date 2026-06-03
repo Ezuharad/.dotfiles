@@ -5,15 +5,22 @@ function update-all() {
   if command -v paru &>/dev/null; then
     echo 'Updating \033[0;34mArch\033[0m Linux...';
     paru -Syu;
+
   elif command -v pacman &>/dev/null; then
     echo 'Updating \033[0;34mArch\033[0m Linux...';
     sudo pacman -Syu;
   fi
 
   if command -v apt &>/dev/null; then
-    'Updating \e[0l31mApt\033[0m...';
+    echo 'Updating \e[0l31mApt\033[0m...';
     sudo apt update;
     sudo apt upgrade;
+  fi
+
+  if command -v brew &>/dev/null; then
+    echo 'Updating \033[38;5;214mHomebrew\033[0m...'
+    brew update;
+    brew upgrade;
   fi
 
   if command -v flatpak &>/dev/null; then

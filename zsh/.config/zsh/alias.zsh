@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
 # comamnd aliases for zsh
-
 which bat > /dev/null && alias bat='bat --style=plain --color=auto';
 which bat > /dev/null && alias cat='bat --style=plain --color=auto';
 
@@ -20,6 +19,8 @@ alias grep='grep --colo=auto';
 which wezterm > /dev/null && alias imgcat='wezterm imgcat';
 
 which fastfetch > /dev/null && alias neofetch='fastfetch';
+
+which pandoc > /dev/null && which typst > /dev/null && alias pandoc='pandoc --pdf-engine typst'
 
 alias help='man zsh';
 

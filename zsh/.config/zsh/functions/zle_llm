@@ -2,15 +2,21 @@
 
 # command for LLM interaction in CLI
 function zle_llm {
-  zle kill-whole-line;
-  if !command -v llm &> /dev/null; then
-    zle -M "Error: 'llm' command not found. Install it with `uv tool install llm`";
-    zle reset-prompt;
-    return 1;
-  fi
+  if (( $+commands[claude] )); then
+    builtin print -rn -- $'\e[H\e[2J' >"$TTY";
+    (
+    set -euo pipefail;
 
-  zle push-line;
-  BUFFER="llm chat";
-  zle accept-line;
-  zle reset-prompt;
+    tmp=$(mktemp -d);
+    trap 'rm -rf "$tmp"' EXIT;
+
+    mkdir "$tmp/.claude";
+
+    cd "$tmp";
+    claude "$@" || true;
+    rm -rf "$tmp"
+  )
+    zle clear-screen;
+  fi
 }
+

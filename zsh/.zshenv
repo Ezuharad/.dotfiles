@@ -1,3 +1,5 @@
+which vim > /dev/null && export EDITOR="vim";
+which vim > /dev/null && export VISUAL="vim";
 which nvim > /dev/null && export EDITOR="nvim";
 which nvim > /dev/null && export VISUAL="nvim";
 
@@ -18,10 +20,12 @@ export SAVEHIST=1000;
 [[ -d /opt/cuda ]] && export XLA_FLAGS=--xla_gpu_cuda_data_dir=/opt/cuda;
 
 # rc files
-which python3 > /dev/null && export PYTHONSTARTUP="$HOME/.startup.py";
-which lua > /dev/null && export LUA_INIT="@$HOME/.startup.lua";
+which python3 > /dev/null && [[ -f "$HOME/.startup.py" ]] && export PYTHONSTARTUP="$HOME/.startup.py";
+which lua > /dev/null && [[ -f "$HOME/.startup.lua" ]] && export LUA_INIT="@$HOME/.startup.lua";
 
 export GOPATH="$HOME/.go";
 export FPATH="$HOME/.config/zsh/functions:$FPATH";
 
-. "$HOME/.cargo/env";
+export ANTHROPIC_MODEL="claude-sonnet-4-6"
+
+[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env";

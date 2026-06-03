@@ -1,0 +1,6 @@
+pkgname=diffsitter-fake
+pkgver=1
+pkgrel=1
+pkgdesc="Diffsitter CLI tool (fake package)"
+arch=('any')
+provides=('diffsitter' 'diffsitter_completions')

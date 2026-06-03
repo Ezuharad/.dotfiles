@@ -28,15 +28,11 @@ source "$HOME/.config/zsh/vibind.zsh";
 source "$HOME/.config/zsh/less.zsh";
 
 # set prompt style
-# which oh-my-posh > /dev/null && eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/default.toml)"
 which starship > /dev/null && eval "$(starship init zsh)";
 
 which direnv > /dev/null && eval "$(direnv hook zsh)";
 
-# completions
-which docker > /dev/null && eval "$(docker completion zsh)";
-which podman > /dev/null && eval "$(podman completion zsh)";
-which typst > /dev/null && eval "$(typst completions zsh)";
+which zoxide > /dev/null && eval "$(zoxide init zsh)";
 
 # set secret variables
 [ -f "$HOME/.env" ] && source "$HOME/.env";
